@@ -1,0 +1,357 @@
+{
+  "titles": {
+    "home": "NovaBridge Global Supply LLC — Direct sourcing from China to the world",
+    "products": "Products — NovaBridge",
+    "productDetail": "Product line — NovaBridge",
+    "markets": "Markets — NovaBridge",
+    "howItWorks": "How it works — NovaBridge",
+    "about": "About — NovaBridge",
+    "news": "News — NovaBridge",
+    "quote": "Get a free quote — NovaBridge",
+    "contact": "Contact — NovaBridge",
+    "notFound": "Page not found — NovaBridge",
+    "cookies": "Cookie policy — NovaBridge"
+  },
+  "lang": {
+    "choose": "Choose language"
+  },
+  "nav": {
+    "homeAria": "NovaBridge — Home",
+    "main": "Main",
+    "mobile": "Mobile",
+    "menu": "Menu",
+    "quote": "Get a free quote",
+    "home": "Home",
+    "products": "Products",
+    "markets": "Markets",
+    "howItWorks": "How it works",
+    "about": "About",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "common": {
+    "requestQuote": "Request a quote",
+    "backHome": "Back to home",
+    "backToTop": "Back to top"
+  },
+  "form": {
+    "fullName": "Full name",
+    "message": "Message"
+  },
+  "cta": {
+    "kicker": "Ready to source smarter?",
+    "title": "Get your free quote in",
+    "titleHighlight": "24 hours."
+  },
+  "footer": {
+    "about": "{{tagline}}. Factory-direct pricing, North American service standards.",
+    "products": "Products",
+    "company": "Company",
+    "aboutUs": "About us",
+    "rights": "All rights reserved.",
+    "admin": "Administration",
+    "cookiePolicy": "Cookie policy",
+    "cookieSettings": "Cookie settings",
+    "developedBy": "Developed by {{name}}"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Direct sourcing partner · China → World",
+      "line1": "Factory-direct supply,",
+      "line2": "delivered to your door.",
+      "text": "PPE, healthcare supplies, uniforms and corporate merchandise — sourced from China’s top production hubs, quality-checked and delivered DDP across the USA, Canada, Europe and Africa.",
+      "cta": "Get your free quote in 24h",
+      "ctaSecondary": "View product lines"
+    },
+    "who": {
+      "kicker": "Who we are",
+      "title": "The direct bridge between Chinese factories and your business.",
+      "link": "Learn more about NovaBridge",
+      "imageAlt": "Warehouse with stocked shelves",
+      "qcTitle": "QC photos",
+      "qcText": "before every shipment"
+    },
+    "products": {
+      "kicker": "Our product lines",
+      "title": "Everything your teams need, sourced at the factory."
+    },
+    "how": {
+      "kicker": "How it works",
+      "title": "From your request to your door in 5 steps.",
+      "link": "See the full process"
+    },
+    "why": {
+      "kicker": "Why choose NovaBridge",
+      "title": "Sourcing with the rigor of a North American partner."
+    },
+    "markets": {
+      "kicker": "Our markets",
+      "title": "Serving businesses on four continents."
+    },
+    "network": {
+      "kicker": "Our sourcing network",
+      "title": "Five of China’s top production hubs.",
+      "imageAlt": "Container ship at port"
+    },
+    "news": {
+      "kicker": "Latest news",
+      "title": "News & announcements",
+      "link": "All news"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "About NovaBridge",
+      "subtitle": "A Dallas-based sourcing company bridging China’s top factories and businesses on four continents."
+    },
+    "values": {
+      "kicker": "Mission, vision & values",
+      "title": "Built on trust, rigor and quality."
+    },
+    "mission": {
+      "title": "Our mission",
+      "text": "Make international sourcing simple for businesses, with direct, reliable and transparent access to industrial production."
+    },
+    "vision": {
+      "title": "Our vision",
+      "text": "Become the reference B2B sourcing partner between Asia and four continents, recognized for its rigor and quality."
+    },
+    "facilities": {
+      "imageAlt": "Warehouse operations",
+      "kicker": "Manufacturing facilities",
+      "title": "Based in China’s top production hubs.",
+      "team": "Multilingual team:",
+      "cta": "Talk to our team"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Let’s talk about your sourcing needs.",
+      "subtitle": "A question about a product, a delivery or a partnership? Our multilingual team answers quickly."
+    },
+    "email": "E-mail",
+    "website": "Website",
+    "headquarters": "Headquarters",
+    "languages": "Languages",
+    "sent": {
+      "title": "Message sent",
+      "text": "Thank you — our team will get back to you shortly.",
+      "again": "Send another message"
+    },
+    "form": {
+      "title": "Send us a message",
+      "subject": "Subject",
+      "error": "Please complete all fields with a valid e-mail.",
+      "submit": "Send message",
+      "quoteLink": "Need pricing? Request a quote instead"
+    }
+  },
+  "how": {
+    "hero": {
+      "title": "Simple, transparent, from quote to delivery.",
+      "subtitle": "Five clear steps. A detailed quote in 24 hours, QC photos before shipment, and DDP delivery to your door."
+    },
+    "commitments": {
+      "imageAlt": "Quality inspection of technical specifications",
+      "kicker": "Our commitments",
+      "title": "What you can count on.",
+      "cta": "Start with step 01"
+    }
+  },
+  "markets": {
+    "hero": {
+      "title": "Four continents. One trusted sourcing partner.",
+      "subtitle": "From Dallas to Lubumbashi, we deliver factory-direct products to businesses across the USA, Canada, Europe and Africa."
+    },
+    "locations": "Locations",
+    "sectors": "Key sectors",
+    "logistics": {
+      "kicker": "Shipping & logistics",
+      "title": "DDP delivery: customs & freight included.",
+      "text": "You receive your goods at your door, with no surprise at customs. We choose the right route for each order.",
+      "cta": "Get a delivered price",
+      "imageAlt": "Trucks at a logistics hub"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "The latest from NovaBridge.",
+      "subtitle": "Product updates, logistics news and offers from our team."
+    },
+    "categories": {
+      "All": "All",
+      "News": "News",
+      "Product": "Product",
+      "Logistics": "Logistics",
+      "Offer": "Offer"
+    },
+    "featured": "Featured",
+    "readMore": "Read more",
+    "empty": "No announcements in this category yet.",
+    "notFound": "Announcement not found",
+    "back": "Back to news"
+  },
+  "notFound": {
+    "kicker": "Error 404",
+    "title": "This page took a different route.",
+    "text": "The page you are looking for does not exist or has moved."
+  },
+  "products": {
+    "hero": {
+      "title": "Factory-direct products for every industry.",
+      "subtitle": "PPE & safety, healthcare, apparel & uniforms, corporate & promotional products — with custom branding, low MOQ and DDP delivery."
+    },
+    "hub": "Hub",
+    "details": "View details",
+    "also": {
+      "kicker": "Also available",
+      "title": "Logistics & manufacturing options"
+    }
+  },
+  "productDetail": {
+    "kicker": "Product line",
+    "items": "Products we source",
+    "industries": "Industries served",
+    "included": "Included with every order",
+    "need": "Need {{name}}?",
+    "needText": "Tell us your product, quantity & specs — detailed quote in 24h.",
+    "notFound": "Product line not found",
+    "back": "Back to products"
+  },
+  "quote": {
+    "hero": {
+      "kicker": "Free quote",
+      "title": "Get your free quote in 24 hours.",
+      "subtitle": "Tell us your product, quantity & specs. We reply with a detailed quote, pricing and timeline."
+    },
+    "sent": {
+      "title": "Thank you, {{name}}!",
+      "p1": "Your request",
+      "p2": "has been received. Our team will send you a detailed quote within 24 hours at",
+      "p3": ".",
+      "again": "Send another request"
+    },
+    "form": {
+      "title": "Your request",
+      "required": "Fields marked * are required.",
+      "companySection": "Your company",
+      "company": "Company",
+      "email": "Business e-mail",
+      "emailPlaceholder": "name@company.com",
+      "phone": "Phone / WhatsApp",
+      "country": "Delivery country",
+      "productsSection": "Your products",
+      "productLine": "Product line",
+      "otherLine": "Other / not listed",
+      "quantity": "Quantity (units)",
+      "product": "Product & specifications",
+      "productPlaceholder": "e.g. Hi-Vis coveralls, sizes M–XXL, reflective tape",
+      "delivery": "Delivery speed",
+      "standard": "Standard (sea / DDP)",
+      "express": "Express (DHL / FedEx)",
+      "branding": "Custom branding (my logo on the products)",
+      "messagePlaceholder": "Colors, packaging, target date, references…",
+      "error": "Please complete all required fields with valid information.",
+      "submit": "Send my quote request"
+    },
+    "next": "What happens next",
+    "preferEmail": "Prefer e-mail?",
+    "teamSpeaks": "Our team speaks {{languages}}."
+  },
+  "cookies": {
+    "banner": {
+      "aria": "Cookie consent",
+      "title": "We value your privacy",
+      "text": "We use cookies and similar technologies to make this site work, remember your preferences and — only with your consent — measure audience and personalize content. You can accept, refuse or choose by category, and change your mind at any time.",
+      "policy": "Read our cookie policy",
+      "customize": "Customize",
+      "reject": "Reject all",
+      "accept": "Accept all"
+    },
+    "settings": {
+      "title": "Cookie preferences",
+      "intro": "Choose which categories of cookies you allow. Strictly necessary cookies are always active because the site cannot work without them.",
+      "close": "Close",
+      "alwaysActive": "Always active",
+      "show": "Show cookies ({{n}})",
+      "hide": "Hide cookies ({{n}})",
+      "none": "No cookies are used in this category at the moment.",
+      "reject": "Reject all",
+      "accept": "Accept all",
+      "save": "Save my choices"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strictly necessary",
+        "description": "Essential for the site to function: saving your cookie choice, sending quote and contact forms, securing the administration area. They cannot be disabled."
+      },
+      "preferences": {
+        "name": "Preferences",
+        "description": "Remember your settings, such as your preferred language, so you don’t have to choose it again on your next visit."
+      },
+      "analytics": {
+        "name": "Analytics",
+        "description": "Help us understand how visitors use the site (pages viewed, time spent) so we can improve it. Data is aggregated."
+      },
+      "marketing": {
+        "name": "Marketing",
+        "description": "Used to show you relevant ads and measure the effectiveness of our campaigns on other websites."
+      }
+    },
+    "table": {
+      "name": "Name",
+      "provider": "Provider",
+      "storage": "Type",
+      "duration": "Duration",
+      "purpose": "Purpose"
+    },
+    "storage": {
+      "cookie": "Cookie",
+      "localStorage": "Local storage",
+      "sessionStorage": "Session storage"
+    },
+    "duration": {
+      "session": "Session",
+      "persistent": "Until deleted",
+      "days": "{{n}} days",
+      "months": "{{n}} months",
+      "years": "{{n}} years"
+    },
+    "purposes": {
+      "consent": "Stores your cookie choices",
+      "forms": "Keeps your quote and contact requests",
+      "admin": "Keeps the administrator signed in",
+      "language": "Remembers your preferred language",
+      "analytics": "Audience measurement"
+    },
+    "policy": {
+      "kicker": "Privacy",
+      "title": "Cookie policy",
+      "subtitle": "What cookies we use, why, and how you can control them at any time.",
+      "what": {
+        "title": "What is a cookie?",
+        "text": "A cookie is a small text file stored on your device when you visit a website. Similar technologies, such as the browser’s local storage, work the same way. They allow a site to remember information about your visit."
+      },
+      "how": {
+        "title": "How we use them",
+        "text": "NovaBridge only uses the cookies strictly necessary for the site to work without your consent. All other categories are disabled by default and only activated if you accept them. The list below is always up to date with the cookies actually used on this site."
+      },
+      "categoriesTitle": "Cookies used on this site",
+      "browser": {
+        "title": "Managing cookies in your browser",
+        "text": "You can also block or delete cookies from your browser settings. Blocking strictly necessary cookies may prevent some features, such as the quote form, from working properly."
+      },
+      "manage": {
+        "title": "Your choices",
+        "button": "Manage my cookie preferences"
+      },
+      "status": {
+        "none": "You have not made a choice yet.",
+        "given": "Choice saved on {{date}}. You can change it at any time.",
+        "on": "Accepted",
+        "off": "Refused"
+      },
+      "contact": "Questions about your data? Write to us:"
+    }
+  }
+}

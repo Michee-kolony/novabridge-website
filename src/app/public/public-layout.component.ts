@@ -1,0 +1,159 @@
+import { Component, HostListener, computed, inject, signal } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter, map } from 'rxjs';
+import { COMPANY } from '../core/data/company';
+import { StoreService } from '../core/services/store.service';
+import { CookieConsentService } from '../core/cookies/cookie-consent.service';
+import { LanguageService } from '../core/services/language.service';
+
+@Component({
+  selector: 'nb-public-layout',
+  standalone: false,
+  template: `
+  <!-- ===== En-tête ===== -->
+  <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+          [class]="solid() ? 'bg-white/95 shadow-nb backdrop-blur' : 'bg-transparent'">
+    <div class="container-nb flex h-20 items-center justify-between">
+      <a routerLink="/" class="flex items-center" [attr.aria-label]="'nav.homeAria' | translate">
+        <img [src]="solid() ? 'logos/logo-horizontal-couleur.svg' : 'logos/logo-horizontal-negatif-transparent.svg'"
+             alt="NovaBridge Global Supply LLC" class="h-12 w-auto">
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" [attr.aria-label]="'nav.main' | translate">
+        @for (l of links; track l.path) {
+          <a [routerLink]="l.path" routerLinkActive="!text-gold" [routerLinkActiveOptions]="{ exact: l.path === '/' }"
+             class="text-sm font-semibold transition-colors hover:text-gold"
+             [class]="solid() ? 'text-navy' : 'text-white'">{{ l.label | translate }}</a>
+        }
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <nb-language-switcher class="hidden lg:block" [light]="!solid()" />
+        <a routerLink="/quote" class="btn btn-gold hidden sm:inline-flex">{{ 'nav.quote' | translate }}</a>
+        <button class="rounded p-2 lg:hidden" [class]="solid() ? 'text-navy' : 'text-white'"
+                (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" [attr.aria-label]="'nav.menu' | translate">
+          <nb-icon [name]="menuOpen() ? 'close' : 'menu'" class="h-7 w-7" />
+        </button>
+      </div>
+    </div>
+
+    @if (menuOpen()) {
+      <nav class="border-t border-mist bg-white lg:hidden" [attr.aria-label]="'nav.mobile' | translate">
+        <div class="container-nb flex flex-col py-4">
+          @for (l of links; track l.path) {
+            <a [routerLink]="l.path" (click)="menuOpen.set(false)" class="border-b border-mist py-3 font-semibold text-navy">{{ l.label | translate }}</a>
+          }
+          <nb-language-switcher variant="inline" class="mt-4 block" />
+          <a routerLink="/quote" (click)="menuOpen.set(false)" class="btn btn-gold mt-4 justify-center">{{ 'nav.quote' | translate }}</a>
+        </div>
+      </nav>
+    }
+  </header>
+
+  <main [class.pt-20]="!isHome()">
+    <router-outlet />
+  </main>
+
+  <!-- ===== Appel à l'action ===== -->
+  <section class="bg-ivory">
+    <div class="container-nb py-16">
+      <div class="relative overflow-hidden rounded-2xl bg-navy px-8 py-12 md:px-14">
+        <svg class="pointer-events-none absolute -right-10 bottom-0 h-full opacity-60" viewBox="0 0 400 220" aria-hidden="true">
+          <g fill="none" stroke="#C9A24B"><path d="M40 230A170 170 0 0 1 380 230" stroke-width="1.6"/><path d="M90 230A120 120 0 0 1 330 230" opacity=".45"/><path d="M140 230A70 70 0 0 1 280 230" opacity=".25"/></g>
+        </svg>
+        <div class="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <p class="overline !text-gold">{{ 'cta.kicker' | translate }}</p>
+            <h2 class="mt-2 font-display text-3xl font-extrabold text-white md:text-4xl">{{ 'cta.title' | translate }} <span class="text-gold">{{ 'cta.titleHighlight' | translate }}</span></h2>
+          </div>
+          <a routerLink="/quote" class="btn btn-gold text-base">{{ 'common.requestQuote' | translate }} <nb-icon name="arrow" class="h-5 w-5" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="bg-navy text-[#C9D3E0]">
+    <div class="container-nb grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <img src="logos/logo-horizontal-negatif-transparent.svg" alt="NovaBridge Global Supply LLC" class="h-14 w-auto">
+        <p class="mt-5 text-sm leading-relaxed">{{ 'footer.about' | translate: { tagline: company().tagline } }}</p>
+        <p class="mt-4 font-display text-sm font-semibold text-gold">{{ company().slogan }}</p>
+      </div>
+      <div>
+        <h3 class="footer-title">{{ 'footer.products' | translate }}</h3>
+        <ul class="space-y-2 text-sm">
+          @for (p of products(); track p.slug) {
+            <li><a [routerLink]="['/products', p.slug]" class="hover:text-gold">{{ p.name }}</a></li>
+          }
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">{{ 'footer.company' | translate }}</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a routerLink="/about" class="hover:text-gold">{{ 'footer.aboutUs' | translate }}</a></li>
+          <li><a routerLink="/how-it-works" class="hover:text-gold">{{ 'nav.howItWorks' | translate }}</a></li>
+          <li><a routerLink="/markets" class="hover:text-gold">{{ 'nav.markets' | translate }}</a></li>
+          <li><a routerLink="/news" class="hover:text-gold">{{ 'nav.news' | translate }}</a></li>
+          <li><a routerLink="/contact" class="hover:text-gold">{{ 'nav.contact' | translate }}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-title">{{ 'nav.contact' | translate }}</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex gap-3"><nb-icon name="mail" class="h-5 w-5 text-white" /><a [href]="'mailto:' + company().email" class="hover:text-gold">{{ company().email }}</a></li>
+          <li class="flex gap-3"><nb-icon name="globe" class="h-5 w-5 text-white" /><a [href]="company().websiteUrl" target="_blank" rel="noopener" class="hover:text-gold">{{ company().website }}</a></li>
+          <li class="flex gap-3"><nb-icon name="pin" class="h-5 w-5 text-white" />{{ company().location }}</li>
+          <li class="flex gap-3"><nb-icon name="chat" class="h-5 w-5 text-white" />{{ company().languages.join(' · ') }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-nb flex flex-col items-center justify-between gap-3 py-6 text-xs text-[#8FA0B8] md:flex-row">
+        <div class="flex flex-col items-center gap-1 md:items-start">
+          <span>© {{ year }} {{ company().name }}. {{ 'footer.rights' | translate }}</span>
+          <span>{{ 'footer.developedBy' | translate: { name: 'AyemTech' } }}</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <a routerLink="/cookies" class="hover:text-gold">{{ 'footer.cookiePolicy' | translate }}</a>
+          <button type="button" class="hover:text-gold" (click)="consent.openSettings()">{{ 'footer.cookieSettings' | translate }}</button>
+          <a routerLink="/admin" class="hover:text-gold">{{ 'footer.admin' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Retour en haut & cookies ===== -->
+  <nb-back-to-top />
+  <nb-cookie-banner />
+  <nb-cookie-settings />
+  `,
+})
+export class PublicLayoutComponent {
+  private lang = inject(LanguageService);
+  readonly company = computed(() => this.lang.obj('data.company', COMPANY));
+  readonly store = inject(StoreService);
+  readonly consent = inject(CookieConsentService);
+  readonly products = computed(() => this.store.visibleProducts().map(p => this.lang.product(p)));
+  readonly year = new Date().getFullYear();
+  readonly links = [
+    { path: '/', label: 'nav.home' },
+    { path: '/products', label: 'nav.products' },
+    { path: '/markets', label: 'nav.markets' },
+    { path: '/how-it-works', label: 'nav.howItWorks' },
+    { path: '/about', label: 'nav.about' },
+    { path: '/news', label: 'nav.news' },
+    { path: '/contact', label: 'nav.contact' },
+  ];
+
+  private router = inject(Router);
+  private url = toSignal(this.router.events.pipe(filter(e => e instanceof NavigationEnd), map(() => this.router.url)), { initialValue: this.router.url });
+  readonly isHome = computed(() => this.url().split(/[?#]/)[0] === '/');
+  readonly scrolled = signal(false);
+  readonly menuOpen = signal(false);
+  readonly solid = computed(() => !this.isHome() || this.scrolled() || this.menuOpen());
+
+  @HostListener('window:scroll')
+  onScroll() { this.scrolled.set(window.scrollY > 40); }
+}

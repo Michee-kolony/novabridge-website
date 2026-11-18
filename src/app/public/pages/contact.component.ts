@@ -1,0 +1,100 @@
+import { Component, computed, inject, signal } from '@angular/core';
+import { LanguageService } from '../../core/services/language.service';
+
+import { FormBuilder, Validators } from '@angular/forms';
+import { COMPANY, MARKETS, img } from '../../core/data/company';
+import { StoreService } from '../../core/services/store.service';
+
+@Component({
+  selector: 'nb-contact',
+  standalone: false,
+  template: `
+  <nb-page-hero [kicker]="'nav.contact' | translate" [title]="'contact.hero.title' | translate"
+    [subtitle]="'contact.hero.subtitle' | translate" image="photo-1572021335469-31706a17aaef" />
+
+  <section class="section">
+    <div class="container-nb grid gap-12 lg:grid-cols-5">
+      <div class="space-y-5 lg:col-span-2" nbReveal="left">
+        <a [href]="'mailto:' + company().email" class="card-nb flex items-center gap-5 transition hover:border-gold">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="mail" class="h-6 w-6" /></div>
+          <div><div class="overline">{{ 'contact.email' | translate }}</div><div class="font-semibold text-navy">{{ company().email }}</div></div>
+        </a>
+        <a [href]="company().websiteUrl" target="_blank" rel="noopener" class="card-nb flex items-center gap-5 transition hover:border-gold">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="globe" class="h-6 w-6" /></div>
+          <div><div class="overline">{{ 'contact.website' | translate }}</div><div class="font-semibold text-navy">{{ company().website }}</div></div>
+        </a>
+        <div class="card-nb flex items-center gap-5">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="pin" class="h-6 w-6" /></div>
+          <div><div class="overline">{{ 'contact.headquarters' | translate }}</div><div class="font-semibold text-navy">{{ company().location }}</div></div>
+        </div>
+        <div class="card-nb flex items-center gap-5">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="chat" class="h-6 w-6" /></div>
+          <div><div class="overline">{{ 'contact.languages' | translate }}</div><div class="font-semibold text-navy">{{ company().languages.join(' · ') }}</div></div>
+        </div>
+        <div class="overflow-hidden rounded-xl">
+          <iframe title="Dallas, Texas" class="h-64 w-full border-0" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-97.05%2C32.65%2C-96.55%2C32.95&layer=mapnik"></iframe>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3" nbReveal="right">
+        @if (sent()) {
+          <div class="rounded-2xl border-t-[3px] border-gold bg-ivory p-10 text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-navy text-white"><nb-icon name="check" class="h-8 w-8" /></div>
+            <h2 class="h3 mt-6">{{ 'contact.sent.title' | translate }}</h2>
+            <p class="mt-3">{{ 'contact.sent.text' | translate }}</p>
+            <button class="btn btn-outline mt-8" (click)="sent.set(false)">{{ 'contact.sent.again' | translate }}</button>
+          </div>
+        } @else {
+          <form [formGroup]="form" (ngSubmit)="submit()" class="card-nb !p-8 md:!p-10" novalidate>
+            <h2 class="h3">{{ 'contact.form.title' | translate }}</h2>
+            <div class="mt-8 grid gap-5 md:grid-cols-2">
+              <label class="field"><span>{{ 'form.fullName' | translate }} *</span><input class="input" formControlName="name" autocomplete="name"></label>
+              <label class="field"><span>{{ 'contact.email' | translate }} *</span><input class="input" type="email" formControlName="email" autocomplete="email"></label>
+              <label class="field md:col-span-2"><span>{{ 'contact.form.subject' | translate }} *</span><input class="input" formControlName="subject"></label>
+              <label class="field md:col-span-2"><span>{{ 'form.message' | translate }} *</span><textarea class="input min-h-[160px]" formControlName="message"></textarea></label>
+            </div>
+            @if (error()) { <p class="mt-6 rounded-lg bg-red-50 p-4 text-sm font-medium text-danger" role="alert">{{ 'contact.form.error' | translate }}</p> }
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <button type="submit" class="btn btn-primary">{{ 'contact.form.submit' | translate }} <nb-icon name="arrow" class="h-5 w-5" /></button>
+              <a routerLink="/quote" class="link-arrow">{{ 'contact.form.quoteLink' | translate }}</a>
+            </div>
+          </form>
+        }
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          @for (m of markets(); track m.id) {
+            <div class="flex items-center gap-4 rounded-xl border border-mist p-4">
+              <img [src]="img(m.image, 160, 160)" alt="" class="h-14 w-14 rounded-lg object-cover" loading="lazy">
+              <div><div class="font-display font-bold text-navy">{{ m.name }}</div><div class="text-xs text-steel">{{ m.cities.join(' · ') }}</div></div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  `,
+})
+export class ContactComponent {
+  private store = inject(StoreService);
+  private fb = inject(FormBuilder);
+  private lang = inject(LanguageService);
+  readonly company = computed(() => this.lang.obj('data.company', COMPANY));
+  readonly markets = computed(() => this.lang.list('data.markets', MARKETS));
+  readonly img = img;
+  readonly sent = signal(false);
+  readonly error = signal(false);
+  readonly form = this.fb.nonNullable.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
+  });
+
+  submit() {
+    if (this.form.invalid) { this.form.markAllAsTouched(); this.error.set(true); return; }
+    this.error.set(false);
+    this.store.addMessage(this.form.getRawValue());
+    this.form.reset();
+    this.sent.set(true);
+  }
+}

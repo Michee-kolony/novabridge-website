@@ -1,0 +1,686 @@
+{
+  "titles": {
+    "home": "NovaBridge Global Supply LLC — 从中国直采，服务全球",
+    "products": "产品 — NovaBridge",
+    "productDetail": "产品系列 — NovaBridge",
+    "markets": "市场 — NovaBridge",
+    "howItWorks": "合作流程 — NovaBridge",
+    "about": "关于我们 — NovaBridge",
+    "news": "新闻 — NovaBridge",
+    "quote": "免费报价 — NovaBridge",
+    "contact": "联系我们 — NovaBridge",
+    "notFound": "页面未找到 — NovaBridge",
+    "cookies": "Cookie 政策 — NovaBridge"
+  },
+  "lang": {
+    "choose": "选择语言"
+  },
+  "nav": {
+    "homeAria": "NovaBridge — 首页",
+    "main": "主导航",
+    "mobile": "移动端导航",
+    "menu": "菜单",
+    "quote": "获取免费报价",
+    "home": "首页",
+    "products": "产品",
+    "markets": "市场",
+    "howItWorks": "合作流程",
+    "about": "关于我们",
+    "news": "新闻",
+    "contact": "联系我们"
+  },
+  "common": {
+    "requestQuote": "申请报价",
+    "backHome": "返回首页",
+    "backToTop": "返回顶部"
+  },
+  "form": {
+    "fullName": "姓名",
+    "message": "留言"
+  },
+  "cta": {
+    "kicker": "准备好更明智地采购了吗？",
+    "title": "免费报价，",
+    "titleHighlight": "24 小时内送达。"
+  },
+  "footer": {
+    "about": "{{tagline}}。工厂直供价格，北美服务标准。",
+    "products": "产品",
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "rights": "保留所有权利。",
+    "admin": "管理后台",
+    "cookiePolicy": "Cookie 政策",
+    "cookieSettings": "Cookie 设置",
+    "developedBy": "由 {{name}} 开发"
+  },
+  "home": {
+    "hero": {
+      "kicker": "直采合作伙伴 · 中国 → 全球",
+      "line1": "工厂直供，",
+      "line2": "送货上门。",
+      "text": "劳保防护用品、医疗用品、制服及企业礼品——源自中国顶尖生产基地，经过质量检验，以 DDP 方式送达美国、加拿大、欧洲和非洲。",
+      "cta": "24 小时内获取免费报价",
+      "ctaSecondary": "查看产品系列"
+    },
+    "who": {
+      "kicker": "关于我们",
+      "title": "连接中国工厂与您企业的直通桥梁。",
+      "link": "进一步了解 NovaBridge",
+      "imageAlt": "货架整齐的仓库",
+      "qcTitle": "质检照片",
+      "qcText": "每批发货前提供"
+    },
+    "products": {
+      "kicker": "我们的产品系列",
+      "title": "您团队所需的一切，源头工厂直采。"
+    },
+    "how": {
+      "kicker": "合作流程",
+      "title": "从需求到交付，仅需 5 步。",
+      "link": "查看完整流程"
+    },
+    "why": {
+      "kicker": "为什么选择 NovaBridge",
+      "title": "以北美合作伙伴的严谨标准进行采购。"
+    },
+    "markets": {
+      "kicker": "我们的市场",
+      "title": "服务四大洲的企业客户。"
+    },
+    "network": {
+      "kicker": "我们的采购网络",
+      "title": "覆盖中国五大顶尖生产基地。",
+      "imageAlt": "停靠港口的集装箱船"
+    },
+    "news": {
+      "kicker": "最新动态",
+      "title": "新闻与公告",
+      "link": "全部新闻"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "关于 NovaBridge",
+      "subtitle": "一家总部位于达拉斯的采购公司，连接中国顶尖工厂与四大洲的企业。"
+    },
+    "values": {
+      "kicker": "使命、愿景与价值观",
+      "title": "以信任、严谨和品质为基石。"
+    },
+    "mission": {
+      "title": "我们的使命",
+      "text": "让企业的国际采购变得简单，提供直接、可靠、透明的工业生产渠道。"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "text": "成为连接亚洲与四大洲的标杆 B2B 采购合作伙伴，以严谨和品质著称。"
+    },
+    "facilities": {
+      "imageAlt": "仓库作业",
+      "kicker": "生产基地",
+      "title": "扎根中国顶尖生产基地。",
+      "team": "多语种团队：",
+      "cta": "联系我们的团队"
+    },
+    "valuesList": [
+      {
+        "t": "信任",
+        "d": "报价清晰，信守承诺，每批发货前提供质检照片。"
+      },
+      {
+        "t": "严谨",
+        "d": "从下单到 DDP 交付，流程精准规范。"
+      },
+      {
+        "t": "可靠",
+        "d": "交期可控——平均 3 至 4 周。"
+      },
+      {
+        "t": "品质",
+        "d": "精选工厂，每批货物均经过系统检验。"
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "title": "聊聊您的采购需求。",
+      "subtitle": "对产品、交付或合作有疑问？我们的多语种团队将迅速为您解答。"
+    },
+    "email": "电子邮件",
+    "website": "网站",
+    "headquarters": "总部",
+    "languages": "语言",
+    "sent": {
+      "title": "消息已发送",
+      "text": "感谢您的留言——我们的团队将尽快回复您。",
+      "again": "再发一条消息"
+    },
+    "form": {
+      "title": "给我们留言",
+      "subject": "主题",
+      "error": "请填写所有字段并提供有效的电子邮件地址。",
+      "submit": "发送消息",
+      "quoteLink": "需要价格？请直接申请报价"
+    }
+  },
+  "how": {
+    "hero": {
+      "title": "从报价到交付，简单透明。",
+      "subtitle": "五个清晰步骤：24 小时内提供详细报价，发货前提供质检照片，DDP 送货上门。"
+    },
+    "commitments": {
+      "imageAlt": "技术规格质量检验",
+      "kicker": "我们的承诺",
+      "title": "您可以信赖的保障。",
+      "cta": "从第 01 步开始"
+    },
+    "details": [
+      "使用我们的报价表单或发送邮件，告知产品型号、数量、尺码、颜色及定制需求。",
+      "24 小时内，您将收到包含价格和生产周期的详细报价。",
+      "确认订单并支付 50% 定金，工厂即开始生产。",
+      "工厂按单生产，每批发货前我们都会向您发送质检照片。",
+      "货物以 DDP 方式交付——含清关和运费。届时支付尾款即可。"
+    ]
+  },
+  "markets": {
+    "hero": {
+      "title": "四大洲，一个值得信赖的采购伙伴。",
+      "subtitle": "从达拉斯到卢本巴希，我们为美国、加拿大、欧洲和非洲的企业提供工厂直供产品。"
+    },
+    "locations": "覆盖地区",
+    "sectors": "重点行业",
+    "logistics": {
+      "kicker": "运输与物流",
+      "title": "DDP 交付：含清关与运费。",
+      "text": "货物直接送到您手中，清关无意外。我们为每笔订单选择最合适的运输路线。",
+      "cta": "获取到岸价格",
+      "imageAlt": "物流中心的卡车"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "NovaBridge 最新动态。",
+      "subtitle": "来自我们团队的产品更新、物流资讯和优惠信息。"
+    },
+    "categories": {
+      "All": "全部",
+      "News": "新闻",
+      "Product": "产品",
+      "Logistics": "物流",
+      "Offer": "优惠"
+    },
+    "featured": "精选",
+    "readMore": "阅读全文",
+    "empty": "该分类下暂无公告。",
+    "notFound": "未找到该公告",
+    "back": "返回新闻列表"
+  },
+  "notFound": {
+    "kicker": "错误 404",
+    "title": "此页面走了另一条路线。",
+    "text": "您访问的页面不存在或已被移动。"
+  },
+  "products": {
+    "hero": {
+      "title": "工厂直供，覆盖各行各业。",
+      "subtitle": "劳保与安全、医疗、服装与制服、企业及促销礼品——支持定制品牌、低起订量和 DDP 交付。"
+    },
+    "hub": "产地",
+    "details": "查看详情",
+    "also": {
+      "kicker": "更多服务",
+      "title": "物流与生产选项"
+    }
+  },
+  "productDetail": {
+    "kicker": "产品系列",
+    "items": "我们采购的产品",
+    "industries": "服务行业",
+    "included": "每笔订单均包含",
+    "need": "需要{{name}}产品？",
+    "needText": "告诉我们产品、数量和规格——24 小时内提供详细报价。",
+    "notFound": "未找到该产品系列",
+    "back": "返回产品列表",
+    "features": [
+      "工厂直供价格",
+      "品牌定制——印上您的标志",
+      "低起订量，50–100 件起",
+      "发货前提供质检照片",
+      "DDP 交付——含清关和运费"
+    ]
+  },
+  "quote": {
+    "hero": {
+      "kicker": "免费报价",
+      "title": "24 小时内获取免费报价。",
+      "subtitle": "告诉我们您的产品、数量和规格，我们将回复详细报价、价格及交期。"
+    },
+    "sent": {
+      "title": "谢谢您，{{name}}！",
+      "p1": "您的询价",
+      "p2": "已收到。我们的团队将在 24 小时内把详细报价发送至",
+      "p3": "。",
+      "again": "再提交一份询价"
+    },
+    "form": {
+      "title": "您的询价",
+      "required": "标有 * 的为必填项。",
+      "companySection": "公司信息",
+      "company": "公司名称",
+      "email": "企业邮箱",
+      "emailPlaceholder": "name@company.com",
+      "phone": "电话 / WhatsApp",
+      "country": "交货国家",
+      "productsSection": "产品信息",
+      "productLine": "产品系列",
+      "otherLine": "其他 / 未列出",
+      "quantity": "数量（件）",
+      "product": "产品与规格",
+      "productPlaceholder": "例如：高可视反光连体服，M–XXL 码，带反光条",
+      "delivery": "运输方式",
+      "standard": "标准（海运 / DDP）",
+      "express": "快递（DHL / FedEx）",
+      "branding": "品牌定制（在产品上印制我的标志）",
+      "messagePlaceholder": "颜色、包装、期望交期、参考款式……",
+      "error": "请正确填写所有必填项。",
+      "submit": "提交询价"
+    },
+    "next": "接下来的流程",
+    "preferEmail": "更喜欢用邮件？",
+    "teamSpeaks": "我们的团队使用{{languages}}。",
+    "countries": [
+      "美国",
+      "加拿大",
+      "意大利",
+      "法国",
+      "比利时",
+      "西欧（其他）",
+      "刚果（金）",
+      "南非",
+      "非洲（其他）",
+      "其他"
+    ]
+  },
+  "data": {
+    "company": {
+      "tagline": "您从中国到全球的直采合作伙伴",
+      "slogan": "连接世界，传递价值。",
+      "location": "美国德克萨斯州达拉斯",
+      "intro": "NovaBridge Global Supply LLC 是一家总部位于达拉斯的公司，在中国广州、深圳、义乌、江苏和诸暨设有生产基地。我们负责采购、质检，并将产品直接交付给美国、加拿大、欧洲和非洲的企业。",
+      "promise": [
+        "没有中间商。",
+        "工厂直供价格。",
+        "北美服务标准。"
+      ],
+      "languages": [
+        "英语",
+        "法语",
+        "中文"
+      ]
+    },
+    "stats": [
+      {
+        "label": "服务大洲"
+      },
+      {
+        "label": "产品线"
+      },
+      {
+        "label": "客户平均节省"
+      },
+      {
+        "label": "平均交期",
+        "suffix": "周"
+      }
+    ],
+    "steps": [
+      {
+        "title": "联系我们",
+        "text": "告诉我们产品、数量和规格。"
+      },
+      {
+        "title": "24 小时报价",
+        "text": "提供包含价格和交期的详细报价。"
+      },
+      {
+        "title": "支付 50% 定金",
+        "text": "确认订单并支付 50% 定金启动生产。"
+      },
+      {
+        "title": "工厂生产",
+        "text": "工厂生产，并向您发送质检照片。"
+      },
+      {
+        "title": "交付",
+        "text": "DDP 送货上门，支付尾款。"
+      }
+    ],
+    "advantages": [
+      {
+        "title": "工厂直供价格",
+        "text": "工厂与您之间没有任何中间商。"
+      },
+      {
+        "title": "中国顶尖产业基地直采",
+        "text": "直达中国领先的生产中心。"
+      },
+      {
+        "title": "品牌定制",
+        "text": "每件产品都可印上您的标志。"
+      },
+      {
+        "title": "DDP 交付",
+        "text": "含清关和运费，送货上门。"
+      },
+      {
+        "title": "质检照片",
+        "text": "每批发货前提供质检照片。"
+      },
+      {
+        "title": "低起订量",
+        "text": "50–100 件起订。"
+      },
+      {
+        "title": "24 小时报价",
+        "text": "24 小时内提供详细报价。"
+      },
+      {
+        "title": "多语种团队",
+        "text": "英语、法语、中文。"
+      }
+    ],
+    "network": [
+      {
+        "place": "广州",
+        "detail": "服装、制服及劳保用品"
+      },
+      {
+        "place": "深圳",
+        "detail": "电子及科技产品"
+      },
+      {
+        "place": "义乌",
+        "detail": "促销及企业礼品"
+      },
+      {
+        "place": "江苏",
+        "detail": "工业及安全设备"
+      },
+      {
+        "place": "浙江诸暨",
+        "detail": "袜业及鞋类产业基地"
+      }
+    ],
+    "markets": [
+      {
+        "name": "美国",
+        "badge": "核心市场",
+        "cities": [
+          "德克萨斯州达拉斯"
+        ],
+        "sectors": [
+          "家庭娱乐中心",
+          "建筑",
+          "医疗",
+          "企业",
+          "石油天然气"
+        ]
+      },
+      {
+        "name": "加拿大",
+        "cities": [
+          "蒙特利尔",
+          "多伦多",
+          "温哥华"
+        ],
+        "sectors": [
+          "企业",
+          "医疗",
+          "娱乐"
+        ]
+      },
+      {
+        "name": "欧洲",
+        "cities": [
+          "意大利",
+          "西欧"
+        ],
+        "sectors": [
+          "医疗用品",
+          "劳保防护用品",
+          "企业礼品"
+        ]
+      },
+      {
+        "name": "非洲",
+        "cities": [
+          "刚果（金）",
+          "卢本巴希",
+          "南非"
+        ],
+        "sectors": [
+          "矿业劳保",
+          "建筑",
+          "医疗"
+        ]
+      }
+    ],
+    "logistics": [
+      {
+        "title": "经德班海运 → 非洲",
+        "text": "为非洲客户提供经济实惠的海运服务。"
+      },
+      {
+        "title": "DHL / FedEx 国际快递",
+        "text": "紧急订单可选择航空快递。"
+      },
+      {
+        "title": "支持贴牌及 OEM",
+        "text": "按您的规格生产您自己的品牌。"
+      }
+    ]
+  },
+  "content": {
+    "products": {
+      "ppe-safety": {
+        "name": "劳保与安全",
+        "short": "适用于严苛作业现场的防护装备。",
+        "description": "源自广州和江苏的认证级个人防护装备——专为矿业、建筑、石油天然气及工业团队打造。",
+        "items": [
+          "安全鞋（SP818、SP918）",
+          "高可视矿用连体服",
+          "反光安全背心",
+          "劳保手套",
+          "安全帽",
+          "丁腈手套",
+          "外科口罩"
+        ],
+        "industries": [
+          "矿业",
+          "建筑",
+          "石油天然气",
+          "工业"
+        ],
+        "hub": "广州 · 江苏"
+      },
+      "healthcare": {
+        "name": "医疗健康",
+        "short": "面向医疗机构的医用耗材与服装。",
+        "description": "为诊所、医院、牙科诊所和美容院提供可靠的医疗用品——每批发货前均提供质检照片。",
+        "items": [
+          "医用刷手服（女款）",
+          "丁腈检查手套",
+          "FFP2 外科口罩",
+          "急救包",
+          "医用耗材"
+        ],
+        "industries": [
+          "诊所",
+          "医院",
+          "牙科",
+          "美容院"
+        ],
+        "hub": "广州"
+      },
+      "apparel-uniforms": {
+        "name": "服装与制服",
+        "short": "品牌定制服装与员工制服。",
+        "description": "在广州和诸暨生产的定制服装和制服——您的标志、您的颜色、您的尺码，50–100 件起订。",
+        "items": [
+          "定制连帽衫及拉链卫衣",
+          "校服",
+          "餐厅围裙",
+          "酒店员工制服",
+          "定制 T 恤",
+          "品牌工作服"
+        ],
+        "industries": [
+          "学校",
+          "酒店",
+          "餐厅",
+          "水疗馆"
+        ],
+        "hub": "广州 · 诸暨"
+      },
+      "corporate-promo": {
+        "name": "企业与促销礼品",
+        "short": "承载您品牌形象的商品与礼品。",
+        "description": "来自全球最大小商品集散地义乌的促销及企业礼品——适用于活动、会议和企业馈赠。",
+        "items": [
+          "定制笔和笔记本",
+          "品牌帆布袋",
+          "定制防滑袜",
+          "活动周边商品",
+          "腕带",
+          "企业礼品套装"
+        ],
+        "industries": [
+          "世界 500 强",
+          "活动",
+          "中小企业",
+          "会议"
+        ],
+        "hub": "义乌 · 诸暨"
+      }
+    },
+    "news": {
+      "a1": {
+        "title": "2026 年公司画册现已发布",
+        "excerpt": "了解我们的四大产品系列、覆盖四大洲的市场以及从报价到 DDP 交付的合作方式。",
+        "content": "我们的 2026 年画册介绍了 NovaBridge Global Supply LLC：一家总部位于达拉斯的采购合作伙伴，在广州、深圳、义乌、江苏和诸暨设有生产基地。欢迎发送邮件索取画册，或申请 24 小时免费报价。"
+      },
+      "a2": {
+        "title": "经德班海运至非洲",
+        "excerpt": "为刚果（金）、卢本巴希和南非的客户提供经济实惠的海运服务。",
+        "content": "对于非洲订单，我们经德班港安排海运，服务整个地区的矿业劳保、建筑和医疗客户。紧急订单可通过 DHL 或 FedEx 国际快递发运。"
+      },
+      "a3": {
+        "title": "低起订量：50–100 件即可品牌定制",
+        "excerpt": "在连帽衫、T 恤、帆布袋、笔记本等产品上印制您的标志——无需大批量起订。",
+        "content": "中小企业现在可以为服装和促销礼品定制品牌，起订量低至 50–100 件。支持贴牌和 OEM。"
+      },
+      "a4": {
+        "title": "高可视矿用连体服——新一批生产",
+        "excerpt": "草稿：劳保与安全系列公告准备中。",
+        "content": "发布前待补充内容。"
+      }
+    }
+  },
+  "cookies": {
+    "banner": {
+      "aria": "Cookie 同意",
+      "title": "我们重视您的隐私",
+      "text": "我们使用 Cookie 及类似技术来保障网站正常运行、记住您的偏好设置，并在征得您同意的前提下进行访问统计和内容个性化。您可以全部接受、全部拒绝或按类别选择，并可随时更改。",
+      "policy": "查看我们的 Cookie 政策",
+      "customize": "自定义",
+      "reject": "全部拒绝",
+      "accept": "全部接受"
+    },
+    "settings": {
+      "title": "Cookie 偏好设置",
+      "intro": "请选择您允许的 Cookie 类别。必要 Cookie 始终启用，因为网站离开它们无法正常运行。",
+      "close": "关闭",
+      "alwaysActive": "始终启用",
+      "show": "查看 Cookie（{{n}}）",
+      "hide": "收起 Cookie（{{n}}）",
+      "none": "该类别目前未使用任何 Cookie。",
+      "reject": "全部拒绝",
+      "accept": "全部接受",
+      "save": "保存我的选择"
+    },
+    "categories": {
+      "necessary": {
+        "name": "必要 Cookie",
+        "description": "网站运行所必需：保存您的 Cookie 选择、提交报价和联系表单、保障管理后台安全。无法关闭。"
+      },
+      "preferences": {
+        "name": "偏好 Cookie",
+        "description": "记住您的设置（例如首选语言），下次访问时无需重新选择。"
+      },
+      "analytics": {
+        "name": "统计分析 Cookie",
+        "description": "帮助我们了解访客如何使用网站（浏览页面、停留时长），以便持续改进。数据以汇总形式处理。"
+      },
+      "marketing": {
+        "name": "营销 Cookie",
+        "description": "用于在其他网站上向您展示相关广告，并衡量我们推广活动的效果。"
+      }
+    },
+    "table": {
+      "name": "名称",
+      "provider": "提供方",
+      "storage": "类型",
+      "duration": "有效期",
+      "purpose": "用途"
+    },
+    "storage": {
+      "cookie": "Cookie",
+      "localStorage": "本地存储",
+      "sessionStorage": "会话存储"
+    },
+    "duration": {
+      "session": "会话期间",
+      "persistent": "直至删除",
+      "days": "{{n}} 天",
+      "months": "{{n}} 个月",
+      "years": "{{n}} 年"
+    },
+    "purposes": {
+      "consent": "保存您的 Cookie 选择",
+      "forms": "保存您的报价和联系请求",
+      "admin": "保持管理员登录状态",
+      "language": "记住您的首选语言",
+      "analytics": "访问统计"
+    },
+    "policy": {
+      "kicker": "隐私",
+      "title": "Cookie 政策",
+      "subtitle": "我们使用哪些 Cookie、为何使用，以及您如何随时进行管理。",
+      "what": {
+        "title": "什么是 Cookie？",
+        "text": "Cookie 是您访问网站时存储在设备上的小型文本文件。浏览器本地存储等类似技术的工作方式相同，它们使网站能够记住您访问的相关信息。"
+      },
+      "how": {
+        "title": "我们如何使用 Cookie",
+        "text": "未经您同意，NovaBridge 仅使用网站运行所必需的 Cookie。其他所有类别默认关闭，只有在您接受后才会启用。下方列表始终与本网站实际使用的 Cookie 保持一致。"
+      },
+      "categoriesTitle": "本网站使用的 Cookie",
+      "browser": {
+        "title": "在浏览器中管理 Cookie",
+        "text": "您也可以在浏览器设置中屏蔽或删除 Cookie。屏蔽必要 Cookie 可能导致报价表单等部分功能无法正常使用。"
+      },
+      "manage": {
+        "title": "您的选择",
+        "button": "管理我的 Cookie 偏好"
+      },
+      "status": {
+        "none": "您尚未做出选择。",
+        "given": "已于 {{date}} 保存您的选择，您可随时更改。",
+        "on": "已接受",
+        "off": "已拒绝"
+      },
+      "contact": "对您的数据有疑问？请联系我们："
+    }
+  }
+}

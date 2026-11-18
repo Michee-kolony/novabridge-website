@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-US" translate="no">
+<head>
+  <meta charset="utf-8">
+  <!-- Le site a ses propres traductions (EN / FR / ES / 中文) : on bloque la traduction automatique du navigateur,
+       qui modifie le DOM et casse l'affichage d'Angular (textes qui disparaissent, effet machine à écrire illisible). -->
+  <meta name="google" content="notranslate">
+  <title>NovaBridge Global Supply LLC — Direct sourcing from China to the world</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NovaBridge Global Supply LLC, Dallas, Texas: factory-direct sourcing of PPE, healthcare supplies, uniforms and corporate merchandise from China, delivered DDP to the USA, Canada, Europe and Africa.">
+  <meta name="theme-color" content="#0B1F3A">
+  <meta property="og:title" content="NovaBridge Global Supply LLC">
+  <meta property="og:description" content="Your direct sourcing partner from China to the world. Bridging Worlds. Delivering Value.">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <style>
+    #nb-splash{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;background:#0B1F3A;transition:opacity .5s ease,visibility .5s ease}
+    #nb-splash.nb-splash--hide{opacity:0;visibility:hidden;pointer-events:none}
+    #nb-splash img{width:min(240px,60vw);height:auto;animation:nb-splash-pulse 2s ease-in-out infinite}
+    #nb-splash .nb-splash-bar{width:min(160px,40vw);height:2px;border-radius:2px;background:rgba(201,162,75,.2);overflow:hidden}
+    #nb-splash .nb-splash-bar::after{content:"";display:block;width:40%;height:100%;background:#C9A24B;animation:nb-splash-load 1.2s ease-in-out infinite}
+    @keyframes nb-splash-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.85;transform:scale(.97)}}
+    @keyframes nb-splash-load{0%{transform:translateX(-100%)}100%{transform:translateX(250%)}}
+    @media (prefers-reduced-motion:reduce){#nb-splash img,#nb-splash .nb-splash-bar::after{animation:none}}
+  </style>
+</head>
+<body class="notranslate">
+  <div id="nb-splash" role="status" aria-label="Loading NovaBridge">
+    <img src="logos/logo-vertical-negatif.svg" alt="NovaBridge Global Supply LLC" width="398" height="267">
+    <div class="nb-splash-bar"></div>
+  </div>
+  <app-root></app-root>
+</body>
+</html>

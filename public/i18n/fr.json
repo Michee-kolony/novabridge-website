@@ -1,0 +1,681 @@
+{
+  "titles": {
+    "home": "NovaBridge Global Supply LLC — Approvisionnement direct de la Chine vers le monde",
+    "products": "Produits — NovaBridge",
+    "productDetail": "Gamme de produits — NovaBridge",
+    "markets": "Marchés — NovaBridge",
+    "howItWorks": "Comment ça marche — NovaBridge",
+    "about": "À propos — NovaBridge",
+    "news": "Actualités — NovaBridge",
+    "quote": "Devis gratuit — NovaBridge",
+    "contact": "Contact — NovaBridge",
+    "notFound": "Page introuvable — NovaBridge",
+    "cookies": "Politique cookies — NovaBridge"
+  },
+  "lang": {
+    "choose": "Choisir la langue"
+  },
+  "nav": {
+    "homeAria": "NovaBridge — Accueil",
+    "main": "Navigation principale",
+    "mobile": "Navigation mobile",
+    "menu": "Menu",
+    "quote": "Devis gratuit",
+    "home": "Accueil",
+    "products": "Produits",
+    "markets": "Marchés",
+    "howItWorks": "Comment ça marche",
+    "about": "À propos",
+    "news": "Actualités",
+    "contact": "Contact"
+  },
+  "common": {
+    "requestQuote": "Demander un devis",
+    "backHome": "Retour à l’accueil",
+    "backToTop": "Retour en haut"
+  },
+  "form": {
+    "fullName": "Nom complet",
+    "message": "Message"
+  },
+  "cta": {
+    "kicker": "Prêt à vous approvisionner plus intelligemment ?",
+    "title": "Recevez votre devis gratuit en",
+    "titleHighlight": "24 heures."
+  },
+  "footer": {
+    "about": "{{tagline}}. Prix directs usine, standards de service nord-américains.",
+    "products": "Produits",
+    "company": "Entreprise",
+    "aboutUs": "À propos de nous",
+    "rights": "Tous droits réservés.",
+    "admin": "Administration",
+    "cookiePolicy": "Politique cookies",
+    "cookieSettings": "Gérer les cookies",
+    "developedBy": "Développé par {{name}}"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Partenaire d’approvisionnement direct · Chine → Monde",
+      "line1": "Approvisionnement direct d’usine,",
+      "line2": "livré à votre porte.",
+      "text": "EPI, fournitures médicales, uniformes et articles promotionnels — fabriqués dans les principaux pôles de production chinois, contrôlés et livrés DDP aux États-Unis, au Canada, en Europe et en Afrique.",
+      "cta": "Votre devis gratuit en 24 h",
+      "ctaSecondary": "Voir les gammes de produits"
+    },
+    "who": {
+      "kicker": "Qui sommes-nous",
+      "title": "Le pont direct entre les usines chinoises et votre entreprise.",
+      "link": "En savoir plus sur NovaBridge",
+      "imageAlt": "Entrepôt aux étagères remplies",
+      "qcTitle": "Photos de contrôle qualité",
+      "qcText": "avant chaque expédition"
+    },
+    "products": {
+      "kicker": "Nos gammes de produits",
+      "title": "Tout ce dont vos équipes ont besoin, directement à l’usine."
+    },
+    "how": {
+      "kicker": "Comment ça marche",
+      "title": "De votre demande à votre porte en 5 étapes.",
+      "link": "Voir tout le processus"
+    },
+    "why": {
+      "kicker": "Pourquoi choisir NovaBridge",
+      "title": "Un approvisionnement avec la rigueur d’un partenaire nord-américain."
+    },
+    "markets": {
+      "kicker": "Nos marchés",
+      "title": "Au service des entreprises sur quatre continents."
+    },
+    "network": {
+      "kicker": "Notre réseau d’approvisionnement",
+      "title": "Cinq des principaux pôles de production chinois.",
+      "imageAlt": "Porte-conteneurs au port"
+    },
+    "news": {
+      "kicker": "Dernières nouvelles",
+      "title": "Actualités & annonces",
+      "link": "Toutes les actualités"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "À propos de NovaBridge",
+      "subtitle": "Une société d’approvisionnement basée à Dallas qui relie les meilleures usines chinoises aux entreprises de quatre continents."
+    },
+    "values": {
+      "kicker": "Mission, vision & valeurs",
+      "title": "Fondée sur la confiance, la rigueur et la qualité."
+    },
+    "mission": {
+      "title": "Notre mission",
+      "text": "Simplifier l’approvisionnement international des entreprises, avec un accès direct, fiable et transparent à la production industrielle."
+    },
+    "vision": {
+      "title": "Notre vision",
+      "text": "Devenir le partenaire B2B de référence entre l’Asie et quatre continents, reconnu pour sa rigueur et sa qualité."
+    },
+    "facilities": {
+      "imageAlt": "Opérations d’entrepôt",
+      "kicker": "Sites de production",
+      "title": "Implantés dans les principaux pôles de production chinois.",
+      "team": "Équipe multilingue :",
+      "cta": "Parler à notre équipe"
+    },
+    "valuesList": [
+      {
+        "t": "Confiance",
+        "d": "Des devis clairs, des engagements tenus, des photos de contrôle avant chaque expédition."
+      },
+      {
+        "t": "Rigueur",
+        "d": "Des processus précis, de la commande à la livraison DDP."
+      },
+      {
+        "t": "Fiabilité",
+        "d": "Des délais maîtrisés — 3 à 4 semaines en moyenne."
+      },
+      {
+        "t": "Qualité",
+        "d": "Des usines sélectionnées et des contrôles systématiques sur chaque lot."
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "title": "Parlons de vos besoins d’approvisionnement.",
+      "subtitle": "Une question sur un produit, une livraison ou un partenariat ? Notre équipe multilingue vous répond rapidement."
+    },
+    "email": "E-mail",
+    "website": "Site web",
+    "headquarters": "Siège social",
+    "languages": "Langues",
+    "sent": {
+      "title": "Message envoyé",
+      "text": "Merci — notre équipe vous répondra très prochainement.",
+      "again": "Envoyer un autre message"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subject": "Objet",
+      "error": "Veuillez remplir tous les champs avec un e-mail valide.",
+      "submit": "Envoyer le message",
+      "quoteLink": "Besoin d’un prix ? Demandez plutôt un devis"
+    }
+  },
+  "how": {
+    "hero": {
+      "title": "Simple et transparent, du devis à la livraison.",
+      "subtitle": "Cinq étapes claires. Un devis détaillé en 24 heures, des photos de contrôle avant expédition et une livraison DDP à votre porte."
+    },
+    "commitments": {
+      "imageAlt": "Inspection qualité des spécifications techniques",
+      "kicker": "Nos engagements",
+      "title": "Ce sur quoi vous pouvez compter.",
+      "cta": "Commencer par l’étape 01"
+    },
+    "details": [
+      "Utilisez notre formulaire de devis ou écrivez-nous. Indiquez les références, quantités, tailles, couleurs et besoins de personnalisation.",
+      "Vous recevez sous 24 heures un devis détaillé avec les prix et le calendrier de production.",
+      "Confirmez votre commande et versez un acompte de 50 % pour lancer la production à l’usine.",
+      "L’usine fabrique votre commande. Nous vous envoyons des photos de contrôle qualité avant chaque expédition.",
+      "Vos marchandises sont livrées DDP — douane et transport inclus. Vous réglez le solde."
+    ]
+  },
+  "markets": {
+    "hero": {
+      "title": "Quatre continents. Un partenaire d’approvisionnement de confiance.",
+      "subtitle": "De Dallas à Lubumbashi, nous livrons des produits directs usine aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique."
+    },
+    "locations": "Implantations",
+    "sectors": "Secteurs clés",
+    "logistics": {
+      "kicker": "Transport & logistique",
+      "title": "Livraison DDP : douane et transport inclus.",
+      "text": "Vous recevez vos marchandises à votre porte, sans surprise à la douane. Nous choisissons le bon itinéraire pour chaque commande.",
+      "cta": "Obtenir un prix livré",
+      "imageAlt": "Camions sur une plateforme logistique"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "Les dernières nouvelles de NovaBridge.",
+      "subtitle": "Nouveautés produits, informations logistiques et offres de notre équipe."
+    },
+    "categories": {
+      "All": "Toutes",
+      "News": "Actualité",
+      "Product": "Produit",
+      "Logistics": "Logistique",
+      "Offer": "Offre"
+    },
+    "featured": "À la une",
+    "readMore": "Lire la suite",
+    "empty": "Aucune annonce dans cette catégorie pour le moment.",
+    "notFound": "Annonce introuvable",
+    "back": "Retour aux actualités"
+  },
+  "notFound": {
+    "kicker": "Erreur 404",
+    "title": "Cette page a pris un autre itinéraire.",
+    "text": "La page que vous recherchez n’existe pas ou a été déplacée."
+  },
+  "products": {
+    "hero": {
+      "title": "Des produits directs usine pour chaque secteur.",
+      "subtitle": "EPI & sécurité, santé, vêtements & uniformes, articles d’entreprise & promotionnels — avec personnalisation, faible minimum de commande et livraison DDP."
+    },
+    "hub": "Pôle",
+    "details": "Voir le détail",
+    "also": {
+      "kicker": "Également disponible",
+      "title": "Options logistiques & de fabrication"
+    }
+  },
+  "productDetail": {
+    "kicker": "Gamme de produits",
+    "items": "Produits que nous fournissons",
+    "industries": "Secteurs servis",
+    "included": "Inclus dans chaque commande",
+    "need": "Besoin de : {{name}} ?",
+    "needText": "Indiquez-nous votre produit, la quantité et les spécifications — devis détaillé en 24 h.",
+    "notFound": "Gamme de produits introuvable",
+    "back": "Retour aux produits",
+    "features": [
+      "Prix directs usine",
+      "Personnalisation — votre logo",
+      "Minimum de commande dès 50–100 unités",
+      "Photos de contrôle avant expédition",
+      "Livraison DDP — douane et transport inclus"
+    ]
+  },
+  "quote": {
+    "hero": {
+      "kicker": "Devis gratuit",
+      "title": "Recevez votre devis gratuit en 24 heures.",
+      "subtitle": "Indiquez-nous votre produit, la quantité et les spécifications. Nous vous répondons avec un devis détaillé, les prix et les délais."
+    },
+    "sent": {
+      "title": "Merci, {{name}} !",
+      "p1": "Votre demande",
+      "p2": "a bien été reçue. Notre équipe vous enverra un devis détaillé sous 24 heures à l’adresse",
+      "p3": ".",
+      "again": "Envoyer une autre demande"
+    },
+    "form": {
+      "title": "Votre demande",
+      "required": "Les champs marqués d’un * sont obligatoires.",
+      "companySection": "Votre entreprise",
+      "company": "Entreprise",
+      "email": "E-mail professionnel",
+      "emailPlaceholder": "nom@entreprise.com",
+      "phone": "Téléphone / WhatsApp",
+      "country": "Pays de livraison",
+      "productsSection": "Vos produits",
+      "productLine": "Gamme de produits",
+      "otherLine": "Autre / non listé",
+      "quantity": "Quantité (unités)",
+      "product": "Produit & spécifications",
+      "productPlaceholder": "ex. combinaisons haute visibilité, tailles M–XXL, bandes réfléchissantes",
+      "delivery": "Délai de livraison",
+      "standard": "Standard (maritime / DDP)",
+      "express": "Express (DHL / FedEx)",
+      "branding": "Personnalisation (mon logo sur les produits)",
+      "messagePlaceholder": "Couleurs, emballage, date souhaitée, références…",
+      "error": "Veuillez remplir tous les champs obligatoires avec des informations valides.",
+      "submit": "Envoyer ma demande de devis"
+    },
+    "next": "La suite",
+    "preferEmail": "Vous préférez l’e-mail ?",
+    "teamSpeaks": "Notre équipe parle {{languages}}.",
+    "countries": [
+      "États-Unis",
+      "Canada",
+      "Italie",
+      "France",
+      "Belgique",
+      "Europe de l’Ouest (autre)",
+      "RD Congo",
+      "Afrique du Sud",
+      "Afrique (autre)",
+      "Autre"
+    ]
+  },
+  "data": {
+    "company": {
+      "tagline": "Votre partenaire d’approvisionnement direct de la Chine vers le monde",
+      "slogan": "Relier les mondes. Créer de la valeur.",
+      "location": "Dallas, Texas — États-Unis",
+      "intro": "NovaBridge Global Supply LLC est une entreprise basée à Dallas, disposant de sites de production à Guangzhou, Shenzhen, Yiwu, Jiangsu et Zhuji, en Chine. Nous sélectionnons, contrôlons et livrons des produits directement aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique.",
+      "promise": [
+        "Aucun intermédiaire.",
+        "Prix directs usine.",
+        "Standards de service nord-américains."
+      ],
+      "languages": [
+        "Anglais",
+        "Français",
+        "Chinois"
+      ]
+    },
+    "stats": [
+      {
+        "label": "Continents desservis"
+      },
+      {
+        "label": "Lignes de produits"
+      },
+      {
+        "label": "Économies moyennes des clients"
+      },
+      {
+        "label": "Délai moyen",
+        "suffix": " sem."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Vous nous contactez",
+        "text": "Indiquez votre produit, la quantité et les spécifications."
+      },
+      {
+        "title": "Devis en 24 h",
+        "text": "Devis détaillé avec prix et calendrier."
+      },
+      {
+        "title": "Acompte de 50 %",
+        "text": "Confirmez et versez 50 % pour lancer la production."
+      },
+      {
+        "title": "Production",
+        "text": "L’usine produit et vous recevez les photos de contrôle."
+      },
+      {
+        "title": "Livraison",
+        "text": "DDP jusqu’à votre porte. Vous réglez le solde."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Prix directs usine",
+        "text": "Aucun intermédiaire entre l’usine et votre entreprise."
+      },
+      {
+        "title": "Approvisionnement direct dans les meilleurs pôles chinois",
+        "text": "Accès aux principaux centres de production de Chine."
+      },
+      {
+        "title": "Personnalisation",
+        "text": "Votre logo sur chaque produit."
+      },
+      {
+        "title": "Livraison DDP",
+        "text": "Douane et transport inclus, livré à votre porte."
+      },
+      {
+        "title": "Photos de contrôle qualité",
+        "text": "Photos de contrôle avant chaque expédition."
+      },
+      {
+        "title": "Faible minimum de commande",
+        "text": "À partir de 50–100 unités."
+      },
+      {
+        "title": "Devis en 24 h",
+        "text": "Un devis détaillé sous 24 heures."
+      },
+      {
+        "title": "Équipe multilingue",
+        "text": "Anglais, français, chinois."
+      }
+    ],
+    "network": [
+      {
+        "detail": "Vêtements, uniformes & EPI"
+      },
+      {
+        "detail": "Électronique & produits technologiques"
+      },
+      {
+        "detail": "Articles promotionnels & d’entreprise"
+      },
+      {
+        "detail": "Équipements industriels & de sécurité"
+      },
+      {
+        "detail": "Pôle chaussettes & chaussures"
+      }
+    ],
+    "markets": [
+      {
+        "name": "États-Unis",
+        "badge": "Marché principal",
+        "cities": [
+          "Dallas, TX"
+        ],
+        "sectors": [
+          "Centres de loisirs (FEC)",
+          "Construction",
+          "Santé",
+          "Entreprises",
+          "Pétrole & gaz"
+        ]
+      },
+      {
+        "name": "Canada",
+        "cities": [
+          "Montréal",
+          "Toronto",
+          "Vancouver"
+        ],
+        "sectors": [
+          "Entreprises",
+          "Santé",
+          "Divertissement"
+        ]
+      },
+      {
+        "name": "Europe",
+        "cities": [
+          "Italie",
+          "Europe de l’Ouest"
+        ],
+        "sectors": [
+          "Fournitures médicales",
+          "EPI",
+          "Articles d’entreprise"
+        ]
+      },
+      {
+        "name": "Afrique",
+        "cities": [
+          "RD Congo",
+          "Lubumbashi",
+          "Afrique du Sud"
+        ],
+        "sectors": [
+          "EPI minier",
+          "Construction",
+          "Médical"
+        ]
+      }
+    ],
+    "logistics": [
+      {
+        "title": "Fret maritime via Durban → Afrique",
+        "text": "Transport maritime économique pour les livraisons en Afrique."
+      },
+      {
+        "title": "DHL / FedEx Express",
+        "text": "Express aérien pour les commandes urgentes."
+      },
+      {
+        "title": "Marque propre & OEM disponibles",
+        "text": "Votre propre marque, fabriquée selon vos spécifications."
+      }
+    ]
+  },
+  "content": {
+    "products": {
+      "ppe-safety": {
+        "name": "EPI & Sécurité",
+        "short": "Équipements de protection pour les chantiers exigeants.",
+        "description": "Équipements de protection individuelle de qualité certifiée, fabriqués à Guangzhou et dans le Jiangsu — conçus pour les équipes des mines, de la construction, du pétrole & gaz et de l’industrie.",
+        "items": [
+          "Chaussures de sécurité (SP818, SP918)",
+          "Combinaisons minières haute visibilité",
+          "Gilets de sécurité",
+          "Gants de travail",
+          "Casques de chantier",
+          "Gants en nitrile",
+          "Masques chirurgicaux"
+        ],
+        "industries": [
+          "Mines",
+          "Construction",
+          "Pétrole & gaz",
+          "Industrie"
+        ],
+        "hub": "Guangzhou · Jiangsu"
+      },
+      "healthcare": {
+        "name": "Santé",
+        "short": "Consommables et tenues médicales pour les professionnels de santé.",
+        "description": "Des fournitures médicales fiables pour cliniques, hôpitaux, cabinets dentaires et salons — avec photos de contrôle qualité avant chaque expédition.",
+        "items": [
+          "Tenues médicales (femme)",
+          "Gants d’examen en nitrile",
+          "Masques chirurgicaux FFP2",
+          "Trousses de premiers secours",
+          "Consommables médicaux"
+        ],
+        "industries": [
+          "Cliniques",
+          "Hôpitaux",
+          "Dentaire",
+          "Salons"
+        ],
+        "hub": "Guangzhou"
+      },
+      "apparel-uniforms": {
+        "name": "Vêtements & Uniformes",
+        "short": "Vêtements personnalisés et uniformes du personnel.",
+        "description": "Vêtements et uniformes personnalisés fabriqués à Guangzhou et Zhuji — votre logo, vos couleurs, vos tailles, dès 50–100 unités.",
+        "items": [
+          "Sweats à capuche & zippés personnalisés",
+          "Uniformes scolaires",
+          "Tabliers de restaurant",
+          "Uniformes du personnel hôtelier",
+          "T-shirts personnalisés",
+          "Vêtements de travail à votre marque"
+        ],
+        "industries": [
+          "Écoles",
+          "Hôtels",
+          "Restaurants",
+          "Spas"
+        ],
+        "hub": "Guangzhou · Zhuji"
+      },
+      "corporate-promo": {
+        "name": "Entreprise & Promotion",
+        "short": "Articles et cadeaux à l’image de votre marque.",
+        "description": "Articles promotionnels et d’entreprise de Yiwu, le plus grand pôle mondial de petits articles — pour les événements, les conférences et les cadeaux d’affaires.",
+        "items": [
+          "Stylos & carnets personnalisés",
+          "Sacs cabas à votre marque",
+          "Chaussettes antidérapantes personnalisées",
+          "Articles pour événements",
+          "Bracelets",
+          "Coffrets cadeaux d’entreprise"
+        ],
+        "industries": [
+          "Fortune 500",
+          "Événements",
+          "PME",
+          "Conférences"
+        ],
+        "hub": "Yiwu · Zhuji"
+      }
+    },
+    "news": {
+      "a1": {
+        "title": "Le Company Portfolio 2026 est disponible",
+        "excerpt": "Découvrez nos quatre gammes de produits, nos marchés sur quatre continents et notre façon de travailler — du devis à la livraison DDP.",
+        "content": "Notre portfolio 2026 présente NovaBridge Global Supply LLC : un partenaire d’approvisionnement basé à Dallas, avec des sites de production à Guangzhou, Shenzhen, Yiwu, Jiangsu et Zhuji. Demandez-nous un exemplaire par e-mail ou demandez un devis gratuit en 24 heures."
+      },
+      "a2": {
+        "title": "Fret maritime vers l’Afrique via Durban",
+        "excerpt": "Un transport maritime économique pour nos clients en RD Congo, à Lubumbashi et en Afrique du Sud.",
+        "content": "Pour les livraisons en Afrique, nous acheminons le fret maritime par le port de Durban, au service des clients de l’EPI minier, de la construction et du médical dans toute la région. Les commandes urgentes peuvent voyager via DHL ou FedEx Express."
+      },
+      "a3": {
+        "title": "Faible minimum : personnalisation dès 50–100 unités",
+        "excerpt": "Votre logo sur des sweats, T-shirts, sacs cabas, carnets et plus encore — sans minimum de commande démesuré.",
+        "content": "Les petites et moyennes entreprises peuvent désormais personnaliser leurs vêtements et articles promotionnels avec un minimum de commande dès 50–100 unités. Marque propre et OEM disponibles."
+      },
+      "a4": {
+        "title": "Combinaisons minières haute visibilité — nouvelle production",
+        "excerpt": "Brouillon : annonce en préparation pour la gamme EPI & Sécurité.",
+        "content": "Texte à compléter avant publication."
+      }
+    }
+  },
+  "cookies": {
+    "banner": {
+      "aria": "Consentement aux cookies",
+      "title": "Le respect de votre vie privée compte",
+      "text": "Nous utilisons des cookies et technologies similaires pour faire fonctionner ce site, mémoriser vos préférences et — uniquement avec votre accord — mesurer l’audience et personnaliser les contenus. Vous pouvez accepter, refuser ou choisir par catégorie, et changer d’avis à tout moment.",
+      "policy": "Consulter notre politique cookies",
+      "customize": "Personnaliser",
+      "reject": "Tout refuser",
+      "accept": "Tout accepter"
+    },
+    "settings": {
+      "title": "Préférences cookies",
+      "intro": "Choisissez les catégories de cookies que vous autorisez. Les cookies strictement nécessaires sont toujours actifs car le site ne peut pas fonctionner sans eux.",
+      "close": "Fermer",
+      "alwaysActive": "Toujours actifs",
+      "show": "Voir les cookies ({{n}})",
+      "hide": "Masquer les cookies ({{n}})",
+      "none": "Aucun cookie n’est utilisé dans cette catégorie pour le moment.",
+      "reject": "Tout refuser",
+      "accept": "Tout accepter",
+      "save": "Enregistrer mes choix"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Strictement nécessaires",
+        "description": "Indispensables au fonctionnement du site : mémorisation de votre choix cookies, envoi des formulaires de devis et de contact, sécurisation de l’espace d’administration. Ils ne peuvent pas être désactivés."
+      },
+      "preferences": {
+        "name": "Préférences",
+        "description": "Mémorisent vos réglages, comme votre langue préférée, pour que vous n’ayez pas à la choisir de nouveau lors de votre prochaine visite."
+      },
+      "analytics": {
+        "name": "Mesure d’audience",
+        "description": "Nous aident à comprendre comment les visiteurs utilisent le site (pages vues, temps passé) afin de l’améliorer. Les données sont agrégées."
+      },
+      "marketing": {
+        "name": "Marketing",
+        "description": "Servent à vous proposer des publicités pertinentes et à mesurer l’efficacité de nos campagnes sur d’autres sites."
+      }
+    },
+    "table": {
+      "name": "Nom",
+      "provider": "Fournisseur",
+      "storage": "Type",
+      "duration": "Durée",
+      "purpose": "Finalité"
+    },
+    "storage": {
+      "cookie": "Cookie",
+      "localStorage": "Stockage local",
+      "sessionStorage": "Stockage de session"
+    },
+    "duration": {
+      "session": "Session",
+      "persistent": "Jusqu’à suppression",
+      "days": "{{n}} jours",
+      "months": "{{n}} mois",
+      "years": "{{n}} ans"
+    },
+    "purposes": {
+      "consent": "Enregistre vos choix cookies",
+      "forms": "Conserve vos demandes de devis et de contact",
+      "admin": "Maintient la connexion de l’administrateur",
+      "language": "Mémorise votre langue préférée",
+      "analytics": "Mesure d’audience"
+    },
+    "policy": {
+      "kicker": "Confidentialité",
+      "title": "Politique cookies",
+      "subtitle": "Les cookies que nous utilisons, pourquoi, et comment les contrôler à tout moment.",
+      "what": {
+        "title": "Qu’est-ce qu’un cookie ?",
+        "text": "Un cookie est un petit fichier texte déposé sur votre appareil lorsque vous visitez un site. Des technologies similaires, comme le stockage local du navigateur, fonctionnent de la même manière. Ils permettent au site de mémoriser des informations sur votre visite."
+      },
+      "how": {
+        "title": "Comment nous les utilisons",
+        "text": "Sans votre accord, NovaBridge n’utilise que les cookies strictement nécessaires au fonctionnement du site. Toutes les autres catégories sont désactivées par défaut et ne sont activées que si vous les acceptez. La liste ci-dessous est toujours à jour avec les cookies réellement utilisés sur ce site."
+      },
+      "categoriesTitle": "Cookies utilisés sur ce site",
+      "browser": {
+        "title": "Gérer les cookies depuis votre navigateur",
+        "text": "Vous pouvez aussi bloquer ou supprimer les cookies dans les réglages de votre navigateur. Bloquer les cookies strictement nécessaires peut empêcher certaines fonctions, comme le formulaire de devis, de fonctionner correctement."
+      },
+      "manage": {
+        "title": "Vos choix",
+        "button": "Gérer mes préférences cookies"
+      },
+      "status": {
+        "none": "Vous n’avez pas encore fait de choix.",
+        "given": "Choix enregistré le {{date}}. Vous pouvez le modifier à tout moment.",
+        "on": "Acceptés",
+        "off": "Refusés"
+      },
+      "contact": "Une question sur vos données ? Écrivez-nous :"
+    }
+  }
+}
