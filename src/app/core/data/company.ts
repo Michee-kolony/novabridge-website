@@ -21,6 +21,29 @@ export const COMPANY = {
   languages: ['English', 'French', 'Chinese'],
 };
 
+/**
+ * Téléphone et réseaux sociaux affichés dans la barre du haut (et le pied de page).
+ * ⚠️ À COMPLÉTER : un élément vide n'est pas affiché sur le site.
+ */
+export const CONTACT = {
+  /** Format international affiché, ex. '+1 (214) 555-0100' */
+  phone: '',
+  /** Numéro WhatsApp au format international sans espaces ni « + », ex. '12145550100' */
+  whatsapp: '',
+};
+
+export type SocialId = 'facebook' | 'instagram' | 'linkedin' | 'tiktok' | 'x' | 'youtube';
+export interface SocialLink { id: SocialId; label: string; url: string; }
+/** Ordre d'affichage des réseaux sociaux — renseignez l'URL complète de chaque page. */
+export const SOCIALS: SocialLink[] = [
+  { id: 'facebook', label: 'Facebook', url: '' },
+  { id: 'instagram', label: 'Instagram', url: '' },
+  { id: 'linkedin', label: 'LinkedIn', url: '' },
+  { id: 'tiktok', label: 'TikTok', url: '' },
+  { id: 'x', label: 'X', url: '' },
+  { id: 'youtube', label: 'YouTube', url: '' },
+];
+
 export interface Stat { key: string; value: number | null; display?: string; suffix?: string; label: string; }
 export const STATS: Stat[] = [
   { key: 'continents', value: 4, label: 'Continents Served' },

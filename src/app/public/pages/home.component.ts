@@ -95,10 +95,12 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
         <p class="overline">{{ 'home.products.kicker' | translate }}</p>
         <h2 class="h2 mt-3">{{ 'home.products.title' | translate }}</h2>
       </div>
-      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4" nbReveal="stagger">
-        @for (p of products(); track p.slug) {
-          <a [routerLink]="['/products', p.slug]" class="group overflow-hidden rounded-xl border-t-[3px] border-gold bg-white shadow-nb-sm transition duration-300 hover:-translate-y-1 hover:shadow-nb-lg">
-            <div class="h-48 overflow-hidden"><img [src]="img(p.image, 700, 500)" [alt]="p.name" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></div>
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3" nbReveal="stagger">
+        @for (p of products(); track p.slug; let first = $first) {
+          <a [routerLink]="['/products', p.slug]" class="group relative overflow-hidden rounded-xl border-t-[3px] border-gold bg-white shadow-nb-sm transition duration-300 hover:-translate-y-1 hover:shadow-nb-lg"
+             [class]="first ? 'md:col-span-2' : ''">
+            @if (first) { <span class="badge absolute left-4 top-4 z-10 !bg-gold !text-navy shadow-nb">{{ 'home.products.new' | translate }}</span> }
+            <div class="h-48 overflow-hidden" [class]="first ? 'md:h-64' : ''"><img [src]="img(p.image, 700, 500)" [alt]="p.name" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy"></div>
             <div class="p-6">
               <div class="relative z-10 -mt-12 mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white shadow-nb"><nb-icon [name]="p.icon" class="h-6 w-6" /></div>
               <h3 class="font-display text-xl font-bold text-navy">{{ p.name }}</h3>
@@ -195,6 +197,22 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="section">
+    <div class="container-nb grid gap-10 lg:grid-cols-5 lg:gap-14">
+      <div class="lg:col-span-2" nbReveal="left">
+        <p class="overline">{{ 'faq.kicker' | translate }}</p>
+        <h2 class="h2 mt-3">{{ 'faq.title' | translate }}</h2>
+        <div class="gold-rule my-6"></div>
+        <p class="text-lg leading-relaxed">{{ 'faq.subtitle' | translate }}</p>
+        <a routerLink="/faq" class="link-arrow mt-8">{{ 'faq.seeAll' | translate }} <nb-icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+      <div class="lg:col-span-3" nbReveal="right">
+        <nb-faq-accordion [items]="faq()" />
+      </div>
+    </div>
+  </section>
+
   <!-- ===== ACTUALITÉS ===== -->
   @if (news().length) {
     <section class="section">
@@ -231,6 +249,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly network = computed(() => this.lang.list('data.network', SOURCING_NETWORK));
   readonly products = computed(() => this.store.visibleProducts().map(p => this.lang.product(p)));
   readonly news = computed(() => this.store.publishedAnnouncements().map(a => this.lang.announcement(a)));
+  readonly faq = computed(() => { const f = this.lang.t<{ q: string; a: string }[]>('faq.items', []); return Array.isArray(f) ? f.slice(0, 5) : []; });
   readonly images = IMAGES;
   readonly img = img;
 

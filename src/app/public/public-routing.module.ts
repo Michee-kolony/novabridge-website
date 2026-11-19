@@ -12,6 +12,7 @@ import { ProductDetailComponent } from './pages/product-detail.component';
 import { ProductsComponent } from './pages/products.component';
 import { QuoteComponent } from './pages/quote.component';
 import { CookiePolicyComponent } from './cookies/cookie-policy.component';
+import { FaqPageComponent } from './faq/faq-page.component';
 
 // Les titres sont des clés de traduction (voir public/i18n/*.json).
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'news/:id', title: 'titles.news', component: NewsDetailComponent },
       { path: 'quote', title: 'titles.quote', component: QuoteComponent },
       { path: 'contact', title: 'titles.contact', component: ContactComponent },
+      { path: 'faq', title: 'titles.faq', component: FaqPageComponent },
       { path: 'cookies', title: 'titles.cookies', component: CookiePolicyComponent },
       { path: '**', title: 'titles.notFound', component: NotFoundComponent },
     ],

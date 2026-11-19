@@ -10,7 +10,8 @@
     "quote": "Devis gratuit — NovaBridge",
     "contact": "Contact — NovaBridge",
     "notFound": "Page introuvable — NovaBridge",
-    "cookies": "Politique cookies — NovaBridge"
+    "cookies": "Politique cookies — NovaBridge",
+    "faq": "FAQ — NovaBridge"
   },
   "lang": {
     "choose": "Choisir la langue"
@@ -73,7 +74,8 @@
     },
     "products": {
       "kicker": "Nos gammes de produits",
-      "title": "Tout ce dont vos équipes ont besoin, directement à l’usine."
+      "title": "Tout ce dont vos équipes ont besoin, directement à l’usine.",
+      "new": "Nouveau"
     },
     "how": {
       "kicker": "Comment ça marche",
@@ -224,7 +226,7 @@
   "products": {
     "hero": {
       "title": "Des produits directs usine pour chaque secteur.",
-      "subtitle": "EPI & sécurité, santé, vêtements & uniformes, articles d’entreprise & promotionnels — avec personnalisation, faible minimum de commande et livraison DDP."
+      "subtitle": "Merchandising pour centres de loisirs, EPI & sécurité, santé, vêtements & uniformes, articles d’entreprise & promotionnels — avec personnalisation, faible minimum de commande et livraison DDP."
     },
     "hub": "Pôle",
     "details": "Voir le détail",
@@ -478,18 +480,53 @@
   },
   "content": {
     "products": {
+      "entertainment-merch": {
+        "name": "Merchandising loisirs",
+        "short": "Articles personnalisés à votre marque pour aires de jeux, trampoline parks et centres de loisirs familiaux.",
+        "description": "Faites de votre marque une expérience : chaussettes antidérapantes, bracelets, gobelets, ballons et accessoires de fête à votre logo — pour aires de jeux intérieures, trampoline parks et centres de loisirs familiaux. Maquette 3D gratuite avant production.",
+        "items": [
+          "Chaussettes antidérapantes — semelle en silicone 3D",
+          "Bracelets — numérotation séquentielle",
+          "Gobelets personnalisés — réutilisables et écologiques",
+          "Tatouages éphémères",
+          "Ballons Mylar — formes personnalisées",
+          "Sacs à cordon & sacs de fête",
+          "Tours de cou & porte-clés",
+          "T-shirts & casquettes",
+          "Serviettes de plage",
+          "Gourdes"
+        ],
+        "industries": [
+          "Trampoline parks",
+          "Aires de jeux intérieures",
+          "Centres de loisirs familiaux",
+          "Événements"
+        ],
+        "hub": "Zhuji · Yiwu"
+      },
       "ppe-safety": {
         "name": "EPI & Sécurité",
         "short": "Équipements de protection pour les chantiers exigeants.",
         "description": "Équipements de protection individuelle de qualité certifiée, fabriqués à Guangzhou et dans le Jiangsu — conçus pour les équipes des mines, de la construction, du pétrole & gaz et de l’industrie.",
         "items": [
-          "Chaussures de sécurité (SP818, SP918)",
-          "Combinaisons minières haute visibilité",
-          "Gilets de sécurité",
-          "Gants de travail",
-          "Casques de chantier",
-          "Gants en nitrile",
-          "Masques chirurgicaux"
+          "Gants de sécurité — anti-coupure, abrasion et chaleur",
+          "Lunettes de sécurité & lunettes-masques",
+          "Casques de sécurité",
+          "Visières de protection",
+          "Protection auditive",
+          "Chaussures et bottes de sécurité (SP818, SP918)",
+          "Gilets réfléchissants",
+          "Combinaisons de travail & combinaisons minières haute visibilité",
+          "Vestes haute visibilité",
+          "Respirateurs",
+          "Masques",
+          "Harnais de sécurité",
+          "Manchettes de protection",
+          "Genouillères",
+          "Vêtements de pluie",
+          "Masques de soudure",
+          "Gants jetables & en nitrile",
+          "Tabliers de sécurité"
         ],
         "industries": [
           "Mines",
@@ -677,5 +714,62 @@
       },
       "contact": "Une question sur vos données ? Écrivez-nous :"
     }
+  },
+  "topbar": {
+    "follow": "Suivez-nous",
+    "social": "NovaBridge sur {{name}}"
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce qu’il faut savoir sur la commande, la personnalisation, le contrôle qualité et la livraison DDP avec NovaBridge.",
+    "seeAll": "Voir toutes les questions",
+    "more": {
+      "title": "Vous avez une autre question ?",
+      "text": "Notre équipe multilingue vous répond en anglais, en français et en chinois — généralement sous 24 heures.",
+      "cta": "Nous contacter"
+    },
+    "items": [
+      {
+        "q": "Comment obtenir un devis ?",
+        "a": "Remplissez notre formulaire de devis gratuit ou écrivez-nous en précisant le produit, la quantité et les spécifications souhaitées (tailles, couleurs, personnalisation). Vous recevez un devis détaillé avec les prix et le calendrier de production sous 24 heures."
+      },
+      {
+        "q": "Quel est votre minimum de commande ?",
+        "a": "Notre minimum de commande commence à 50–100 unités selon le produit — y compris pour les articles personnalisés. Indiquez-nous votre quantité et nous trouverons la bonne solution."
+      },
+      {
+        "q": "Pouvez-vous mettre notre logo sur les produits ?",
+        "a": "Oui. La personnalisation est possible sur toutes nos gammes : votre logo, vos couleurs, vos tailles. Nous proposons aussi la marque propre et la fabrication OEM, ainsi qu’une maquette 3D gratuite avant production."
+      },
+      {
+        "q": "Quels sont vos délais ?",
+        "a": "La production prend en moyenne 3 à 4 semaines. Le délai de livraison dépend ensuite du mode de transport : fret maritime (standard, DDP) ou DHL / FedEx Express pour les commandes urgentes."
+      },
+      {
+        "q": "Que signifie la livraison DDP ?",
+        "a": "DDP (Delivered Duty Paid, « rendu droits acquittés ») signifie que les droits de douane et le transport sont inclus dans notre prix. Vos marchandises sont livrées à votre porte, sans surprise à la douane."
+      },
+      {
+        "q": "Comment se passe le paiement ?",
+        "a": "Une fois la commande confirmée, vous versez un acompte de 50 % pour lancer la production à l’usine. Le solde est réglé à la livraison."
+      },
+      {
+        "q": "Comment garantissez-vous la qualité ?",
+        "a": "Nous travaillons avec des usines sélectionnées dans les principaux pôles de production chinois et contrôlons chaque lot. Vous recevez des photos de contrôle qualité avant chaque expédition, pour valider vos marchandises avant leur départ de l’usine."
+      },
+      {
+        "q": "Dans quels pays livrez-vous ?",
+        "a": "Nous livrons les entreprises aux États-Unis, au Canada, en Europe et en Afrique. Pour nos clients africains, le fret maritime passe par le port de Durban ; les commandes urgentes peuvent voyager via DHL ou FedEx Express."
+      },
+      {
+        "q": "Quels produits pouvez-vous fournir ?",
+        "a": "Merchandising pour centres de loisirs (chaussettes antidérapantes, bracelets, gobelets, ballons…), EPI & équipements de sécurité, fournitures médicales, vêtements & uniformes, articles d’entreprise & promotionnels. Vous cherchez autre chose ? Demandez-nous — nous nous approvisionnons directement à Guangzhou, Shenzhen, Yiwu, dans le Jiangsu et à Zhuji."
+      },
+      {
+        "q": "Quelles langues parle votre équipe ?",
+        "a": "Notre équipe travaille en anglais, en français et en chinois, ce qui nous permet d’échanger directement avec nos clients comme avec les usines."
+      }
+    ]
   }
 }

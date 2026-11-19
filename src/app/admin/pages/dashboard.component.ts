@@ -10,42 +10,38 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
   template: `
   <div class="flex flex-wrap items-end justify-between gap-4">
     <div><h1 class="admin-title">Tableau de bord</h1><p class="text-sm text-steel">Vue d'ensemble de l'activité commerciale.</p></div>
-    <a routerLink="/admin/annonces/nouvelle" class="btn btn-primary"><nb-icon name="plus" class="h-5 w-5" />Nouvelle annonce</a>
+    <a routerLink="/admin/annonces/nouvelle" class="btn btn-primary w-full justify-center sm:w-auto"><nb-icon name="plus" class="h-5 w-5" />Nouvelle annonce</a>
   </div>
 
-  <div class="kpis mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+  <div class="kpis mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-5 xl:grid-cols-4">
     @for (k of kpis(); track k.label) {
-      <a [routerLink]="k.link" class="rounded-xl border border-mist bg-white p-6 shadow-nb-sm transition hover:shadow-nb">
-        <div class="flex items-center justify-between">
-          <span class="text-sm font-semibold text-steel">{{ k.label }}</span>
-          <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-ivory text-navy"><nb-icon [name]="k.icon" class="h-5 w-5" /></span>
+      <a [routerLink]="k.link" class="min-w-0 rounded-xl border border-mist bg-white p-4 shadow-nb-sm transition hover:shadow-nb sm:p-6">
+        <div class="flex items-start justify-between gap-2">
+          <span class="text-xs font-semibold text-steel sm:text-sm">{{ k.label }}</span>
+          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-ivory text-navy sm:h-10 sm:w-10"><nb-icon [name]="k.icon" class="h-5 w-5" /></span>
         </div>
-        <div class="mt-3 font-display text-3xl font-extrabold text-navy">{{ k.value }}</div>
+        <div class="mt-2 font-display text-2xl font-extrabold text-navy sm:mt-3 sm:text-3xl">{{ k.value }}</div>
         <div class="mt-1 text-xs text-steel">{{ k.hint }}</div>
       </a>
     }
   </div>
 
-  <div class="mt-8 grid gap-6 xl:grid-cols-3">
-    <section class="admin-card xl:col-span-2">
-      <div class="flex items-center justify-between"><h2 class="admin-h2">Dernières demandes de devis</h2><a routerLink="/admin/devis" class="text-sm font-semibold text-atlantic">Tout voir →</a></div>
-      <div class="mt-4 overflow-x-auto">
-        <table class="admin-table">
-          <thead><tr><th>N°</th><th>Client</th><th>Produit</th><th class="text-right">Qté</th><th>Statut</th><th>Date</th></tr></thead>
-          <tbody>
-            @for (q of store.quotes().slice(0, 6); track q.id) {
-              <tr class="cursor-pointer" [routerLink]="['/admin/devis', q.id]">
-                <td class="whitespace-nowrap font-semibold text-navy">{{ q.id }}</td>
-                <td><div class="font-medium text-navy">{{ q.company }}</div><div class="text-xs text-steel">{{ q.country }}</div></td>
-                <td>{{ q.product }}</td>
-                <td class="text-right">{{ q.quantity | number }}</td>
-                <td><nb-status [status]="q.status" /></td>
-                <td class="whitespace-nowrap text-steel">{{ q.createdAt | date: 'dd/MM HH:mm' }}</td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
+  <div class="mt-6 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-2 xl:grid-cols-3 [&>*]:min-w-0">
+    <section class="admin-card md:col-span-2">
+      <div class="flex items-center justify-between gap-3"><h2 class="admin-h2">Dernières demandes de devis</h2><a routerLink="/admin/devis" class="shrink-0 whitespace-nowrap text-sm font-semibold text-atlantic">Tout voir →</a></div>
+      <ul class="mt-3 divide-y divide-mist">
+        @for (q of store.quotes().slice(0, 6); track q.id) {
+          <li>
+            <a [routerLink]="['/admin/devis', q.id]" class="-mx-2 flex items-center justify-between gap-3 rounded-lg px-2 py-3 transition hover:bg-cloud">
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2"><span class="shrink-0 text-sm font-bold text-navy">{{ q.id }}</span><span class="truncate text-sm font-medium text-navy">{{ q.company }}</span></div>
+                <div class="truncate text-xs text-steel">{{ q.product }} · {{ q.quantity | number: '1.0-0' : 'fr' }} u. · {{ q.country }}</div>
+              </div>
+              <div class="flex shrink-0 flex-col items-end gap-1"><nb-status [status]="q.status" /><span class="text-xs text-steel">{{ q.createdAt | date: 'dd/MM HH:mm' }}</span></div>
+            </a>
+          </li>
+        }
+      </ul>
     </section>
 
     <section class="admin-card">
@@ -83,11 +79,11 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
     </section>
 
     <section class="admin-card">
-      <div class="flex items-center justify-between"><h2 class="admin-h2">Messages récents</h2><a routerLink="/admin/messages" class="text-sm font-semibold text-atlantic">Tout voir →</a></div>
+      <div class="flex items-center justify-between gap-3"><h2 class="admin-h2">Messages récents</h2><a routerLink="/admin/messages" class="shrink-0 whitespace-nowrap text-sm font-semibold text-atlantic">Tout voir →</a></div>
       <ul class="mt-4 space-y-3">
         @for (m of store.messages().slice(0, 4); track m.id) {
           <li class="rounded-lg border border-mist p-3">
-            <div class="flex items-center justify-between text-sm"><span class="font-semibold text-navy">{{ m.subject }}</span>@if (!m.read) { <span class="h-2 w-2 rounded-full bg-gold"></span> }</div>
+            <div class="flex items-center justify-between gap-2 text-sm"><span class="truncate font-semibold text-navy">{{ m.subject }}</span>@if (!m.read) { <span class="h-2 w-2 rounded-full bg-gold"></span> }</div>
             <div class="truncate text-xs text-steel">{{ m.name }} — {{ m.message }}</div>
           </li>
         } @empty { <li class="text-sm text-steel">Aucun message.</li> }

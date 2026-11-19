@@ -19,6 +19,8 @@ import { CookieBannerComponent } from './cookies/cookie-banner.component';
 import { CookiePolicyComponent } from './cookies/cookie-policy.component';
 import { CookieSettingsComponent } from './cookies/cookie-settings.component';
 import { CookieTableComponent } from './cookies/cookie-table.component';
+import { FaqAccordionComponent } from './faq/faq-accordion.component';
+import { FaqPageComponent } from './faq/faq-page.component';
 
 /** Site client (chargé à la demande). */
 @NgModule({
@@ -42,6 +44,9 @@ import { CookieTableComponent } from './cookies/cookie-table.component';
     CookieSettingsComponent,
     CookieTableComponent,
     CookiePolicyComponent,
+    // FAQ
+    FaqAccordionComponent,
+    FaqPageComponent,
   ],
   imports: [SharedModule, ReactiveFormsModule, PublicRoutingModule],
 })

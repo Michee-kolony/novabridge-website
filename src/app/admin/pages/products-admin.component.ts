@@ -10,20 +10,20 @@ import { StoreService } from '../../core/services/store.service';
   <h1 class="admin-title">Catalogue produits</h1>
   <p class="text-sm text-steel">Modifiez les gammes et les produits affichés sur le site.</p>
 
-  <div class="mt-8 space-y-6">
+  <div class="mt-6 space-y-4 sm:mt-8 sm:space-y-6">
     @for (p of store.products(); track p.slug) {
       <section class="admin-card">
-        <div class="flex flex-wrap items-start gap-5">
-          <img [src]="img(p.image, 240, 160)" [alt]="p.name" class="h-24 w-36 rounded-lg object-cover" [class.grayscale]="!p.visible">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+          <img [src]="img(p.image, 480, 320)" [alt]="p.name" class="aspect-[16/9] w-full rounded-lg object-cover sm:aspect-auto sm:h-24 sm:w-36 sm:shrink-0" [class.grayscale]="!p.visible">
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-center gap-3">
-              <h2 class="font-display text-xl font-bold text-navy">{{ p.name }}</h2>
+              <h2 class="font-display text-lg font-bold text-navy sm:text-xl">{{ p.name }}</h2>
               <span class="rounded-full px-2.5 py-1 text-xs font-bold" [class]="p.visible ? 'bg-emerald-100 text-success' : 'bg-cloud text-steel'">{{ p.visible ? 'Visible' : 'Masquée' }}</span>
             </div>
             <p class="mt-1 text-sm text-steel">{{ p.short }} · Hub : {{ p.hub }}</p>
             <div class="mt-3 flex flex-wrap gap-2">@for (i of p.industries; track i) { <span class="badge !bg-cloud">{{ i }}</span> }</div>
           </div>
-          <div class="flex gap-2">
+          <div class="flex flex-wrap gap-2 sm:shrink-0">
             <button class="btn btn-outline !px-3 !py-2 text-sm" (click)="toggleEdit(p)"><nb-icon name="edit" class="h-4 w-4" />{{ editing() === p.slug ? 'Fermer' : 'Modifier' }}</button>
             <button class="btn !px-3 !py-2 text-sm" [class]="p.visible ? 'btn-outline' : 'btn-gold'" (click)="store.updateProduct(p.slug, { visible: !p.visible })">{{ p.visible ? 'Masquer' : 'Afficher' }}</button>
             @if (p.visible) { <a [routerLink]="['/products', p.slug]" target="_blank" class="p-2 text-steel hover:text-navy" title="Voir sur le site"><nb-icon name="eye" class="h-5 w-5" /></a> }
@@ -43,11 +43,11 @@ import { StoreService } from '../../core/services/store.service';
                     <button class="text-steel hover:text-danger" (click)="draft.items.splice(i, 1)" aria-label="Retirer"><nb-icon name="close" class="h-3.5 w-3.5" /></button></span>
                 }
               </div>
-              <form class="mt-3 flex max-w-md gap-2" (ngSubmit)="addItem()"><input class="input" name="item" [(ngModel)]="newItem" placeholder="Ajouter un produit…"><button class="btn btn-outline shrink-0" type="submit">Ajouter</button></form>
+              <form class="mt-3 flex w-full gap-2 sm:max-w-md" (ngSubmit)="addItem()"><input class="input" name="item" [(ngModel)]="newItem" placeholder="Ajouter un produit…"><button class="btn btn-outline shrink-0" type="submit">Ajouter</button></form>
             </div>
-            <div class="flex gap-3 lg:col-span-2">
-              <button class="btn btn-primary" (click)="save(p.slug)">Enregistrer</button>
-              <button class="btn btn-outline" (click)="editing.set(null)">Annuler</button>
+            <div class="grid grid-cols-2 gap-3 sm:flex lg:col-span-2">
+              <button class="btn btn-primary justify-center" (click)="save(p.slug)">Enregistrer</button>
+              <button class="btn btn-outline justify-center" (click)="editing.set(null)">Annuler</button>
             </div>
           </div>
         }

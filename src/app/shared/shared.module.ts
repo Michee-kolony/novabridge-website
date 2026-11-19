@@ -5,8 +5,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CountUpDirective, ParallaxDirective, RevealDirective } from './gsap.directives';
 import { IconComponent } from './icon.component';
 import { LanguageSwitcherComponent } from './language-switcher.component';
+import { SocialIconComponent } from './social-icon.component';
 
-const DECLARATIONS = [IconComponent, RevealDirective, CountUpDirective, ParallaxDirective, LanguageSwitcherComponent];
+const DECLARATIONS = [IconComponent, SocialIconComponent, RevealDirective, CountUpDirective, ParallaxDirective, LanguageSwitcherComponent];
 
 /**
  * Éléments communs au site client et au back-office.

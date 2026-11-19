@@ -49,12 +49,12 @@
   /* Back-office */
   .admin-title { @apply font-display text-2xl font-extrabold text-navy md:text-3xl; }
   .admin-h2 { @apply font-display text-lg font-bold text-navy; }
-  .admin-card { @apply rounded-xl border border-mist bg-white p-6 shadow-nb-sm; }
+  .admin-card { @apply rounded-xl border border-mist bg-white p-4 shadow-nb-sm sm:p-6; }
   .admin-table { @apply w-full text-left text-sm; }
   .admin-table th { @apply whitespace-nowrap border-b border-mist px-3 py-3 text-xs font-bold uppercase tracking-wider text-steel; }
   .admin-table td { @apply border-b border-mist px-3 py-3.5 align-top; }
   .admin-table tbody tr { @apply transition hover:bg-cloud; }
-  .chip { @apply rounded-full border border-mist bg-white px-4 py-2 text-sm font-semibold text-navy transition hover:border-navy; }
+  .chip { @apply whitespace-nowrap rounded-full border border-mist bg-white px-3.5 py-2 text-sm font-semibold text-navy transition hover:border-navy sm:px-4; }
   .chip-active { @apply border-navy bg-navy text-white; }
   .dt { @apply text-xs font-bold uppercase tracking-wider text-steel; }
   .dd { @apply mt-1 font-medium text-navy; }

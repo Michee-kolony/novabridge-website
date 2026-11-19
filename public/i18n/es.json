@@ -10,7 +10,8 @@
     "quote": "Cotización gratuita — NovaBridge",
     "contact": "Contacto — NovaBridge",
     "notFound": "Página no encontrada — NovaBridge",
-    "cookies": "Política de cookies — NovaBridge"
+    "cookies": "Política de cookies — NovaBridge",
+    "faq": "Preguntas frecuentes — NovaBridge"
   },
   "lang": {
     "choose": "Elegir idioma"
@@ -73,7 +74,8 @@
     },
     "products": {
       "kicker": "Nuestras líneas de productos",
-      "title": "Todo lo que sus equipos necesitan, directo de fábrica."
+      "title": "Todo lo que sus equipos necesitan, directo de fábrica.",
+      "new": "Nuevo"
     },
     "how": {
       "kicker": "Cómo funciona",
@@ -224,7 +226,7 @@
   "products": {
     "hero": {
       "title": "Productos directos de fábrica para cada sector.",
-      "subtitle": "EPP y seguridad, salud, ropa y uniformes, artículos corporativos y promocionales — con personalización, pedido mínimo bajo y entrega DDP."
+      "subtitle": "Merchandising para centros de entretenimiento, EPP y seguridad, salud, ropa y uniformes, artículos corporativos y promocionales — con personalización, pedido mínimo bajo y entrega DDP."
     },
     "hub": "Polo",
     "details": "Ver detalles",
@@ -478,18 +480,53 @@
   },
   "content": {
     "products": {
+      "entertainment-merch": {
+        "name": "Merchandising para entretenimiento",
+        "short": "Artículos personalizados con su marca para parques infantiles, parques de trampolines y centros de entretenimiento familiar.",
+        "description": "Convierta su marca en una experiencia: calcetines antideslizantes, pulseras, vasos, globos y artículos de fiesta con su logotipo — para parques infantiles cubiertos, parques de trampolines y centros de entretenimiento familiar. Maqueta 3D gratuita antes de la producción.",
+        "items": [
+          "Calcetines antideslizantes — suela de silicona 3D",
+          "Pulseras — numeración secuencial",
+          "Vasos personalizados — reutilizables y ecológicos",
+          "Tatuajes temporales",
+          "Globos Mylar — formas personalizadas",
+          "Mochilas de cuerdas y bolsas de fiesta",
+          "Lanyards y llaveros",
+          "Camisetas y gorras",
+          "Toallas de playa",
+          "Botellas de agua"
+        ],
+        "industries": [
+          "Parques de trampolines",
+          "Parques infantiles cubiertos",
+          "Centros de entretenimiento familiar",
+          "Eventos"
+        ],
+        "hub": "Zhuji · Yiwu"
+      },
       "ppe-safety": {
         "name": "EPP y Seguridad",
         "short": "Equipos de protección para obras exigentes.",
         "description": "Equipos de protección personal de calidad certificada, fabricados en Guangzhou y Jiangsu — diseñados para equipos de minería, construcción, petróleo y gas e industria.",
         "items": [
-          "Botas de seguridad (SP818, SP918)",
-          "Overoles mineros de alta visibilidad",
-          "Chalecos de seguridad",
-          "Guantes de trabajo",
+          "Guantes de seguridad — anticorte, abrasión y calor",
+          "Lentes y gafas de seguridad",
           "Cascos de seguridad",
-          "Guantes de nitrilo",
-          "Mascarillas quirúrgicas"
+          "Caretas protectoras",
+          "Protección auditiva",
+          "Botas y zapatos de seguridad (SP818, SP918)",
+          "Chalecos reflectantes",
+          "Overoles y overoles mineros de alta visibilidad",
+          "Chaquetas de alta visibilidad",
+          "Respiradores",
+          "Mascarillas",
+          "Arneses de seguridad",
+          "Mangas protectoras",
+          "Rodilleras",
+          "Ropa impermeable",
+          "Caretas para soldar",
+          "Guantes desechables y de nitrilo",
+          "Delantales de seguridad"
         ],
         "industries": [
           "Minería",
@@ -677,5 +714,62 @@
       },
       "contact": "¿Preguntas sobre sus datos? Escríbanos:"
     }
+  },
+  "topbar": {
+    "follow": "Síganos",
+    "social": "NovaBridge en {{name}}"
+  },
+  "faq": {
+    "kicker": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesita saber sobre pedidos, personalización, control de calidad y entrega DDP con NovaBridge.",
+    "seeAll": "Ver todas las preguntas",
+    "more": {
+      "title": "¿Tiene otra pregunta?",
+      "text": "Nuestro equipo multilingüe responde en inglés, francés y chino — normalmente en 24 horas.",
+      "cta": "Contáctenos"
+    },
+    "items": [
+      {
+        "q": "¿Cómo obtengo una cotización?",
+        "a": "Complete nuestro formulario de cotización gratuita o escríbanos indicando el producto, la cantidad y las especificaciones (tallas, colores, personalización). Recibe una cotización detallada con precios y calendario de producción en 24 horas."
+      },
+      {
+        "q": "¿Cuál es su pedido mínimo (MOQ)?",
+        "a": "Nuestro pedido mínimo comienza desde 50–100 unidades según el producto — incluso para artículos personalizados. Indíquenos su cantidad y encontraremos la mejor opción."
+      },
+      {
+        "q": "¿Pueden poner nuestro logotipo en los productos?",
+        "a": "Sí. La personalización está disponible en todas nuestras líneas: su logotipo, sus colores, sus tallas. También ofrecemos marca propia y fabricación OEM, además de una maqueta 3D gratuita antes de la producción."
+      },
+      {
+        "q": "¿Cuáles son sus plazos?",
+        "a": "La producción toma de 3 a 4 semanas en promedio. El tiempo de entrega depende luego del tipo de envío: flete marítimo (estándar, DDP) o DHL / FedEx Express para pedidos urgentes."
+      },
+      {
+        "q": "¿Qué significa la entrega DDP?",
+        "a": "DDP (Delivered Duty Paid, «entregado con derechos pagados») significa que los aranceles y el flete están incluidos en nuestro precio. Su mercancía se entrega en su puerta, sin sorpresas en la aduana."
+      },
+      {
+        "q": "¿Cómo funciona el pago?",
+        "a": "Una vez confirmado el pedido, paga un anticipo del 50 % para iniciar la producción en fábrica. El saldo se paga a la entrega."
+      },
+      {
+        "q": "¿Cómo garantizan la calidad?",
+        "a": "Trabajamos con fábricas seleccionadas en los principales polos de producción de China y revisamos cada lote. Recibe fotos de control de calidad antes de cada envío, para aprobar su mercancía antes de que salga de la fábrica."
+      },
+      {
+        "q": "¿A qué países entregan?",
+        "a": "Entregamos a empresas en Estados Unidos, Canadá, Europa y África. Para nuestros clientes africanos, el flete marítimo pasa por el puerto de Durban; los pedidos urgentes pueden enviarse por DHL o FedEx Express."
+      },
+      {
+        "q": "¿Qué productos pueden suministrar?",
+        "a": "Merchandising para centros de entretenimiento (calcetines antideslizantes, pulseras, vasos, globos…), EPP y equipos de seguridad, insumos médicos, ropa y uniformes, y artículos corporativos y promocionales. ¿Busca algo que no está en la lista? Pregúntenos — nos abastecemos directamente en Guangzhou, Shenzhen, Yiwu, Jiangsu y Zhuji."
+      },
+      {
+        "q": "¿Qué idiomas habla su equipo?",
+        "a": "Nuestro equipo trabaja en inglés, francés y chino, lo que nos permite comunicarnos directamente tanto con nuestros clientes como con las fábricas."
+      }
+    ]
   }
 }

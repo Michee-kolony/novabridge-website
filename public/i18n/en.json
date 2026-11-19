@@ -10,7 +10,8 @@
     "quote": "Get a free quote — NovaBridge",
     "contact": "Contact — NovaBridge",
     "notFound": "Page not found — NovaBridge",
-    "cookies": "Cookie policy — NovaBridge"
+    "cookies": "Cookie policy — NovaBridge",
+    "faq": "FAQ — NovaBridge"
   },
   "lang": {
     "choose": "Choose language"
@@ -73,7 +74,8 @@
     },
     "products": {
       "kicker": "Our product lines",
-      "title": "Everything your teams need, sourced at the factory."
+      "title": "Everything your teams need, sourced at the factory.",
+      "new": "New"
     },
     "how": {
       "kicker": "How it works",
@@ -199,7 +201,7 @@
   "products": {
     "hero": {
       "title": "Factory-direct products for every industry.",
-      "subtitle": "PPE & safety, healthcare, apparel & uniforms, corporate & promotional products — with custom branding, low MOQ and DDP delivery."
+      "subtitle": "Entertainment merchandise, PPE & safety, healthcare, apparel & uniforms, corporate & promotional products — with custom branding, low MOQ and DDP delivery."
     },
     "hub": "Hub",
     "details": "View details",
@@ -353,5 +355,62 @@
       },
       "contact": "Questions about your data? Write to us:"
     }
+  },
+  "topbar": {
+    "follow": "Follow us",
+    "social": "NovaBridge on {{name}}"
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about ordering, branding, quality control and DDP delivery with NovaBridge.",
+    "seeAll": "See all questions",
+    "more": {
+      "title": "Still have a question?",
+      "text": "Our multilingual team answers in English, French and Chinese — usually within 24 hours.",
+      "cta": "Contact us"
+    },
+    "items": [
+      {
+        "q": "How do I get a quote?",
+        "a": "Fill in our free quote form or e-mail us with the product, quantity and specifications you need (sizes, colors, branding). You receive a detailed quote with pricing and a production timeline within 24 hours."
+      },
+      {
+        "q": "What is your minimum order quantity (MOQ)?",
+        "a": "Our minimum order starts from 50–100 units depending on the product — including custom-branded items. Tell us your quantity and we will find the right option."
+      },
+      {
+        "q": "Can you put our logo on the products?",
+        "a": "Yes. Custom branding is available on all our product lines: your logo, your colors, your sizes. Private label and OEM manufacturing are also available, and we can provide a free 3D mock-up before production."
+      },
+      {
+        "q": "What are your lead times?",
+        "a": "Production takes 3 to 4 weeks on average. Delivery time then depends on the shipping method: sea freight (standard, DDP) or DHL / FedEx Express for urgent orders."
+      },
+      {
+        "q": "What does DDP delivery mean?",
+        "a": "DDP (Delivered Duty Paid) means customs duties and freight are included in our price. Your goods are delivered to your door with no surprise at customs."
+      },
+      {
+        "q": "How does payment work?",
+        "a": "Once you confirm the order, you pay a 50% deposit to launch production at the factory. The balance is paid at delivery."
+      },
+      {
+        "q": "How do you guarantee quality?",
+        "a": "We work with selected factories in China’s top production hubs and check every batch. You receive quality-control photos before every shipment, so you approve your goods before they leave the factory."
+      },
+      {
+        "q": "Which countries do you deliver to?",
+        "a": "We deliver businesses across the USA, Canada, Europe and Africa. For African clients we route sea freight through the port of Durban; urgent orders can travel by DHL or FedEx Express."
+      },
+      {
+        "q": "What products can you source?",
+        "a": "Entertainment merchandise (grip socks, wristbands, cups, balloons…), PPE & safety equipment, healthcare supplies, apparel & uniforms, and corporate & promotional products. Looking for something not listed? Ask us — we source directly from Guangzhou, Shenzhen, Yiwu, Jiangsu and Zhuji."
+      },
+      {
+        "q": "Which languages does your team speak?",
+        "a": "Our team works in English, French and Chinese, which lets us communicate directly with both our clients and the factories."
+      }
+    ]
   }
 }

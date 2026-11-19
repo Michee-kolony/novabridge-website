@@ -3,6 +3,31 @@ import { Announcement, ContactMessage, ProductLine, QuoteRequest } from '../mode
 /** Gammes de produits — contenu du Company Portfolio 2026. */
 export const PRODUCT_LINES: ProductLine[] = [
   {
+    slug: 'entertainment-merch',
+    name: 'Entertainment Merchandise',
+    short: 'Custom-branded merchandise for playgrounds, trampoline parks and family entertainment centers.',
+    description:
+      'Turn your brand into an experience: grip socks, wristbands, cups, balloons and party essentials with your logo — for indoor playgrounds, trampoline parks and family entertainment centers. Free 3D mock-up before production.',
+    icon: 'sock',
+    image: '/images/products/merch-socks.jpg',
+    gallery: ['/images/products/merch-wristbands.jpg', '/images/products/merch-cups.jpg', '/images/products/merch-balloons.jpg'],
+    items: [
+      'Grip Socks — 3D silicone grip sole',
+      'Wristbands — sequential numbering',
+      'Custom Cups — reusable & eco-friendly',
+      'Fake Tattoos',
+      'Mylar Balloons — custom shapes',
+      'Drawstring & Party Bags',
+      'Lanyards & Keychains',
+      'T-shirts & Hats',
+      'Beach Towels',
+      'Water Bottles',
+    ],
+    industries: ['Trampoline Parks', 'Indoor Playgrounds', 'Family Entertainment Centers', 'Events'],
+    hub: 'Zhuji · Yiwu',
+    visible: true,
+  },
+  {
     slug: 'ppe-safety',
     name: 'PPE & Safety',
     short: 'Protective equipment for demanding work sites.',
@@ -11,7 +36,12 @@ export const PRODUCT_LINES: ProductLine[] = [
     icon: 'shield',
     image: 'photo-1504307651254-35680f356dfd',
     gallery: ['photo-1541888946425-d81bb19240f5', 'photo-1504917595217-d4dc5ebe6122'],
-    items: ['Safety Boots (SP818, SP918)', 'Hi-Vis Mining Coveralls', 'Safety Vests', 'Work Gloves', 'Hard Hats', 'Nitrile Gloves', 'Surgical Masks'],
+    items: [
+      'Safety Gloves — cut, abrasion & heat resistant', 'Safety Glasses & Work Goggles', 'Safety Helmets', 'Face Shields',
+      'Hearing Protection', 'Safety Boots (SP818, SP918) & Shoes', 'Reflective Vests', 'Coveralls & Hi-Vis Mining Coveralls',
+      'Hi-Vis Jackets', 'Respirators', 'Face Masks', 'Safety Harnesses', 'Protective Sleeves', 'Knee Pads',
+      'Rain Wear', 'Welding Helmets', 'Disposable & Nitrile Gloves', 'Safety Aprons',
+    ],
     industries: ['Mining', 'Construction', 'Oil & Gas', 'Industrial'],
     hub: 'Guangzhou · Jiangsu',
     visible: true,

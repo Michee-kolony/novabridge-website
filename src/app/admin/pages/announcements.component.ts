@@ -11,10 +11,10 @@ import { StoreService } from '../../core/services/store.service';
   template: `
   <div class="flex flex-wrap items-end justify-between gap-4">
     <div><h1 class="admin-title">Annonces</h1><p class="text-sm text-steel">Les annonces publiées apparaissent sur la page « News » et l'accueil du site.</p></div>
-    <a routerLink="/admin/annonces/nouvelle" class="btn btn-primary"><nb-icon name="plus" class="h-5 w-5" />Nouvelle annonce</a>
+    <a routerLink="/admin/annonces/nouvelle" class="btn btn-primary w-full justify-center sm:w-auto"><nb-icon name="plus" class="h-5 w-5" />Nouvelle annonce</a>
   </div>
 
-  <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+  <div class="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
     @for (a of store.announcements(); track a.id) {
       <article class="flex flex-col overflow-hidden rounded-xl border border-mist bg-white shadow-nb-sm">
         <div class="relative h-40">
@@ -26,7 +26,7 @@ import { StoreService } from '../../core/services/store.service';
           <div class="text-xs text-steel">{{ a.category }} · {{ a.date | date: 'dd/MM/yyyy' }}</div>
           <h2 class="mt-1 font-display font-bold text-navy">{{ a.title }}</h2>
           <p class="mt-2 line-clamp-2 flex-1 text-sm text-steel">{{ a.excerpt }}</p>
-          <div class="mt-4 flex items-center gap-2 border-t border-mist pt-4">
+          <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-mist pt-4">
             <a [routerLink]="['/admin/annonces', a.id]" class="btn btn-outline !px-3 !py-2 text-sm"><nb-icon name="edit" class="h-4 w-4" />Modifier</a>
             <button class="btn !px-3 !py-2 text-sm" [class]="a.published ? 'btn-outline' : 'btn-gold'" (click)="store.togglePublished(a.id)">{{ a.published ? 'Dépublier' : 'Publier' }}</button>
             @if (a.published) { <a [routerLink]="['/news', a.id]" target="_blank" class="ml-auto p-2 text-steel hover:text-navy" title="Voir sur le site"><nb-icon name="eye" class="h-5 w-5" /></a> }
@@ -59,7 +59,7 @@ const IMAGE_CHOICES = [
   <a routerLink="/admin/annonces" class="text-sm font-semibold text-steel hover:text-navy">← Annonces</a>
   <h1 class="admin-title mt-3">{{ id() ? 'Modifier l’annonce' : 'Nouvelle annonce' }}</h1>
 
-  <form [formGroup]="form" (ngSubmit)="save()" class="mt-8 grid gap-6 xl:grid-cols-3" novalidate>
+  <form [formGroup]="form" (ngSubmit)="save()" class="mt-6 grid gap-4 sm:mt-8 sm:gap-6 xl:grid-cols-3 [&>*]:min-w-0" novalidate>
     <section class="admin-card space-y-5 xl:col-span-2">
       <label class="field"><span>Titre *</span><input class="input" formControlName="title" placeholder="Ex. New production run of safety boots"></label>
       <label class="field"><span>Résumé * <em class="font-normal text-steel">(affiché sur les cartes)</em></span><textarea class="input min-h-[80px]" formControlName="excerpt"></textarea></label>
@@ -79,7 +79,7 @@ const IMAGE_CHOICES = [
       </div>
     </section>
 
-    <aside class="space-y-6">
+    <aside class="grid gap-4 sm:gap-6 md:grid-cols-2 xl:grid-cols-1 xl:content-start">
       <section class="admin-card space-y-5">
         <h2 class="admin-h2">Publication</h2>
         <label class="field"><span>Catégorie</span>

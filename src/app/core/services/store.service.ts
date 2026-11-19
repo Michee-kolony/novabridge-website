@@ -3,8 +3,11 @@ import { Announcement, ContactMessage, ProductLine, QuoteRequest, QuoteStatus } 
 import { PRODUCT_LINES, SEED_ANNOUNCEMENTS, SEED_MESSAGES, SEED_QUOTES } from '../data/seed';
 
 const KEY = 'novabridge-store-v1';
+/** Incrémenter quand le catalogue d'origine change : les gammes stockées sont alors remplacées (devis, messages et annonces sont conservés). */
+const CATALOG_VERSION = 2;
 
 interface StoreState {
+  catalogVersion?: number;
   quotes: QuoteRequest[];
   messages: ContactMessage[];
   announcements: Announcement[];
@@ -12,6 +15,7 @@ interface StoreState {
 }
 
 const seed = (): StoreState => structuredClone({
+  catalogVersion: CATALOG_VERSION,
   quotes: SEED_QUOTES,
   messages: SEED_MESSAGES,
   announcements: SEED_ANNOUNCEMENTS,
@@ -46,7 +50,15 @@ export class StoreService {
   private load(): StoreState {
     try {
       const raw = localStorage.getItem(KEY);
-      if (raw) return { ...seed(), ...JSON.parse(raw) };
+      if (raw) {
+        const stored = JSON.parse(raw) as StoreState;
+        const state = { ...seed(), ...stored };
+        if (stored.catalogVersion !== CATALOG_VERSION) {
+          state.products = seed().products;
+          state.catalogVersion = CATALOG_VERSION;
+        }
+        return state;
+      }
     } catch { /* ignore */ }
     return seed();
   }

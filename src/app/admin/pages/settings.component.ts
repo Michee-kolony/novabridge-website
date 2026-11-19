@@ -10,10 +10,10 @@ import { StoreService } from '../../core/services/store.service';
   <h1 class="admin-title">Paramètres</h1>
   <p class="text-sm text-steel">Informations de l'entreprise utilisées sur le site.</p>
 
-  <div class="mt-8 grid gap-6 xl:grid-cols-2">
+  <div class="mt-6 grid gap-4 sm:mt-8 sm:gap-6 xl:grid-cols-2 [&>*]:min-w-0">
     <section class="admin-card">
       <h2 class="admin-h2">Entreprise</h2>
-      <dl class="mt-5 space-y-4 text-sm">
+      <dl class="mt-5 space-y-4 break-words text-sm">
         <div><dt class="dt">Raison sociale</dt><dd class="dd">{{ c.name }}</dd></div>
         <div><dt class="dt">Siège</dt><dd class="dd">{{ c.location }}</dd></div>
         <div><dt class="dt">E-mail</dt><dd class="dd">{{ c.email }}</dd></div>

@@ -2,7 +2,7 @@ import { Component, HostListener, computed, inject, signal } from '@angular/core
 import { NavigationEnd, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
-import { COMPANY } from '../core/data/company';
+import { COMPANY, CONTACT, SOCIALS } from '../core/data/company';
 import { StoreService } from '../core/services/store.service';
 import { CookieConsentService } from '../core/cookies/cookie-consent.service';
 import { LanguageService } from '../core/services/language.service';
@@ -14,6 +14,46 @@ import { LanguageService } from '../core/services/language.service';
   <!-- ===== En-tête ===== -->
   <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
           [class]="solid() ? 'bg-white/95 shadow-nb backdrop-blur' : 'bg-transparent'">
+    <!-- Barre du haut : contacts & réseaux sociaux (se replie au défilement) -->
+    <div class="overflow-hidden text-[#C9D3E0] transition-[max-height,background-color] duration-300"
+         [class]="(scrolled() ? 'max-h-0 ' : 'max-h-9 ') + (isHome() && !solid() ? 'bg-navy-900/60 backdrop-blur-sm' : 'bg-navy-900')"
+         [attr.aria-hidden]="scrolled() ? true : null">
+      <div class="container-nb flex h-9 items-center justify-between gap-4 text-xs">
+        <div class="flex min-w-0 items-center gap-4 sm:gap-6">
+          @if (contact.phone) {
+            <a [href]="'tel:' + phoneHref" class="flex shrink-0 items-center gap-1.5 font-semibold text-white transition-colors hover:text-gold" [attr.tabindex]="scrolled() ? -1 : null">
+              <nb-social-icon name="phone" class="h-3.5 w-3.5 text-gold" /><span>{{ contact.phone }}</span>
+            </a>
+          }
+          @if (contact.whatsapp) {
+            <a [href]="'https://wa.me/' + contact.whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="flex shrink-0 items-center gap-1.5 transition-colors hover:text-gold" [attr.tabindex]="scrolled() ? -1 : null">
+              <nb-social-icon name="whatsapp" class="h-3.5 w-3.5 text-gold" /><span class="hidden sm:inline">WhatsApp</span>
+            </a>
+          }
+          <a [href]="'mailto:' + company().email" class="flex min-w-0 items-center gap-1.5 transition-colors hover:text-gold" [attr.aria-label]="company().email" [attr.tabindex]="scrolled() ? -1 : null">
+            <nb-icon name="mail" class="h-3.5 w-3.5 text-gold" />
+            <span class="truncate" [class]="contact.phone ? 'hidden md:inline' : ''">{{ company().email }}</span>
+          </a>
+          <span class="hidden items-center gap-1.5 lg:flex"><nb-icon name="pin" class="h-3.5 w-3.5 text-gold" />{{ company().location }}</span>
+        </div>
+        @if (socials.length) {
+          <div class="flex shrink-0 items-center gap-2">
+            <span class="hidden text-[#8FA0B8] sm:inline">{{ 'topbar.follow' | translate }}</span>
+            <ul class="-mr-1.5 flex items-center">
+              @for (s of socials; track s.id) {
+                <li>
+                  <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.tabindex]="scrolled() ? -1 : null"
+                     [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
+                     class="flex h-7 w-7 items-center justify-center rounded-full transition hover:bg-white/10 hover:text-gold">
+                    <nb-social-icon [name]="s.id" class="h-3.5 w-3.5" />
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    </div>
     <div class="container-nb flex h-20 items-center justify-between">
       <a routerLink="/" class="flex items-center" [attr.aria-label]="'nav.homeAria' | translate">
         <img [src]="solid() ? 'logos/logo-horizontal-couleur.svg' : 'logos/logo-horizontal-negatif-transparent.svg'"
@@ -51,7 +91,8 @@ import { LanguageService } from '../core/services/language.service';
     }
   </header>
 
-  <main [class.pt-20]="!isHome()">
+  <!-- Hauteur de l'en-tête : barre du haut (36 px) + menu (80 px) -->
+  <main [style.padding-top.px]="isHome() ? 0 : 116">
     <router-outlet />
   </main>
 
@@ -80,6 +121,15 @@ import { LanguageService } from '../core/services/language.service';
         <img src="logos/logo-horizontal-negatif-transparent.svg" alt="NovaBridge Global Supply LLC" class="h-14 w-auto">
         <p class="mt-5 text-sm leading-relaxed">{{ 'footer.about' | translate: { tagline: company().tagline } }}</p>
         <p class="mt-4 font-display text-sm font-semibold text-gold">{{ company().slogan }}</p>
+        @if (socials.length) {
+          <ul class="mt-6 flex flex-wrap gap-2">
+            @for (s of socials; track s.id) {
+              <li><a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
+                     class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-gold hover:bg-gold hover:text-navy">
+                <nb-social-icon [name]="s.id" class="h-4 w-4" /></a></li>
+            }
+          </ul>
+        }
       </div>
       <div>
         <h3 class="footer-title">{{ 'footer.products' | translate }}</h3>
@@ -96,12 +146,15 @@ import { LanguageService } from '../core/services/language.service';
           <li><a routerLink="/how-it-works" class="hover:text-gold">{{ 'nav.howItWorks' | translate }}</a></li>
           <li><a routerLink="/markets" class="hover:text-gold">{{ 'nav.markets' | translate }}</a></li>
           <li><a routerLink="/news" class="hover:text-gold">{{ 'nav.news' | translate }}</a></li>
+          <li><a routerLink="/faq" class="hover:text-gold">{{ 'faq.kicker' | translate }}</a></li>
           <li><a routerLink="/contact" class="hover:text-gold">{{ 'nav.contact' | translate }}</a></li>
         </ul>
       </div>
       <div>
         <h3 class="footer-title">{{ 'nav.contact' | translate }}</h3>
         <ul class="space-y-3 text-sm">
+          @if (contact.phone) { <li class="flex gap-3"><nb-social-icon name="phone" class="h-5 w-5 text-white" /><a [href]="'tel:' + phoneHref" class="hover:text-gold">{{ contact.phone }}</a></li> }
+          @if (contact.whatsapp) { <li class="flex gap-3"><nb-social-icon name="whatsapp" class="h-5 w-5 text-white" /><a [href]="'https://wa.me/' + contact.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-gold">WhatsApp</a></li> }
           <li class="flex gap-3"><nb-icon name="mail" class="h-5 w-5 text-white" /><a [href]="'mailto:' + company().email" class="hover:text-gold">{{ company().email }}</a></li>
           <li class="flex gap-3"><nb-icon name="globe" class="h-5 w-5 text-white" /><a [href]="company().websiteUrl" target="_blank" rel="noopener" class="hover:text-gold">{{ company().website }}</a></li>
           <li class="flex gap-3"><nb-icon name="pin" class="h-5 w-5 text-white" />{{ company().location }}</li>
@@ -132,6 +185,11 @@ import { LanguageService } from '../core/services/language.service';
 })
 export class PublicLayoutComponent {
   private lang = inject(LanguageService);
+  readonly contact = CONTACT;
+  /** Lien tel: sans espaces ni ponctuation. */
+  readonly phoneHref = CONTACT.phone.replace(/[^\d+]/g, '');
+  /** Seuls les réseaux dont l'URL est renseignée sont affichés. */
+  readonly socials = SOCIALS.filter(s => !!s.url);
   readonly company = computed(() => this.lang.obj('data.company', COMPANY));
   readonly store = inject(StoreService);
   readonly consent = inject(CookieConsentService);
