@@ -66,8 +66,8 @@ import { MailService } from '../../core/services/mail.service';
           </div>
         }
         <div class="overflow-hidden rounded-xl">
-          <iframe title="Dallas, Texas" class="h-64 w-full border-0" loading="lazy"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-97.05%2C32.65%2C-96.55%2C32.95&layer=mapnik"></iframe>
+          <iframe title="Austin, Texas" class="h-64 w-full border-0" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-97.99%2C30.12%2C-97.49%2C30.42&layer=mapnik"></iframe>
         </div>
       </div>
 

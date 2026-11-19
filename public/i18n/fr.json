@@ -107,7 +107,7 @@
     },
     "network": {
       "kicker": "Notre réseau d’approvisionnement",
-      "title": "Cinq des principaux pôles de production chinois.",
+      "title": "Quatre des principaux pôles de production chinois.",
       "imageAlt": "Porte-conteneurs au port"
     },
     "news": {
@@ -119,7 +119,7 @@
   "about": {
     "hero": {
       "kicker": "À propos de NovaBridge",
-      "subtitle": "Une société d’approvisionnement basée à Dallas qui relie les meilleures usines chinoises aux entreprises de quatre continents."
+      "subtitle": "Une société d’approvisionnement basée à Austin qui relie les meilleures usines chinoises aux entreprises de quatre continents."
     },
     "values": {
       "kicker": "Mission, vision & valeurs",
@@ -204,7 +204,7 @@
   "markets": {
     "hero": {
       "title": "Quatre continents. Un partenaire d’approvisionnement de confiance.",
-      "subtitle": "De Dallas à Lubumbashi, nous livrons des produits directs usine aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique."
+      "subtitle": "D’Austin à Lubumbashi, nous livrons des produits directs usine aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique."
     },
     "locations": "Implantations",
     "sectors": "Secteurs clés",
@@ -242,7 +242,7 @@
   "products": {
     "hero": {
       "title": "Des produits directs usine pour chaque secteur.",
-      "subtitle": "Merchandising pour centres de loisirs, EPI & sécurité, santé, vêtements & uniformes, articles d’entreprise & promotionnels — avec personnalisation, faible minimum de commande et livraison DDP."
+      "subtitle": "Merchandising pour centres de loisirs, studios de Pilates, EPI & sécurité, santé, vêtements & uniformes, avantages d’entreprise & articles promotionnels — avec personnalisation, faible minimum de commande et livraison DDP."
     },
     "hub": "Pôle",
     "details": "Voir le détail",
@@ -266,7 +266,9 @@
       "Minimum de commande dès 50–100 unités",
       "Photos de contrôle avant expédition",
       "Livraison DDP — douane et transport inclus"
-    ]
+    ],
+    "catalog": "Catalogue produits",
+    "catalogHint": "Cliquez sur le catalogue pour l’afficher en grand."
   },
   "quote": {
     "hero": {
@@ -324,8 +326,8 @@
     "company": {
       "tagline": "Votre partenaire d’approvisionnement direct de la Chine vers le monde",
       "slogan": "Relier les mondes. Créer de la valeur.",
-      "location": "Dallas, Texas — États-Unis",
-      "intro": "NovaBridge Global Supply LLC est une entreprise basée à Dallas, disposant de sites de production à Guangzhou, Shenzhen, Yiwu, Jiangsu et Zhuji, en Chine. Nous sélectionnons, contrôlons et livrons des produits directement aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique.",
+      "location": "Austin, Texas — États-Unis",
+      "intro": "NovaBridge Global Supply LLC est une entreprise basée à Austin, disposant de sites de production à Shenzhen, Yiwu, Jiangsu et Zhuji, en Chine. Nous sélectionnons, contrôlons et livrons des produits directement aux entreprises des États-Unis, du Canada, d’Europe et d’Afrique.",
       "promise": [
         "Aucun intermédiaire.",
         "Prix directs usine.",
@@ -410,9 +412,6 @@
     ],
     "network": [
       {
-        "detail": "Vêtements, uniformes & EPI"
-      },
-      {
         "detail": "Électronique & produits technologiques"
       },
       {
@@ -430,7 +429,7 @@
         "name": "États-Unis",
         "badge": "Marché principal",
         "cities": [
-          "Dallas, TX"
+          "Austin, TX"
         ],
         "sectors": [
           "Centres de loisirs (FEC)",
@@ -520,10 +519,32 @@
         ],
         "hub": "Zhuji · Yiwu"
       },
+      "pilates-studio": {
+        "name": "Studio de Pilates",
+        "short": "L’essentiel à votre marque pour les studios de Pilates, de yoga et de barre.",
+        "description": "Tout ce dont votre studio a besoin, à votre logo : chaussettes antidérapantes, tapis, serviettes, accessoires et tenues pour vos clients et vos coachs — pour les studios de Pilates, de yoga et de barre. Faible minimum de commande et maquette offerte avant production.",
+        "items": [
+          "Chaussettes de Pilates — semelle silicone antidérapante",
+          "Tapis de Pilates & de yoga",
+          "Serviettes de studio à votre marque",
+          "Bandes de résistance",
+          "Cercles & ballons de Pilates",
+          "Leggings, brassières & hauts",
+          "Gourdes",
+          "Sacs cabas & sacs de sport"
+        ],
+        "industries": [
+          "Studios de Pilates",
+          "Studios de yoga",
+          "Studios de barre",
+          "Clubs de fitness"
+        ],
+        "hub": "Zhuji · Yiwu"
+      },
       "ppe-safety": {
         "name": "EPI & Sécurité",
         "short": "Équipements de protection pour les chantiers exigeants.",
-        "description": "Équipements de protection individuelle de qualité certifiée, fabriqués à Guangzhou et dans le Jiangsu — conçus pour les équipes des mines, de la construction, du pétrole & gaz et de l’industrie.",
+        "description": "Équipements de protection individuelle de qualité certifiée, fabriqués dans le Jiangsu — conçus pour les équipes des mines, de la construction, du pétrole & gaz et de l’industrie.",
         "items": [
           "Gants de sécurité — anti-coupure, abrasion et chaleur",
           "Lunettes de sécurité & lunettes-masques",
@@ -550,7 +571,7 @@
           "Pétrole & gaz",
           "Industrie"
         ],
-        "hub": "Guangzhou · Jiangsu"
+        "hub": "Jiangsu"
       },
       "healthcare": {
         "name": "Santé",
@@ -569,12 +590,12 @@
           "Dentaire",
           "Salons"
         ],
-        "hub": "Guangzhou"
+        "hub": "Jiangsu"
       },
       "apparel-uniforms": {
         "name": "Vêtements & Uniformes",
         "short": "Vêtements personnalisés et uniformes du personnel.",
-        "description": "Vêtements et uniformes personnalisés fabriqués à Guangzhou et Zhuji — votre logo, vos couleurs, vos tailles, dès 50–100 unités.",
+        "description": "Vêtements et uniformes personnalisés fabriqués à Zhuji — votre logo, vos couleurs, vos tailles, dès 50–100 unités.",
         "items": [
           "Sweats à capuche & zippés personnalisés",
           "Uniformes scolaires",
@@ -589,10 +610,10 @@
           "Restaurants",
           "Spas"
         ],
-        "hub": "Guangzhou · Zhuji"
+        "hub": "Zhuji"
       },
       "corporate-promo": {
-        "name": "Entreprise & Promotion",
+        "name": "Avantages d’entreprise & Promo",
         "short": "Articles et cadeaux à l’image de votre marque.",
         "description": "Articles promotionnels et d’entreprise de Yiwu, le plus grand pôle mondial de petits articles — pour les événements, les conférences et les cadeaux d’affaires.",
         "items": [
@@ -616,7 +637,7 @@
       "a1": {
         "title": "Le Company Portfolio 2026 est disponible",
         "excerpt": "Découvrez nos quatre gammes de produits, nos marchés sur quatre continents et notre façon de travailler — du devis à la livraison DDP.",
-        "content": "Notre portfolio 2026 présente NovaBridge Global Supply LLC : un partenaire d’approvisionnement basé à Dallas, avec des sites de production à Guangzhou, Shenzhen, Yiwu, Jiangsu et Zhuji. Demandez-nous un exemplaire par e-mail ou demandez un devis gratuit en 24 heures."
+        "content": "Notre portfolio 2026 présente NovaBridge Global Supply LLC : un partenaire d’approvisionnement basé à Austin, avec des sites de production à Shenzhen, Yiwu, Jiangsu et Zhuji. Demandez-nous un exemplaire par e-mail ou demandez un devis gratuit en 24 heures."
       },
       "a2": {
         "title": "Fret maritime vers l’Afrique via Durban",
@@ -780,7 +801,7 @@
       },
       {
         "q": "Quels produits pouvez-vous fournir ?",
-        "a": "Merchandising pour centres de loisirs (chaussettes antidérapantes, bracelets, gobelets, ballons…), EPI & équipements de sécurité, fournitures médicales, vêtements & uniformes, articles d’entreprise & promotionnels. Vous cherchez autre chose ? Demandez-nous — nous nous approvisionnons directement à Guangzhou, Shenzhen, Yiwu, dans le Jiangsu et à Zhuji."
+        "a": "Merchandising pour centres de loisirs (chaussettes antidérapantes, bracelets, gobelets, ballons…), équipements pour studios de Pilates (chaussettes, tapis, serviettes…), EPI & équipements de sécurité, fournitures médicales, vêtements & uniformes, avantages d’entreprise & articles promotionnels. Vous cherchez autre chose ? Demandez-nous — nous nous approvisionnons directement à Shenzhen, à Yiwu, dans le Jiangsu et à Zhuji."
       },
       {
         "q": "Quelles langues parle votre équipe ?",

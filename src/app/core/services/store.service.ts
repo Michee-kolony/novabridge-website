@@ -4,7 +4,7 @@ import { PRODUCT_LINES, SEED_ANNOUNCEMENTS, SEED_MESSAGES, SEED_QUOTES } from '.
 
 const KEY = 'novabridge-store-v1';
 /** Incrémenter quand le catalogue d'origine change : les gammes stockées sont alors remplacées (devis, messages et annonces sont conservés). */
-const CATALOG_VERSION = 2;
+const CATALOG_VERSION = 4;
 
 interface StoreState {
   catalogVersion?: number;

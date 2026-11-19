@@ -107,7 +107,7 @@
     },
     "network": {
       "kicker": "Our sourcing network",
-      "title": "Five of China’s top production hubs.",
+      "title": "Four of China’s top production hubs.",
       "imageAlt": "Container ship at port"
     },
     "news": {
@@ -119,7 +119,7 @@
   "about": {
     "hero": {
       "kicker": "About NovaBridge",
-      "subtitle": "A Dallas-based sourcing company bridging China’s top factories and businesses on four continents."
+      "subtitle": "A Austin-based sourcing company bridging China’s top factories and businesses on four continents."
     },
     "values": {
       "kicker": "Mission, vision & values",
@@ -179,7 +179,7 @@
   "markets": {
     "hero": {
       "title": "Four continents. One trusted sourcing partner.",
-      "subtitle": "From Dallas to Lubumbashi, we deliver factory-direct products to businesses across the USA, Canada, Europe and Africa."
+      "subtitle": "From Austin to Lubumbashi, we deliver factory-direct products to businesses across the USA, Canada, Europe and Africa."
     },
     "locations": "Locations",
     "sectors": "Key sectors",
@@ -217,7 +217,7 @@
   "products": {
     "hero": {
       "title": "Factory-direct products for every industry.",
-      "subtitle": "Entertainment merchandise, PPE & safety, healthcare, apparel & uniforms, corporate & promotional products — with custom branding, low MOQ and DDP delivery."
+      "subtitle": "Entertainment merchandise, Pilates studio essentials, PPE & safety, healthcare, apparel & uniforms, corporate perks & promotional products — with custom branding, low MOQ and DDP delivery."
     },
     "hub": "Hub",
     "details": "View details",
@@ -234,7 +234,9 @@
     "need": "Need {{name}}?",
     "needText": "Tell us your product, quantity & specs — detailed quote in 24h.",
     "notFound": "Product line not found",
-    "back": "Back to products"
+    "back": "Back to products",
+    "catalog": "Product catalog",
+    "catalogHint": "Click the catalog to view it full size."
   },
   "quote": {
     "hero": {
@@ -421,7 +423,7 @@
       },
       {
         "q": "What products can you source?",
-        "a": "Entertainment merchandise (grip socks, wristbands, cups, balloons…), PPE & safety equipment, healthcare supplies, apparel & uniforms, and corporate & promotional products. Looking for something not listed? Ask us — we source directly from Guangzhou, Shenzhen, Yiwu, Jiangsu and Zhuji."
+        "a": "Entertainment merchandise (grip socks, wristbands, cups, balloons…), Pilates studio essentials (grip socks, mats, towels…), PPE & safety equipment, healthcare supplies, apparel & uniforms, and corporate perks & promotional products. Looking for something not listed? Ask us — we source directly from Shenzhen, Yiwu, Jiangsu and Zhuji."
       },
       {
         "q": "Which languages does your team speak?",

@@ -40,6 +40,7 @@ import { Component, Input } from '@angular/core';
       @case ('edit') { <path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4" [attr.stroke]="accent"/> }
       @case ('eye') { <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3" [attr.stroke]="accent"/> }
       @case ('plus') { <path d="M12 5v14M5 12h14"/> }
+      @case ('pilates') { <circle cx="15.5" cy="5" r="2"/><path d="M4 15l5-2.5 4 2.5 4.5-6"/><path d="M13 14.5l3 3.5" /><path d="M3 20h18" [attr.stroke]="accent"/> }
       @case ('sock') { <path d="M8 3h7v8.5l3.6 3.4a3.2 3.2 0 0 1-4.4 4.6L8 13.6z"/><path d="M8 7h7" [attr.stroke]="accent"/><path d="M11.5 17l1.5 1.4" [attr.stroke]="accent"/> }
       @case ('chevron-up') { <path d="M6 15l6-6 6 6"/> }
       @case ('arrow-up') { <path d="M12 19V5M6 11l6-6 6 6"/> }

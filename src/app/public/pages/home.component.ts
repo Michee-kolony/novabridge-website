@@ -194,7 +194,7 @@ import { GlobePoint, GlobeRoute } from '../../shared/globe.component';
 
         <dl class="mt-10 grid grid-cols-3 gap-4 border-y border-white/10 py-6">
           <div><dt class="sr-only">{{ 'home.global.hubs' | translate }}</dt>
-            <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">5</dd>
+            <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">{{ network().length }}</dd>
             <dd class="mt-1 text-xs leading-snug sm:text-sm">{{ 'home.global.hubs' | translate }}</dd></div>
           <div><dt class="sr-only">{{ 'home.global.continents' | translate }}</dt>
             <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">4</dd>
@@ -306,14 +306,13 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   // ----- Globe : pôles en Chine, marchés et routes -----
   readonly globeHubs: GlobePoint[] = [
-    { name: 'China', coords: [113.26, 23.13] }, // Guangzhou
-    { name: '', coords: [114.06, 22.54] },      // Shenzhen
+    { name: 'China', coords: [114.06, 22.54] }, // Shenzhen
     { name: '', coords: [120.07, 29.31] },      // Yiwu
     { name: '', coords: [118.80, 32.06] },      // Jiangsu
     { name: '', coords: [120.24, 29.71] },      // Zhuji
   ];
   readonly globeMarkets: GlobePoint[] = [
-    { name: 'Dallas', coords: [-96.80, 32.78] },
+    { name: 'Austin', coords: [-97.74, 30.27] },
     { name: 'Montréal', coords: [-73.57, 45.50] },
     { name: '', coords: [-79.38, 43.65] },      // Toronto
     { name: 'Vancouver', coords: [-123.12, 49.28] },
@@ -322,11 +321,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     { name: 'Durban', coords: [31.02, -29.86] },
   ];
   readonly globeRoutes: GlobeRoute[] = [
-    { from: [113.26, 23.13], to: [-96.80, 32.78] },
+    { from: [114.06, 22.54], to: [-97.74, 30.27] },
     { from: [120.07, 29.31], to: [-73.57, 45.50] },
     { from: [114.06, 22.54], to: [-123.12, 49.28] },
     { from: [120.24, 29.71], to: [9.19, 45.46] },
-    { from: [113.26, 23.13], to: [31.02, -29.86] },
+    { from: [120.07, 29.31], to: [31.02, -29.86] },
     { from: [118.80, 32.06], to: [27.48, -11.66] },
     { from: [114.06, 22.54], to: [-79.38, 43.65] },
   ];

@@ -12,11 +12,11 @@ export const COMPANY = {
   email: 'cedrickonia@novabridgeglobalsupply.com',
   website: 'www.novabridgedistribution.com',
   websiteUrl: 'https://www.novabridgedistribution.com',
-  city: 'Dallas, Texas',
+  city: 'Austin, Texas',
   country: 'USA',
-  location: 'Dallas, Texas — USA',
+  location: 'Austin, Texas — USA',
   intro:
-    'NovaBridge Global Supply LLC is a Dallas-based company with manufacturing facilities based in Guangzhou, Shenzhen, Yiwu, Jiangsu, and Zhuji, China. We source, quality-check, and deliver products directly to businesses across the USA, Canada, Europe, and Africa.',
+    'NovaBridge Global Supply LLC is an Austin-based company with manufacturing facilities based in Shenzhen, Yiwu, Jiangsu, and Zhuji, China. We source, quality-check, and deliver products directly to businesses across the USA, Canada, Europe, and Africa.',
   promise: ['No middlemen.', 'Factory-direct pricing.', 'North American service standards.'],
   languages: ['English', 'French', 'Chinese'],
 };
@@ -61,7 +61,7 @@ export const STATS: Stat[] = [
 
 export interface Market { id: string; name: string; flag: string; badge?: string; cities: string[]; sectors: string[]; image: string; }
 export const MARKETS: Market[] = [
-  { id: 'usa', name: 'USA', flag: '🇺🇸', badge: 'Primary Market', cities: ['Dallas, TX'], sectors: ['FEC', 'Construction', 'Healthcare', 'Corporate', 'Oil & Gas'], image: 'photo-1601584115197-04ecc0da31d7' },
+  { id: 'usa', name: 'USA', flag: '🇺🇸', badge: 'Primary Market', cities: ['Austin, TX'], sectors: ['FEC', 'Construction', 'Healthcare', 'Corporate', 'Oil & Gas'], image: 'photo-1601584115197-04ecc0da31d7' },
   { id: 'canada', name: 'Canada', flag: '🇨🇦', cities: ['Montreal', 'Toronto', 'Vancouver'], sectors: ['Corporate', 'Healthcare', 'Entertainment'], image: 'photo-1565793298595-6a879b1d9492' },
   { id: 'europe', name: 'Europe', flag: '🇪🇺', cities: ['Italy', 'Western Europe'], sectors: ['Medical supplies', 'PPE', 'Corporate merchandise'], image: 'photo-1605745341112-85968b19335b' },
   { id: 'africa', name: 'Africa', flag: '🌍', cities: ['DRC Congo', 'Lubumbashi', 'South Africa'], sectors: ['Mining PPE', 'Construction', 'Medical'], image: 'photo-1541888946425-d81bb19240f5' },
@@ -87,7 +87,6 @@ export const ADVANTAGES = [
 ];
 
 export const SOURCING_NETWORK = [
-  { place: 'Guangzhou', detail: 'Apparel, uniforms & PPE' },
   { place: 'Shenzhen', detail: 'Electronics & tech products' },
   { place: 'Yiwu', detail: 'Promotional & corporate products' },
   { place: 'Jiangsu', detail: 'Industrial & safety equipment' },

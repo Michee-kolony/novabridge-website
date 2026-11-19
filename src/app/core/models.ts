@@ -9,6 +9,8 @@ export interface ProductLine {
   items: string[];
   industries: string[];
   hub: string;
+  /** Image du catalogue de la gamme, affichée en entier sur la page produit (optionnel). */
+  catalog?: string;
   visible: boolean;
 }
 

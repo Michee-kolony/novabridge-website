@@ -28,6 +28,16 @@ import { StoreService } from '../../core/services/store.service';
               <img [src]="img(g, 800, 560)" [alt]="p.name" class="aspect-[10/7] w-full rounded-xl object-cover" loading="lazy">
             }
           </div>
+          @if (p.catalog) {
+            <!-- Catalogue de la gamme : image affichée en entier (cliquable pour l'agrandir) -->
+            <figure class="mt-14">
+              <h2 class="h3">{{ 'productDetail.catalog' | translate }}</h2>
+              <a [href]="p.catalog" target="_blank" rel="noopener" class="mt-6 block overflow-hidden rounded-xl border border-mist shadow-nb transition hover:shadow-nb-lg">
+                <img [src]="p.catalog" [alt]="('productDetail.catalog' | translate) + ' — ' + p.name" class="h-auto w-full" loading="lazy">
+              </a>
+              <figcaption class="mt-3 text-sm text-steel">{{ 'productDetail.catalogHint' | translate }}</figcaption>
+            </figure>
+          }
         </div>
         <aside class="space-y-6" nbReveal="right">
           <div class="card-nb">
