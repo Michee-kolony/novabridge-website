@@ -105,7 +105,7 @@ import { LanguageService } from '../core/services/language.service';
 
   <!-- ===== Appel à l'action ===== -->
   <section class="bg-ivory">
-    <div class="container-nb py-16">
+    <div class="container-nb pb-24 pt-16 md:pb-32">
       <div class="relative overflow-hidden rounded-2xl bg-navy px-8 py-12 md:px-14">
         <svg class="pointer-events-none absolute -right-10 bottom-0 h-full opacity-60" viewBox="0 0 400 220" aria-hidden="true">
           <g fill="none" stroke="#C9A24B"><path d="M40 230A170 170 0 0 1 380 230" stroke-width="1.6"/><path d="M90 230A120 120 0 0 1 330 230" opacity=".45"/><path d="M140 230A70 70 0 0 1 280 230" opacity=".25"/></g>
@@ -122,7 +122,12 @@ import { LanguageService } from '../core/services/language.service';
   </section>
 
   <!-- ===== Pied de page ===== -->
-  <footer class="bg-navy text-[#C9D3E0]">
+  <footer class="relative bg-navy text-[#C9D3E0]">
+    <!-- Vague unique (statique) qui forme le haut du pied de page, même couleur que le fond -->
+    <svg class="pointer-events-none absolute inset-x-0 bottom-full block h-14 w-full translate-y-px text-navy md:h-20"
+         viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="currentColor" d="M0 72C180 22 360 4 560 34s380 82 600 70c120-6 210-34 280-60V120H0Z"/>
+    </svg>
     <div class="container-nb grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
       <div class="lg:col-span-1">
         <img src="logos/logo-horizontal-negatif-transparent.svg" alt="NovaBridge Global Supply LLC" class="h-14 w-auto">

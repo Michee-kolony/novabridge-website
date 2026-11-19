@@ -111,7 +111,7 @@ export class GlobeComponent implements AfterViewInit, OnDestroy {
     this.size = canvas.clientWidth;
     canvas.width = Math.round(this.size * this.dpr);
     canvas.height = Math.round(this.size * this.dpr);
-    const r = this.size / 2 - 6;
+    const r = this.size / 2 / 1.09; // marge pour le halo
     this.projection.scale(r).translate([this.size / 2, this.size / 2]);
   }
 

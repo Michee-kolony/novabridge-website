@@ -179,6 +179,11 @@ import { GlobePoint, GlobeRoute } from '../../shared/globe.component';
   </section>
 
   <!-- ===== PRÉSENCE INTERNATIONALE (globe) ===== -->
+  <!-- Vague unique (statique) qui forme le haut de la section, même couleur que son fond -->
+  <svg class="pointer-events-none -mb-px block h-14 w-full text-navy-900 md:h-20"
+       viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="currentColor" d="M0 72C180 22 360 4 560 34s380 82 600 70c120-6 210-34 280-60V120H0Z"/>
+  </svg>
   <section class="section relative overflow-hidden bg-navy-900 text-[#C9D3E0]">
     <div class="pointer-events-none absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full bg-atlantic/20 blur-3xl"></div>
     <div class="container-nb relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
