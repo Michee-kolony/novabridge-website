@@ -2,7 +2,7 @@ import { Component, HostListener, computed, inject, signal } from '@angular/core
 import { NavigationEnd, Router } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
-import { COMPANY, CONTACT, SOCIALS } from '../core/data/company';
+import { COMPANY, CONTACT, SOCIALS, telHref } from '../core/data/company';
 import { StoreService } from '../core/services/store.service';
 import { CookieConsentService } from '../core/cookies/cookie-consent.service';
 import { LanguageService } from '../core/services/language.service';
@@ -20,9 +20,10 @@ import { LanguageService } from '../core/services/language.service';
          [attr.aria-hidden]="scrolled() ? true : null">
       <div class="container-nb flex h-9 items-center justify-between gap-4 text-xs">
         <div class="flex min-w-0 items-center gap-4 sm:gap-6">
-          @if (contact.phone) {
-            <a [href]="'tel:' + phoneHref" class="flex shrink-0 items-center gap-1.5 font-semibold text-white transition-colors hover:text-gold" [attr.tabindex]="scrolled() ? -1 : null">
-              <nb-social-icon name="phone" class="h-3.5 w-3.5 text-gold" /><span>{{ contact.phone }}</span>
+          @for (p of contact.phones; track p; let i = $index) {
+            <a [href]="tel(p)" class="shrink-0 items-center gap-1.5 font-semibold text-white transition-colors hover:text-gold" [attr.tabindex]="scrolled() ? -1 : null"
+               [class]="i === 0 ? 'flex' : 'hidden sm:flex'">
+              <nb-social-icon name="phone" class="h-3.5 w-3.5 text-gold" /><span>{{ p }}</span>
             </a>
           }
           @if (contact.whatsapp) {
@@ -32,9 +33,9 @@ import { LanguageService } from '../core/services/language.service';
           }
           <a [href]="'mailto:' + company().email" class="flex min-w-0 items-center gap-1.5 transition-colors hover:text-gold" [attr.aria-label]="company().email" [attr.tabindex]="scrolled() ? -1 : null">
             <nb-icon name="mail" class="h-3.5 w-3.5 text-gold" />
-            <span class="truncate" [class]="contact.phone ? 'hidden md:inline' : ''">{{ company().email }}</span>
+            <span class="truncate" [class]="contact.phones.length ? 'hidden lg:inline' : ''">{{ company().email }}</span>
           </a>
-          <span class="hidden items-center gap-1.5 lg:flex"><nb-icon name="pin" class="h-3.5 w-3.5 text-gold" />{{ company().location }}</span>
+          <span class="hidden items-center gap-1.5 xl:flex"><nb-icon name="pin" class="h-3.5 w-3.5 text-gold" />{{ company().location }}</span>
         </div>
         @if (socials.length) {
           <div class="flex shrink-0 items-center gap-2">
@@ -42,11 +43,17 @@ import { LanguageService } from '../core/services/language.service';
             <ul class="-mr-1.5 flex items-center">
               @for (s of socials; track s.id) {
                 <li>
-                  <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.tabindex]="scrolled() ? -1 : null"
-                     [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
-                     class="flex h-7 w-7 items-center justify-center rounded-full transition hover:bg-white/10 hover:text-gold">
-                    <nb-social-icon [name]="s.id" class="h-3.5 w-3.5" />
-                  </a>
+                  @if (s.url) {
+                    <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.tabindex]="scrolled() ? -1 : null"
+                       [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
+                       class="flex h-7 w-7 items-center justify-center rounded-full transition hover:bg-white/10 hover:text-gold">
+                      <nb-social-icon [name]="s.id" class="h-3.5 w-3.5" />
+                    </a>
+                  } @else {
+                    <span role="img" [attr.title]="s.label" [attr.aria-label]="s.label" class="flex h-7 w-7 items-center justify-center rounded-full">
+                      <nb-social-icon [name]="s.id" class="h-3.5 w-3.5" />
+                    </span>
+                  }
                 </li>
               }
             </ul>
@@ -124,9 +131,17 @@ import { LanguageService } from '../core/services/language.service';
         @if (socials.length) {
           <ul class="mt-6 flex flex-wrap gap-2">
             @for (s of socials; track s.id) {
-              <li><a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
+              <li>
+                @if (s.url) {
+                  <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label" [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
                      class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-gold hover:bg-gold hover:text-navy">
-                <nb-social-icon [name]="s.id" class="h-4 w-4" /></a></li>
+                    <nb-social-icon [name]="s.id" class="h-4 w-4" /></a>
+                } @else {
+                  <span role="img" [attr.title]="s.label" [attr.aria-label]="s.label"
+                        class="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white">
+                    <nb-social-icon [name]="s.id" class="h-4 w-4" /></span>
+                }
+              </li>
             }
           </ul>
         }
@@ -153,9 +168,9 @@ import { LanguageService } from '../core/services/language.service';
       <div>
         <h3 class="footer-title">{{ 'nav.contact' | translate }}</h3>
         <ul class="space-y-3 text-sm">
-          @if (contact.phone) { <li class="flex gap-3"><nb-social-icon name="phone" class="h-5 w-5 text-white" /><a [href]="'tel:' + phoneHref" class="hover:text-gold">{{ contact.phone }}</a></li> }
+          @for (p of contact.phones; track p) { <li class="flex gap-3"><nb-social-icon name="phone" class="h-5 w-5 text-white" /><a [href]="tel(p)" class="hover:text-gold">{{ p }}</a></li> }
           @if (contact.whatsapp) { <li class="flex gap-3"><nb-social-icon name="whatsapp" class="h-5 w-5 text-white" /><a [href]="'https://wa.me/' + contact.whatsapp" target="_blank" rel="noopener noreferrer" class="hover:text-gold">WhatsApp</a></li> }
-          <li class="flex gap-3"><nb-icon name="mail" class="h-5 w-5 text-white" /><a [href]="'mailto:' + company().email" class="hover:text-gold">{{ company().email }}</a></li>
+          @for (e of emails(); track e) { <li class="flex gap-3"><nb-icon name="mail" class="h-5 w-5 shrink-0 text-white" /><a [href]="'mailto:' + e" class="break-all hover:text-gold">{{ e }}</a></li> }
           <li class="flex gap-3"><nb-icon name="globe" class="h-5 w-5 text-white" /><a [href]="company().websiteUrl" target="_blank" rel="noopener" class="hover:text-gold">{{ company().website }}</a></li>
           <li class="flex gap-3"><nb-icon name="pin" class="h-5 w-5 text-white" />{{ company().location }}</li>
           <li class="flex gap-3"><nb-icon name="chat" class="h-5 w-5 text-white" />{{ company().languages.join(' · ') }}</li>
@@ -166,7 +181,7 @@ import { LanguageService } from '../core/services/language.service';
       <div class="container-nb flex flex-col items-center justify-between gap-3 py-6 text-xs text-[#8FA0B8] md:flex-row">
         <div class="flex flex-col items-center gap-1 md:items-start">
           <span>© {{ year }} {{ company().name }}. {{ 'footer.rights' | translate }}</span>
-          <span>{{ 'footer.developedBy' | translate: { name: 'AyemTech' } }}</span>
+          <a href="https://www.ayemtech.com" target="_blank" rel="noopener" class="transition-colors hover:text-gold">{{ 'footer.developedBy' | translate: { name: 'AyemTech' } }}</a>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           <a routerLink="/cookies" class="hover:text-gold">{{ 'footer.cookiePolicy' | translate }}</a>
@@ -186,11 +201,11 @@ import { LanguageService } from '../core/services/language.service';
 export class PublicLayoutComponent {
   private lang = inject(LanguageService);
   readonly contact = CONTACT;
-  /** Lien tel: sans espaces ni ponctuation. */
-  readonly phoneHref = CONTACT.phone.replace(/[^\d+]/g, '');
-  /** Seuls les réseaux dont l'URL est renseignée sont affichés. */
-  readonly socials = SOCIALS.filter(s => !!s.url);
+  readonly tel = telHref;
+  /** Tous les réseaux sont affichés ; l'icône n'est cliquable que si son URL est renseignée. */
+  readonly socials = SOCIALS;
   readonly company = computed(() => this.lang.obj('data.company', COMPANY));
+  readonly emails = computed(() => [this.company().email, ...CONTACT.emails]);
   readonly store = inject(StoreService);
   readonly consent = inject(CookieConsentService);
   readonly products = computed(() => this.store.visibleProducts().map(p => this.lang.product(p)));

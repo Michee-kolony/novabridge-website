@@ -9,7 +9,7 @@ export const COMPANY = {
   shortName: 'NovaBridge',
   tagline: 'Your direct sourcing partner from China to the world',
   slogan: 'Bridging Worlds. Delivering Value.',
-  email: 'info@novabridgedistribution.com',
+  email: 'cedrickonia@novabridgeglobalsupply.com',
   website: 'www.novabridgedistribution.com',
   websiteUrl: 'https://www.novabridgedistribution.com',
   city: 'Dallas, Texas',
@@ -26,22 +26,29 @@ export const COMPANY = {
  * ⚠️ À COMPLÉTER : un élément vide n'est pas affiché sur le site.
  */
 export const CONTACT = {
-  /** Format international affiché, ex. '+1 (214) 555-0100' */
-  phone: '',
+  /** Numéros affichés (format international), dans l'ordre d'affichage. */
+  phones: ['+1 (972) 215-8495', '+1 (817) 971-1538'],
+  /** E-mail(s) supplémentaire(s), affiché(s) en plus de COMPANY.email. */
+  emails: [] as string[],
   /** Numéro WhatsApp au format international sans espaces ni « + », ex. '12145550100' */
   whatsapp: '',
 };
 
+/** Lien tel: à partir d'un numéro affiché (sans espaces ni ponctuation). */
+export const telHref = (phone: string) => 'tel:' + phone.replace(/[^\d+]/g, '');
+
 export type SocialId = 'facebook' | 'instagram' | 'linkedin' | 'tiktok' | 'x' | 'youtube';
 export interface SocialLink { id: SocialId; label: string; url: string; }
-/** Ordre d'affichage des réseaux sociaux — renseignez l'URL complète de chaque page. */
+/**
+ * Réseaux sociaux (ordre d'affichage) — barre du haut, pied de page et page Contact.
+ * ⚠️ À COMPLÉTER : renseignez l'URL complète de chaque page (ex. 'https://www.facebook.com/novabridge').
+ * Sans URL, l'icône est affichée mais n'est pas cliquable. Pour ajouter X ou YouTube : { id: 'x', label: 'X', url: '…' }.
+ */
 export const SOCIALS: SocialLink[] = [
   { id: 'facebook', label: 'Facebook', url: '' },
   { id: 'instagram', label: 'Instagram', url: '' },
   { id: 'linkedin', label: 'LinkedIn', url: '' },
   { id: 'tiktok', label: 'TikTok', url: '' },
-  { id: 'x', label: 'X', url: '' },
-  { id: 'youtube', label: 'YouTube', url: '' },
 ];
 
 export interface Stat { key: string; value: number | null; display?: string; suffix?: string; label: string; }

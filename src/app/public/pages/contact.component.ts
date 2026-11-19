@@ -2,7 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { LanguageService } from '../../core/services/language.service';
 
 import { FormBuilder, Validators } from '@angular/forms';
-import { COMPANY, MARKETS, img } from '../../core/data/company';
+import { COMPANY, CONTACT, MARKETS, SOCIALS, img, telHref } from '../../core/data/company';
 import { StoreService } from '../../core/services/store.service';
 
 @Component({
@@ -15,10 +15,20 @@ import { StoreService } from '../../core/services/store.service';
   <section class="section">
     <div class="container-nb grid gap-12 lg:grid-cols-5">
       <div class="space-y-5 lg:col-span-2" nbReveal="left">
-        <a [href]="'mailto:' + company().email" class="card-nb flex items-center gap-5 transition hover:border-gold">
-          <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="mail" class="h-6 w-6" /></div>
-          <div><div class="overline">{{ 'contact.email' | translate }}</div><div class="font-semibold text-navy">{{ company().email }}</div></div>
-        </a>
+        @if (phones.length) {
+          <div class="card-nb flex items-center gap-5">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy text-white"><nb-social-icon name="phone" class="h-6 w-6" /></div>
+            <div class="min-w-0"><div class="overline">{{ 'contact.phone' | translate }}</div>
+              @for (p of phones; track p) { <a [href]="tel(p)" class="block font-semibold text-navy transition hover:text-gold">{{ p }}</a> }
+            </div>
+          </div>
+        }
+        <div class="card-nb flex items-center gap-5">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="mail" class="h-6 w-6" /></div>
+          <div class="min-w-0"><div class="overline">{{ 'contact.email' | translate }}</div>
+            @for (e of emails(); track e) { <a [href]="'mailto:' + e" class="block break-all font-semibold text-navy transition hover:text-gold">{{ e }}</a> }
+          </div>
+        </div>
         <a [href]="company().websiteUrl" target="_blank" rel="noopener" class="card-nb flex items-center gap-5 transition hover:border-gold">
           <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="globe" class="h-6 w-6" /></div>
           <div><div class="overline">{{ 'contact.website' | translate }}</div><div class="font-semibold text-navy">{{ company().website }}</div></div>
@@ -31,6 +41,29 @@ import { StoreService } from '../../core/services/store.service';
           <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-navy text-white"><nb-icon name="chat" class="h-6 w-6" /></div>
           <div><div class="overline">{{ 'contact.languages' | translate }}</div><div class="font-semibold text-navy">{{ company().languages.join(' · ') }}</div></div>
         </div>
+        @if (socials.length) {
+          <div class="card-nb">
+            <div class="overline">{{ 'topbar.follow' | translate }}</div>
+            <ul class="mt-3 flex flex-wrap gap-3">
+              @for (s of socials; track s.id) {
+                <li>
+                  @if (s.url) {
+                    <a [href]="s.url" target="_blank" rel="noopener noreferrer" [attr.title]="s.label"
+                       [attr.aria-label]="'topbar.social' | translate: { name: s.label }"
+                       class="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white transition hover:bg-gold hover:text-navy">
+                      <nb-social-icon [name]="s.id" class="h-5 w-5" />
+                    </a>
+                  } @else {
+                    <span role="img" [attr.title]="s.label" [attr.aria-label]="s.label"
+                          class="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white">
+                      <nb-social-icon [name]="s.id" class="h-5 w-5" />
+                    </span>
+                  }
+                </li>
+              }
+            </ul>
+          </div>
+        }
         <div class="overflow-hidden rounded-xl">
           <iframe title="Dallas, Texas" class="h-64 w-full border-0" loading="lazy"
             src="https://www.openstreetmap.org/export/embed.html?bbox=-97.05%2C32.65%2C-96.55%2C32.95&layer=mapnik"></iframe>
@@ -79,8 +112,13 @@ export class ContactComponent {
   private fb = inject(FormBuilder);
   private lang = inject(LanguageService);
   readonly company = computed(() => this.lang.obj('data.company', COMPANY));
+  readonly emails = computed(() => [this.company().email, ...CONTACT.emails]);
+  readonly phones = CONTACT.phones;
+  readonly tel = telHref;
   readonly markets = computed(() => this.lang.list('data.markets', MARKETS));
   readonly img = img;
+  /** Tous les réseaux sont affichés ; l'icône n'est cliquable que si son URL est renseignée. */
+  readonly socials = SOCIALS;
   readonly sent = signal(false);
   readonly error = signal(false);
   readonly form = this.fb.nonNullable.group({

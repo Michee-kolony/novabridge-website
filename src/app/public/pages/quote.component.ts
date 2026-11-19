@@ -2,7 +2,7 @@ import { Component, OnInit, computed, inject, input, signal } from '@angular/cor
 import { LanguageService } from '../../core/services/language.service';
 
 import { FormBuilder, Validators } from '@angular/forms';
-import { COMPANY, STEPS } from '../../core/data/company';
+import { COMPANY, CONTACT, STEPS, telHref } from '../../core/data/company';
 import { QuoteRequest } from '../../core/models';
 import { StoreService } from '../../core/services/store.service';
 
@@ -78,7 +78,12 @@ export const COUNTRIES = ['USA', 'Canada', 'Italy', 'France', 'Belgium', 'Wester
         </div>
         <div class="card-nb">
           <h3 class="font-display text-lg font-bold text-navy">{{ 'quote.preferEmail' | translate }}</h3>
-          <a [href]="'mailto:' + company().email" class="mt-3 flex items-center gap-3 font-semibold text-atlantic"><nb-icon name="mail" class="h-5 w-5" />{{ company().email }}</a>
+          @for (e of emails(); track e) {
+            <a [href]="'mailto:' + e" class="mt-3 flex items-center gap-3 break-all font-semibold text-atlantic"><nb-icon name="mail" class="h-5 w-5 shrink-0" />{{ e }}</a>
+          }
+          @for (p of phones; track p) {
+            <a [href]="tel(p)" class="mt-3 flex items-center gap-3 font-semibold text-atlantic"><nb-social-icon name="phone" class="h-5 w-5 shrink-0" />{{ p }}</a>
+          }
           <p class="mt-3 text-sm text-steel">{{ 'quote.teamSpeaks' | translate: { languages: company().languages.join(', ') } }}</p>
         </div>
       </aside>
@@ -92,6 +97,9 @@ export class QuoteComponent implements OnInit {
   private fb = inject(FormBuilder);
   private lang = inject(LanguageService);
   readonly company = computed(() => this.lang.obj('data.company', COMPANY));
+  readonly emails = computed(() => [this.company().email, ...CONTACT.emails]);
+  readonly phones = CONTACT.phones;
+  readonly tel = telHref;
   readonly steps = computed(() => this.lang.list('data.steps', STEPS));
   readonly products = computed(() => this.store.visibleProducts().map(p => this.lang.product(p)));
   /** Les valeurs envoyées restent en anglais (back-office) ; seuls les libellés sont traduits. */

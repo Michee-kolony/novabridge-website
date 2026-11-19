@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { COMPANY, MARKETS, SOURCING_NETWORK } from '../../core/data/company';
+import { COMPANY, CONTACT, MARKETS, SOURCING_NETWORK } from '../../core/data/company';
 import { AuthService } from '../../core/services/auth.service';
 import { StoreService } from '../../core/services/store.service';
 
@@ -16,7 +16,8 @@ import { StoreService } from '../../core/services/store.service';
       <dl class="mt-5 space-y-4 break-words text-sm">
         <div><dt class="dt">Raison sociale</dt><dd class="dd">{{ c.name }}</dd></div>
         <div><dt class="dt">Siège</dt><dd class="dd">{{ c.location }}</dd></div>
-        <div><dt class="dt">E-mail</dt><dd class="dd">{{ c.email }}</dd></div>
+        <div><dt class="dt">E-mail</dt><dd class="dd">@for (e of emails; track e) { <span class="block">{{ e }}</span> }</dd></div>
+        <div><dt class="dt">Téléphone</dt><dd class="dd">@for (p of phones; track p) { <span class="block">{{ p }}</span> }</dd></div>
         <div><dt class="dt">Site web</dt><dd class="dd">{{ c.website }}</dd></div>
         <div><dt class="dt">Signature</dt><dd class="dd">{{ c.slogan }}</dd></div>
         <div><dt class="dt">Langues de l'équipe</dt><dd class="dd">{{ c.languages.join(', ') }}</dd></div>
@@ -47,6 +48,8 @@ import { StoreService } from '../../core/services/store.service';
 })
 export class SettingsComponent {
   readonly c = COMPANY;
+  readonly emails = [COMPANY.email, ...CONTACT.emails];
+  readonly phones = CONTACT.phones;
   readonly markets = MARKETS;
   readonly network = SOURCING_NETWORK;
   readonly auth = inject(AuthService);
