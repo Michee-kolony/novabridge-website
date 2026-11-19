@@ -86,6 +86,19 @@
       "kicker": "Why choose NovaBridge",
       "title": "Sourcing with the rigor of a North American partner."
     },
+    "global": {
+      "kicker": "International presence",
+      "title": "From China to the whole world.",
+      "text": "Our sourcing hubs in China ship every day to businesses in North America, Europe and Africa. One partner, one point of contact, deliveries all over the world.",
+      "hubs": "production hubs in China",
+      "continents": "continents served",
+      "languages": "working languages",
+      "legendHubs": "Sourcing hubs (China)",
+      "legendMarkets": "Markets served",
+      "link": "Discover our markets",
+      "aria": "Rotating globe showing NovaBridge routes from China to the USA, Canada, Europe and Africa",
+      "drag": "Drag the globe to explore"
+    },
     "markets": {
       "kicker": "Our markets",
       "title": "Serving businesses on four continents."

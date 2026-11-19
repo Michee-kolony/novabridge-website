@@ -86,6 +86,19 @@
       "kicker": "Por qué elegir NovaBridge",
       "title": "Abastecimiento con el rigor de un socio norteamericano."
     },
+    "global": {
+      "kicker": "Presencia internacional",
+      "title": "De China al mundo entero.",
+      "text": "Nuestros centros de abastecimiento en China envían cada día a empresas de Norteamérica, Europa y África. Un solo socio, un solo interlocutor, entregas en todo el mundo.",
+      "hubs": "centros de producción en China",
+      "continents": "continentes atendidos",
+      "languages": "idiomas de trabajo",
+      "legendHubs": "Centros de abastecimiento (China)",
+      "legendMarkets": "Mercados atendidos",
+      "link": "Descubra nuestros mercados",
+      "aria": "Globo giratorio que muestra las rutas de NovaBridge desde China hacia EE. UU., Canadá, Europa y África",
+      "drag": "Arrastre el globo para explorarlo"
+    },
     "markets": {
       "kicker": "Nuestros mercados",
       "title": "Al servicio de empresas en cuatro continentes."

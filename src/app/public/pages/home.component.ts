@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ADVANTAGES, COMPANY, IMAGES, MARKETS, SOURCING_NETWORK, STATS, STEPS, img } from '../../core/data/company';
 import { StoreService } from '../../core/services/store.service';
 import { prefersReducedMotion } from '../../shared/gsap.directives';
+import { GlobePoint, GlobeRoute } from '../../shared/globe.component';
 
 @Component({
   selector: 'nb-home',
@@ -12,7 +13,8 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
   <!-- ===== HERO ===== -->
   <section #hero class="relative flex min-h-[100svh] items-center overflow-hidden bg-navy">
     <div class="absolute inset-0 -top-[10%] h-[120%]" [nbParallax]="14">
-      <img [src]="img(images.hero, 1600)" alt="" class="h-full w-full object-cover">
+      <!-- Effet « eau » : une goutte tombe à chaque clic / toucher sur le hero -->
+      <nb-water-ripple [src]="img(images.hero, 1600)" [target]="hero" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40"></div>
 
@@ -176,6 +178,50 @@ import { prefersReducedMotion } from '../../shared/gsap.directives';
     </div>
   </section>
 
+  <!-- ===== PRÉSENCE INTERNATIONALE (globe) ===== -->
+  <section class="section relative overflow-hidden bg-navy-900 text-[#C9D3E0]">
+    <div class="pointer-events-none absolute -right-40 top-1/2 h-[700px] w-[700px] -translate-y-1/2 rounded-full bg-atlantic/20 blur-3xl"></div>
+    <div class="container-nb relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div nbReveal="left">
+        <p class="overline !text-gold">{{ 'home.global.kicker' | translate }}</p>
+        <h2 class="h2 mt-3 !text-white">{{ 'home.global.title' | translate }}</h2>
+        <p class="mt-5 text-lg leading-relaxed">{{ 'home.global.text' | translate }}</p>
+
+        <dl class="mt-10 grid grid-cols-3 gap-4 border-y border-white/10 py-6">
+          <div><dt class="sr-only">{{ 'home.global.hubs' | translate }}</dt>
+            <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">5</dd>
+            <dd class="mt-1 text-xs leading-snug sm:text-sm">{{ 'home.global.hubs' | translate }}</dd></div>
+          <div><dt class="sr-only">{{ 'home.global.continents' | translate }}</dt>
+            <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">4</dd>
+            <dd class="mt-1 text-xs leading-snug sm:text-sm">{{ 'home.global.continents' | translate }}</dd></div>
+          <div><dt class="sr-only">{{ 'home.global.languages' | translate }}</dt>
+            <dd class="font-display text-3xl font-extrabold text-gold md:text-4xl">{{ company().languages.length }}</dd>
+            <dd class="mt-1 text-xs leading-snug sm:text-sm">{{ 'home.global.languages' | translate }}</dd></div>
+        </dl>
+
+        <ul class="mt-8 flex flex-wrap gap-2">
+          @for (m of markets(); track m.id) {
+            <li class="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white">
+              <span aria-hidden="true">{{ m.flag }}</span>{{ m.name }}
+            </li>
+          }
+        </ul>
+
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+          <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-gold"></span>{{ 'home.global.legendHubs' | translate }}</span>
+          <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-white"></span>{{ 'home.global.legendMarkets' | translate }}</span>
+        </div>
+
+        <a routerLink="/markets" class="link-arrow mt-8 !text-gold hover:!text-white">{{ 'home.global.link' | translate }} <nb-icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+
+      <div class="mx-auto w-full max-w-[560px]" nbReveal="scale">
+        <nb-globe [hubs]="globeHubs" [markets]="globeMarkets" [routes]="globeRoutes" [label]="'home.global.aria' | translate" />
+        <p class="mt-4 text-center text-xs text-[#8FA0B8]">{{ 'home.global.drag' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== RÉSEAU DE SOURCING ===== -->
   <section class="section bg-ivory">
     <div class="container-nb grid items-center gap-14 lg:grid-cols-2">
@@ -252,6 +298,33 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly faq = computed(() => { const f = this.lang.t<{ q: string; a: string }[]>('faq.items', []); return Array.isArray(f) ? f.slice(0, 5) : []; });
   readonly images = IMAGES;
   readonly img = img;
+
+  // ----- Globe : pôles en Chine, marchés et routes -----
+  readonly globeHubs: GlobePoint[] = [
+    { name: 'China', coords: [113.26, 23.13] }, // Guangzhou
+    { name: '', coords: [114.06, 22.54] },      // Shenzhen
+    { name: '', coords: [120.07, 29.31] },      // Yiwu
+    { name: '', coords: [118.80, 32.06] },      // Jiangsu
+    { name: '', coords: [120.24, 29.71] },      // Zhuji
+  ];
+  readonly globeMarkets: GlobePoint[] = [
+    { name: 'Dallas', coords: [-96.80, 32.78] },
+    { name: 'Montréal', coords: [-73.57, 45.50] },
+    { name: '', coords: [-79.38, 43.65] },      // Toronto
+    { name: 'Vancouver', coords: [-123.12, 49.28] },
+    { name: 'Italia', coords: [9.19, 45.46] },
+    { name: 'Lubumbashi', coords: [27.48, -11.66] },
+    { name: 'Durban', coords: [31.02, -29.86] },
+  ];
+  readonly globeRoutes: GlobeRoute[] = [
+    { from: [113.26, 23.13], to: [-96.80, 32.78] },
+    { from: [120.07, 29.31], to: [-73.57, 45.50] },
+    { from: [114.06, 22.54], to: [-123.12, 49.28] },
+    { from: [120.24, 29.71], to: [9.19, 45.46] },
+    { from: [113.26, 23.13], to: [31.02, -29.86] },
+    { from: [118.80, 32.06], to: [27.48, -11.66] },
+    { from: [114.06, 22.54], to: [-79.38, 43.65] },
+  ];
 
   // ----- Titre « machine à écrire » -----
   /** Caractères de chaque ligne (Array.from gère correctement le chinois et les accents). */

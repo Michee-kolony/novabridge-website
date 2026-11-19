@@ -86,6 +86,19 @@
       "kicker": "Pourquoi choisir NovaBridge",
       "title": "Un approvisionnement avec la rigueur d’un partenaire nord-américain."
     },
+    "global": {
+      "kicker": "Présence internationale",
+      "title": "De la Chine vers le monde entier.",
+      "text": "Nos pôles d’approvisionnement en Chine expédient chaque jour vers des entreprises d’Amérique du Nord, d’Europe et d’Afrique. Un seul partenaire, un seul interlocuteur, des livraisons partout dans le monde.",
+      "hubs": "pôles de production en Chine",
+      "continents": "continents desservis",
+      "languages": "langues de travail",
+      "legendHubs": "Pôles d’approvisionnement (Chine)",
+      "legendMarkets": "Marchés desservis",
+      "link": "Découvrir nos marchés",
+      "aria": "Globe en rotation montrant les routes NovaBridge de la Chine vers les États-Unis, le Canada, l’Europe et l’Afrique",
+      "drag": "Faites glisser le globe pour l’explorer"
+    },
     "markets": {
       "kicker": "Nos marchés",
       "title": "Au service des entreprises sur quatre continents."

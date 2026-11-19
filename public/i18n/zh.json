@@ -86,6 +86,19 @@
       "kicker": "为什么选择 NovaBridge",
       "title": "以北美合作伙伴的严谨标准进行采购。"
     },
+    "global": {
+      "kicker": "国际业务",
+      "title": "从中国走向世界。",
+      "text": "我们在中国的采购中心每天向北美、欧洲和非洲的企业发货。一个合作伙伴，一个联系人，货达全球。",
+      "hubs": "个中国生产基地",
+      "continents": "个服务大洲",
+      "languages": "种工作语言",
+      "legendHubs": "采购中心（中国）",
+      "legendMarkets": "服务市场",
+      "link": "了解我们的市场",
+      "aria": "旋转地球，展示 NovaBridge 从中国到美国、加拿大、欧洲和非洲的运输路线",
+      "drag": "拖动地球进行探索"
+    },
     "markets": {
       "kicker": "我们的市场",
       "title": "服务四大洲的企业客户。"

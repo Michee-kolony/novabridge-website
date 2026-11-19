@@ -6,8 +6,10 @@ import { CountUpDirective, ParallaxDirective, RevealDirective } from './gsap.dir
 import { IconComponent } from './icon.component';
 import { LanguageSwitcherComponent } from './language-switcher.component';
 import { SocialIconComponent } from './social-icon.component';
+import { GlobeComponent } from './globe.component';
+import { WaterRippleComponent } from './water-ripple.component';
 
-const DECLARATIONS = [IconComponent, SocialIconComponent, RevealDirective, CountUpDirective, ParallaxDirective, LanguageSwitcherComponent];
+const DECLARATIONS = [IconComponent, SocialIconComponent, GlobeComponent, WaterRippleComponent, RevealDirective, CountUpDirective, ParallaxDirective, LanguageSwitcherComponent];
 
 /**
  * Éléments communs au site client et au back-office.
