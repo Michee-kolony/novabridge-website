@@ -1,0 +1,812 @@
+{
+  "titles": {
+    "home": "NovaBridge Global Supply LLC — Aprovisionamento direto da China para o mundo",
+    "products": "Produtos — NovaBridge",
+    "productDetail": "Linha de produtos — NovaBridge",
+    "markets": "Mercados — NovaBridge",
+    "howItWorks": "Como funciona — NovaBridge",
+    "about": "Sobre nós — NovaBridge",
+    "news": "Notícias — NovaBridge",
+    "quote": "Orçamento gratuito — NovaBridge",
+    "contact": "Contacto — NovaBridge",
+    "notFound": "Página não encontrada — NovaBridge",
+    "cookies": "Política de cookies — NovaBridge",
+    "faq": "Perguntas frequentes — NovaBridge"
+  },
+  "lang": {
+    "choose": "Escolher idioma"
+  },
+  "nav": {
+    "homeAria": "NovaBridge — Início",
+    "main": "Navegação principal",
+    "mobile": "Navegação móvel",
+    "menu": "Menu",
+    "quote": "Orçamento gratuito",
+    "home": "Início",
+    "products": "Produtos",
+    "markets": "Mercados",
+    "howItWorks": "Como funciona",
+    "about": "Sobre nós",
+    "news": "Notícias",
+    "contact": "Contacto"
+  },
+  "common": {
+    "requestQuote": "Pedir orçamento",
+    "backHome": "Voltar ao início",
+    "backToTop": "Voltar ao topo"
+  },
+  "form": {
+    "sending": "A enviar…",
+    "sendError": "Não foi possível enviar a sua mensagem. Tente novamente dentro de momentos ou escreva-nos diretamente para {{email}}.",
+    "fullName": "Nome completo",
+    "message": "Mensagem"
+  },
+  "cta": {
+    "kicker": "Pronto para se aprovisionar de forma mais inteligente?",
+    "title": "Receba o seu orçamento gratuito em",
+    "titleHighlight": "24 horas."
+  },
+  "footer": {
+    "about": "{{tagline}}. Preços diretos de fábrica, padrões de serviço norte-americanos.",
+    "products": "Produtos",
+    "company": "Empresa",
+    "aboutUs": "Sobre nós",
+    "rights": "Todos os direitos reservados.",
+    "admin": "Administração",
+    "cookiePolicy": "Política de cookies",
+    "cookieSettings": "Definições de cookies",
+    "developedBy": "Desenvolvido por {{name}}"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Parceiro de aprovisionamento direto · China → Mundo",
+      "line1": "Fornecimento direto de fábrica,",
+      "line2": "entregue à sua porta.",
+      "text": "EPI, material médico, fardamento e artigos promocionais — fabricados nos principais polos de produção da China, inspecionados e entregues DDP nos Estados Unidos, Canadá, Europa e África.",
+      "cta": "O seu orçamento gratuito em 24 h",
+      "ctaSecondary": "Ver linhas de produtos"
+    },
+    "who": {
+      "kicker": "Quem somos",
+      "title": "A ponte direta entre as fábricas chinesas e a sua empresa.",
+      "link": "Saiba mais sobre a NovaBridge",
+      "imageAlt": "Armazém com prateleiras abastecidas",
+      "qcTitle": "Fotos de controlo de qualidade",
+      "qcText": "antes de cada envio"
+    },
+    "products": {
+      "kicker": "As nossas linhas de produtos",
+      "title": "Tudo o que as suas equipas precisam, direto da fábrica.",
+      "new": "Novo"
+    },
+    "how": {
+      "kicker": "Como funciona",
+      "title": "Do seu pedido até à sua porta em 5 passos.",
+      "link": "Ver o processo completo"
+    },
+    "why": {
+      "kicker": "Porquê escolher a NovaBridge",
+      "title": "Aprovisionamento com o rigor de um parceiro norte-americano."
+    },
+    "global": {
+      "kicker": "Presença internacional",
+      "title": "Da China para o mundo inteiro.",
+      "text": "Os nossos centros de aprovisionamento na China enviam todos os dias para empresas da América do Norte, Europa e África. Um só parceiro, um só interlocutor, entregas em todo o mundo.",
+      "hubs": "polos de produção na China",
+      "continents": "continentes servidos",
+      "languages": "idiomas de trabalho",
+      "legendHubs": "Polos de aprovisionamento (China)",
+      "legendMarkets": "Mercados servidos",
+      "link": "Descubra os nossos mercados",
+      "aria": "Globo giratório que mostra as rotas da NovaBridge da China para os EUA, Canadá, Europa e África",
+      "drag": "Arraste o globo para o explorar"
+    },
+    "markets": {
+      "kicker": "Os nossos mercados",
+      "title": "Ao serviço de empresas em quatro continentes."
+    },
+    "network": {
+      "kicker": "A nossa rede de aprovisionamento",
+      "title": "Quatro dos principais polos de produção da China.",
+      "imageAlt": "Navio porta-contentores no porto"
+    },
+    "news": {
+      "kicker": "Últimas notícias",
+      "title": "Notícias e anúncios",
+      "link": "Todas as notícias"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "Sobre a NovaBridge",
+      "subtitle": "Uma empresa de aprovisionamento sediada em Austin que liga as melhores fábricas da China a empresas de quatro continentes."
+    },
+    "values": {
+      "kicker": "Missão, visão e valores",
+      "title": "Assentes na confiança, no rigor e na qualidade."
+    },
+    "mission": {
+      "title": "A nossa missão",
+      "text": "Simplificar o aprovisionamento internacional das empresas, com um acesso direto, fiável e transparente à produção industrial."
+    },
+    "vision": {
+      "title": "A nossa visão",
+      "text": "Tornar-nos o parceiro B2B de referência entre a Ásia e quatro continentes, reconhecido pelo seu rigor e pela sua qualidade."
+    },
+    "facilities": {
+      "imageAlt": "Operações de armazém",
+      "kicker": "Unidades de produção",
+      "title": "Presentes nos principais polos de produção da China.",
+      "team": "Equipa multilingue:",
+      "cta": "Fale com a nossa equipa"
+    },
+    "valuesList": [
+      {
+        "t": "Confiança",
+        "d": "Orçamentos claros, compromissos cumpridos e fotos de controlo antes de cada envio."
+      },
+      {
+        "t": "Rigor",
+        "d": "Processos precisos, da encomenda à entrega DDP."
+      },
+      {
+        "t": "Fiabilidade",
+        "d": "Prazos controlados — 3 a 4 semanas em média."
+      },
+      {
+        "t": "Qualidade",
+        "d": "Fábricas selecionadas e controlos sistemáticos em cada lote."
+      }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "title": "Vamos falar das suas necessidades de aprovisionamento.",
+      "subtitle": "Tem uma pergunta sobre um produto, uma entrega ou uma parceria? A nossa equipa multilingue responde-lhe rapidamente."
+    },
+    "email": "E-mail",
+    "phone": "Telefone",
+    "website": "Website",
+    "headquarters": "Sede",
+    "languages": "Idiomas",
+    "sent": {
+      "title": "Mensagem enviada",
+      "text": "Obrigado — a nossa equipa responder-lhe-á muito em breve.",
+      "again": "Enviar outra mensagem"
+    },
+    "form": {
+      "title": "Envie-nos uma mensagem",
+      "subject": "Assunto",
+      "error": "Preencha todos os campos com um e-mail válido.",
+      "submit": "Enviar mensagem",
+      "quoteLink": "Precisa de preços? Peça um orçamento"
+    }
+  },
+  "how": {
+    "hero": {
+      "title": "Simples e transparente, do orçamento à entrega.",
+      "subtitle": "Cinco passos claros. Um orçamento detalhado em 24 horas, fotos de controlo antes do envio e entrega DDP à sua porta."
+    },
+    "commitments": {
+      "imageAlt": "Inspeção de qualidade de especificações técnicas",
+      "kicker": "Os nossos compromissos",
+      "title": "O que pode esperar de nós.",
+      "cta": "Começar pelo passo 01"
+    },
+    "details": [
+      "Utilize o nosso formulário de orçamento ou escreva-nos. Indique referências, quantidades, tamanhos, cores e necessidades de personalização.",
+      "Em 24 horas recebe um orçamento detalhado com preços e o calendário de produção.",
+      "Confirme a sua encomenda e pague um sinal de 50 % para iniciar a produção na fábrica.",
+      "A fábrica produz a sua encomenda. Enviamos-lhe fotos de controlo de qualidade antes de cada envio.",
+      "A sua mercadoria é entregue DDP — alfândega e frete incluídos. Paga o restante."
+    ]
+  },
+  "markets": {
+    "hero": {
+      "title": "Quatro continentes. Um parceiro de aprovisionamento de confiança.",
+      "subtitle": "De Austin a Lubumbashi, entregamos produtos diretos de fábrica a empresas dos Estados Unidos, Canadá, Europa e África."
+    },
+    "locations": "Localizações",
+    "sectors": "Setores-chave",
+    "logistics": {
+      "kicker": "Envio e logística",
+      "title": "Entrega DDP: alfândega e frete incluídos.",
+      "text": "Recebe a sua mercadoria à porta, sem surpresas na alfândega. Escolhemos a rota certa para cada encomenda.",
+      "cta": "Obter um preço entregue no destino",
+      "imageAlt": "Camiões num centro logístico"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "O mais recente da NovaBridge.",
+      "subtitle": "Novidades de produtos, notícias de logística e ofertas da nossa equipa."
+    },
+    "categories": {
+      "All": "Todas",
+      "News": "Notícia",
+      "Product": "Produto",
+      "Logistics": "Logística",
+      "Offer": "Oferta"
+    },
+    "featured": "Em destaque",
+    "readMore": "Ler mais",
+    "empty": "Ainda não há anúncios nesta categoria.",
+    "notFound": "Anúncio não encontrado",
+    "back": "Voltar às notícias"
+  },
+  "notFound": {
+    "kicker": "Erro 404",
+    "title": "Esta página seguiu outra rota.",
+    "text": "A página que procura não existe ou foi movida."
+  },
+  "products": {
+    "hero": {
+      "title": "Produtos diretos de fábrica para cada setor.",
+      "subtitle": "Merchandising para centros de lazer, estúdios de Pilates, EPI e segurança, saúde, vestuário e fardamento, benefícios empresariais e artigos promocionais — com personalização, encomenda mínima baixa e entrega DDP."
+    },
+    "hub": "Polo",
+    "details": "Ver detalhes",
+    "also": {
+      "kicker": "Também disponível",
+      "title": "Opções de logística e fabrico"
+    }
+  },
+  "productDetail": {
+    "kicker": "Linha de produtos",
+    "items": "Produtos que fornecemos",
+    "industries": "Setores servidos",
+    "included": "Incluído em cada encomenda",
+    "need": "Precisa de {{name}}?",
+    "needText": "Indique-nos o seu produto, quantidade e especificações — orçamento detalhado em 24 h.",
+    "notFound": "Linha de produtos não encontrada",
+    "back": "Voltar aos produtos",
+    "features": [
+      "Preços diretos de fábrica",
+      "Personalização — o seu logótipo",
+      "Encomenda mínima a partir de 50–100 unidades",
+      "Fotos de controlo antes do envio",
+      "Entrega DDP — alfândega e frete incluídos"
+    ],
+    "catalog": "Catálogo de produtos",
+    "catalogHint": "Clique no catálogo para o ver em tamanho real."
+  },
+  "quote": {
+    "hero": {
+      "kicker": "Orçamento gratuito",
+      "title": "Receba o seu orçamento gratuito em 24 horas.",
+      "subtitle": "Indique-nos o seu produto, quantidade e especificações. Respondemos com um orçamento detalhado, preços e prazos."
+    },
+    "sent": {
+      "title": "Obrigado, {{name}}!",
+      "p1": "O seu pedido",
+      "p2": "foi recebido. A nossa equipa enviará um orçamento detalhado em 24 horas para",
+      "p3": ".",
+      "again": "Enviar outro pedido"
+    },
+    "form": {
+      "title": "O seu pedido",
+      "required": "Os campos marcados com * são obrigatórios.",
+      "companySection": "A sua empresa",
+      "company": "Empresa",
+      "email": "E-mail profissional",
+      "emailPlaceholder": "nome@empresa.com",
+      "phone": "Telefone / WhatsApp",
+      "country": "País de entrega",
+      "productsSection": "Os seus produtos",
+      "productLine": "Linha de produtos",
+      "otherLine": "Outra / não listada",
+      "quantity": "Quantidade (unidades)",
+      "product": "Produto e especificações",
+      "productPlaceholder": "ex.: fatos-macaco de alta visibilidade, tamanhos M–XXL, fita refletora",
+      "delivery": "Tipo de envio",
+      "standard": "Normal (marítimo / DDP)",
+      "express": "Expresso (DHL / FedEx)",
+      "branding": "Personalização (o meu logótipo nos produtos)",
+      "messagePlaceholder": "Cores, embalagem, data pretendida, referências…",
+      "error": "Preencha todos os campos obrigatórios com informações válidas.",
+      "submit": "Enviar o meu pedido de orçamento"
+    },
+    "next": "Próximos passos",
+    "preferEmail": "Prefere o e-mail?",
+    "teamSpeaks": "A nossa equipa fala {{languages}}.",
+    "countries": [
+      "Estados Unidos",
+      "Canadá",
+      "Itália",
+      "França",
+      "Bélgica",
+      "Europa Ocidental (outro)",
+      "RD do Congo",
+      "África do Sul",
+      "África (outro)",
+      "Outro"
+    ]
+  },
+  "data": {
+    "company": {
+      "tagline": "O seu parceiro de aprovisionamento direto da China para o mundo",
+      "slogan": "Ligar mundos. Entregar valor.",
+      "location": "Austin, Texas — EUA",
+      "intro": "A NovaBridge Global Supply LLC é uma empresa sediada em Austin, com unidades de produção em Shenzhen, Yiwu, Jiangsu e Zhuji, na China. Selecionamos, inspecionamos e entregamos produtos diretamente a empresas dos Estados Unidos, Canadá, Europa e África.",
+      "promise": [
+        "Sem intermediários.",
+        "Preços diretos de fábrica.",
+        "Padrões de serviço norte-americanos."
+      ],
+      "languages": [
+        "Inglês",
+        "Francês",
+        "Chinês"
+      ]
+    },
+    "stats": [
+      {
+        "label": "Continentes servidos"
+      },
+      {
+        "label": "Linhas de produtos"
+      },
+      {
+        "label": "Poupança média dos clientes"
+      },
+      {
+        "label": "Prazo médio",
+        "suffix": " sem."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Contacta-nos",
+        "text": "Indique o seu produto, quantidade e especificações."
+      },
+      {
+        "title": "Orçamento em 24 h",
+        "text": "Orçamento detalhado com preços e calendário."
+      },
+      {
+        "title": "Sinal de 50 %",
+        "text": "Confirme e pague 50 % para iniciar a produção."
+      },
+      {
+        "title": "Produção",
+        "text": "A fábrica produz e recebe as fotos de controlo."
+      },
+      {
+        "title": "Entrega",
+        "text": "DDP até à sua porta. Paga o restante."
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Preços diretos de fábrica",
+        "text": "Sem intermediários entre a fábrica e a sua empresa."
+      },
+      {
+        "title": "Aprovisionamento direto nos melhores polos da China",
+        "text": "Acesso aos principais centros de produção da China."
+      },
+      {
+        "title": "Personalização",
+        "text": "O seu logótipo em cada produto."
+      },
+      {
+        "title": "Entrega DDP",
+        "text": "Alfândega e frete incluídos, entregue à sua porta."
+      },
+      {
+        "title": "Fotos de controlo de qualidade",
+        "text": "Fotos de controlo antes de cada envio."
+      },
+      {
+        "title": "Encomenda mínima baixa",
+        "text": "A partir de 50–100 unidades."
+      },
+      {
+        "title": "Orçamento em 24 h",
+        "text": "Um orçamento detalhado em 24 horas."
+      },
+      {
+        "title": "Equipa multilingue",
+        "text": "Inglês, francês, chinês."
+      }
+    ],
+    "network": [
+      {
+        "detail": "Eletrónica e produtos tecnológicos"
+      },
+      {
+        "detail": "Artigos promocionais e empresariais"
+      },
+      {
+        "detail": "Equipamentos industriais e de segurança"
+      },
+      {
+        "detail": "Polo de meias e calçado"
+      }
+    ],
+    "markets": [
+      {
+        "name": "Estados Unidos",
+        "badge": "Mercado principal",
+        "cities": [
+          "Austin, TX"
+        ],
+        "sectors": [
+          "Centros de lazer familiar (FEC)",
+          "Construção",
+          "Saúde",
+          "Empresas",
+          "Petróleo e gás"
+        ]
+      },
+      {
+        "name": "Canadá",
+        "cities": [
+          "Montreal",
+          "Toronto",
+          "Vancouver"
+        ],
+        "sectors": [
+          "Empresas",
+          "Saúde",
+          "Entretenimento"
+        ]
+      },
+      {
+        "name": "Europa",
+        "cities": [
+          "Itália",
+          "Europa Ocidental"
+        ],
+        "sectors": [
+          "Material médico",
+          "EPI",
+          "Artigos empresariais"
+        ]
+      },
+      {
+        "name": "África",
+        "cities": [
+          "RD do Congo",
+          "Lubumbashi",
+          "África do Sul"
+        ],
+        "sectors": [
+          "EPI para mineração",
+          "Construção",
+          "Médico"
+        ]
+      }
+    ],
+    "logistics": [
+      {
+        "title": "Frete marítimo via Durban → África",
+        "text": "Transporte marítimo económico para entregas em África."
+      },
+      {
+        "title": "DHL / FedEx Express",
+        "text": "Envio aéreo expresso para encomendas urgentes."
+      },
+      {
+        "title": "Marca própria e OEM disponíveis",
+        "text": "A sua própria marca, fabricada segundo as suas especificações."
+      }
+    ]
+  },
+  "content": {
+    "products": {
+      "entertainment-merch": {
+        "name": "Merchandising para lazer",
+        "short": "Artigos personalizados com a sua marca para parques infantis, parques de trampolins e centros de lazer familiar.",
+        "description": "Transforme a sua marca numa experiência: meias antiderrapantes, pulseiras, copos, balões e artigos de festa com o seu logótipo — para parques infantis cobertos, parques de trampolins e centros de lazer familiar. Maquete 3D gratuita antes da produção.",
+        "items": [
+          "Meias antiderrapantes — sola de silicone 3D",
+          "Pulseiras — numeração sequencial",
+          "Copos personalizados — reutilizáveis e ecológicos",
+          "Tatuagens temporárias",
+          "Balões Mylar — formas personalizadas",
+          "Mochilas de cordão e sacos de festa",
+          "Fitas porta-crachás e porta-chaves",
+          "T-shirts e bonés",
+          "Toalhas de praia",
+          "Garrafas de água"
+        ],
+        "industries": [
+          "Parques de trampolins",
+          "Parques infantis cobertos",
+          "Centros de lazer familiar",
+          "Eventos"
+        ],
+        "hub": "Zhuji · Yiwu"
+      },
+      "pilates-studio": {
+        "name": "Estúdio de Pilates",
+        "short": "O essencial com a sua marca para estúdios de Pilates, ioga e barre.",
+        "description": "Tudo o que o seu estúdio precisa, com o seu logótipo: meias antiderrapantes, tapetes, toalhas, acessórios e vestuário para os seus clientes e instrutores — para estúdios de Pilates, ioga e barre. Encomenda mínima baixa e maquete gratuita antes da produção.",
+        "items": [
+          "Meias de Pilates — sola de silicone antiderrapante",
+          "Tapetes de Pilates e ioga",
+          "Toalhas de estúdio com a sua marca",
+          "Bandas elásticas",
+          "Anéis e bolas de Pilates",
+          "Leggings, tops e soutiens desportivos",
+          "Garrafas de água",
+          "Sacos tote e de ginásio"
+        ],
+        "industries": [
+          "Estúdios de Pilates",
+          "Estúdios de ioga",
+          "Estúdios de barre",
+          "Ginásios"
+        ],
+        "hub": "Zhuji · Yiwu"
+      },
+      "ppe-safety": {
+        "name": "EPI e Segurança",
+        "short": "Equipamentos de proteção para estaleiros exigentes.",
+        "description": "Equipamentos de proteção individual de qualidade certificada, fabricados em Jiangsu — concebidos para equipas de mineração, construção, petróleo e gás e indústria.",
+        "items": [
+          "Luvas de segurança — anticorte, abrasão e calor",
+          "Óculos e óculos de proteção",
+          "Capacetes de segurança",
+          "Viseiras de proteção",
+          "Proteção auditiva",
+          "Botas e sapatos de segurança (SP818, SP918)",
+          "Coletes refletores",
+          "Fatos-macaco e fatos-macaco de mineração de alta visibilidade",
+          "Casacos de alta visibilidade",
+          "Respiradores",
+          "Máscaras",
+          "Arneses de segurança",
+          "Mangas de proteção",
+          "Joelheiras",
+          "Vestuário impermeável",
+          "Máscaras de soldadura",
+          "Luvas descartáveis e de nitrilo",
+          "Aventais de segurança"
+        ],
+        "industries": [
+          "Mineração",
+          "Construção",
+          "Petróleo e gás",
+          "Indústria"
+        ],
+        "hub": "Jiangsu"
+      },
+      "healthcare": {
+        "name": "Saúde",
+        "short": "Material e fardamento médico para profissionais de saúde.",
+        "description": "Material médico fiável para clínicas, hospitais, consultórios dentários e salões — com fotos de controlo de qualidade antes de cada envio.",
+        "items": [
+          "Fardas médicas (mulher)",
+          "Luvas de exame de nitrilo",
+          "Máscaras cirúrgicas FFP2",
+          "Kits de primeiros socorros",
+          "Consumíveis médicos"
+        ],
+        "industries": [
+          "Clínicas",
+          "Hospitais",
+          "Medicina dentária",
+          "Salões"
+        ],
+        "hub": "Jiangsu"
+      },
+      "apparel-uniforms": {
+        "name": "Vestuário e Fardamento",
+        "short": "Vestuário personalizado e fardamento para o pessoal.",
+        "description": "Vestuário e fardamento personalizados fabricados em Zhuji — o seu logótipo, as suas cores, os seus tamanhos, a partir de 50–100 unidades.",
+        "items": [
+          "Sweatshirts com capuz e fecho personalizadas",
+          "Fardas escolares",
+          "Aventais para restaurantes",
+          "Fardas para pessoal de hotel",
+          "T-shirts personalizadas",
+          "Vestuário de trabalho com a sua marca"
+        ],
+        "industries": [
+          "Escolas",
+          "Hotéis",
+          "Restaurantes",
+          "Spas"
+        ],
+        "hub": "Zhuji"
+      },
+      "corporate-promo": {
+        "name": "Benefícios empresariais e Promoção",
+        "short": "Artigos e brindes que levam a sua marca.",
+        "description": "Artigos promocionais e empresariais de Yiwu, o maior centro mundial de pequenas mercadorias — para eventos, conferências e ofertas empresariais.",
+        "items": [
+          "Canetas e cadernos personalizados",
+          "Sacos de pano com a sua marca",
+          "Meias antiderrapantes personalizadas",
+          "Artigos para eventos",
+          "Pulseiras",
+          "Conjuntos de oferta empresarial"
+        ],
+        "industries": [
+          "Fortune 500",
+          "Eventos",
+          "PME",
+          "Conferências"
+        ],
+        "hub": "Yiwu · Zhuji"
+      }
+    },
+    "news": {
+      "a1": {
+        "title": "O Company Portfolio 2026 já está disponível",
+        "excerpt": "Descubra as nossas linhas de produtos, os nossos mercados em quatro continentes e a nossa forma de trabalhar — do orçamento à entrega DDP.",
+        "content": "O nosso portfólio 2026 apresenta a NovaBridge Global Supply LLC: um parceiro de aprovisionamento sediado em Austin, com unidades de produção em Shenzhen, Yiwu, Jiangsu e Zhuji. Peça-nos um exemplar por e-mail ou solicite um orçamento gratuito em 24 horas."
+      },
+      "a2": {
+        "title": "Frete marítimo para África via Durban",
+        "excerpt": "Transporte marítimo económico para os nossos clientes na RD do Congo, em Lubumbashi e na África do Sul.",
+        "content": "Para as entregas em África, encaminhamos o frete marítimo pelo porto de Durban, servindo clientes de EPI para mineração, construção e setor médico em toda a região. As encomendas urgentes podem ser enviadas por DHL ou FedEx Express."
+      },
+      "a3": {
+        "title": "Encomenda mínima baixa: personalização a partir de 50–100 unidades",
+        "excerpt": "O seu logótipo em sweatshirts, t-shirts, sacos de pano, cadernos e muito mais — sem encomendas mínimas enormes.",
+        "content": "As pequenas e médias empresas podem agora personalizar o seu vestuário e os seus artigos promocionais com uma encomenda mínima a partir de 50–100 unidades. Marca própria e OEM disponíveis."
+      },
+      "a4": {
+        "title": "Fatos-macaco de mineração de alta visibilidade — nova produção",
+        "excerpt": "Rascunho: anúncio em preparação para a linha EPI e Segurança.",
+        "content": "Texto a completar antes da publicação."
+      }
+    }
+  },
+  "cookies": {
+    "banner": {
+      "aria": "Consentimento de cookies",
+      "title": "Valorizamos a sua privacidade",
+      "text": "Utilizamos cookies e tecnologias semelhantes para que este site funcione, para recordar as suas preferências e — apenas com o seu consentimento — para medir a audiência e personalizar o conteúdo. Pode aceitar, recusar ou escolher por categoria, e mudar de ideias a qualquer momento.",
+      "policy": "Consulte a nossa política de cookies",
+      "customize": "Personalizar",
+      "reject": "Recusar tudo",
+      "accept": "Aceitar tudo"
+    },
+    "settings": {
+      "title": "Preferências de cookies",
+      "intro": "Escolha as categorias de cookies que autoriza. Os cookies estritamente necessários estão sempre ativos, porque o site não funciona sem eles.",
+      "close": "Fechar",
+      "alwaysActive": "Sempre ativos",
+      "show": "Ver cookies ({{n}})",
+      "hide": "Ocultar cookies ({{n}})",
+      "none": "De momento, nenhum cookie é utilizado nesta categoria.",
+      "reject": "Recusar tudo",
+      "accept": "Aceitar tudo",
+      "save": "Guardar as minhas preferências"
+    },
+    "categories": {
+      "necessary": {
+        "name": "Estritamente necessários",
+        "description": "Indispensáveis ao funcionamento do site: guardar a sua escolha de cookies, enviar os formulários de orçamento e contacto e proteger a área de administração. Não podem ser desativados."
+      },
+      "preferences": {
+        "name": "Preferências",
+        "description": "Recordam as suas definições, como o seu idioma preferido, para que não tenha de o escolher novamente na próxima visita."
+      },
+      "analytics": {
+        "name": "Análise",
+        "description": "Ajudam-nos a perceber como os visitantes utilizam o site (páginas vistas, duração da visita) para o melhorar. Os dados são tratados de forma agregada."
+      },
+      "marketing": {
+        "name": "Marketing",
+        "description": "Servem para lhe mostrar anúncios relevantes e medir a eficácia das nossas campanhas noutros sites."
+      }
+    },
+    "table": {
+      "name": "Nome",
+      "provider": "Fornecedor",
+      "storage": "Tipo",
+      "duration": "Duração",
+      "purpose": "Finalidade"
+    },
+    "storage": {
+      "cookie": "Cookie",
+      "localStorage": "Armazenamento local",
+      "sessionStorage": "Armazenamento de sessão"
+    },
+    "duration": {
+      "session": "Sessão",
+      "persistent": "Até ser eliminado",
+      "days": "{{n}} dias",
+      "months": "{{n}} meses",
+      "years": "{{n}} anos"
+    },
+    "purposes": {
+      "consent": "Guarda as suas preferências de cookies",
+      "forms": "Conserva os seus pedidos de orçamento e contacto",
+      "admin": "Mantém a sessão do administrador",
+      "language": "Recorda o seu idioma preferido",
+      "analytics": "Medição de audiência"
+    },
+    "policy": {
+      "kicker": "Privacidade",
+      "title": "Política de cookies",
+      "subtitle": "Que cookies utilizamos, porquê e como os pode controlar a qualquer momento.",
+      "what": {
+        "title": "O que é um cookie?",
+        "text": "Um cookie é um pequeno ficheiro de texto guardado no seu dispositivo quando visita um site. Tecnologias semelhantes, como o armazenamento local do navegador, funcionam da mesma forma. Permitem ao site recordar informações sobre a sua visita."
+      },
+      "how": {
+        "title": "Como os utilizamos",
+        "text": "Sem o seu consentimento, a NovaBridge utiliza apenas os cookies estritamente necessários ao funcionamento do site. Todas as outras categorias estão desativadas por predefinição e só são ativadas se as aceitar. A lista abaixo é sempre atualizada com os cookies efetivamente utilizados por este site."
+      },
+      "categoriesTitle": "Cookies utilizados neste site",
+      "browser": {
+        "title": "Gerir os cookies a partir do seu navegador",
+        "text": "Também pode bloquear ou eliminar os cookies nas definições do seu navegador. Bloquear os cookies estritamente necessários pode impedir que algumas funcionalidades, como o formulário de orçamento, funcionem corretamente."
+      },
+      "manage": {
+        "title": "As suas preferências",
+        "button": "Gerir as minhas preferências de cookies"
+      },
+      "status": {
+        "none": "Ainda não fez nenhuma escolha.",
+        "given": "Escolha guardada a {{date}}. Pode alterá-la a qualquer momento.",
+        "on": "Aceites",
+        "off": "Recusados"
+      },
+      "contact": "Dúvidas sobre os seus dados? Escreva-nos:"
+    }
+  },
+  "topbar": {
+    "follow": "Siga-nos",
+    "social": "NovaBridge no {{name}}"
+  },
+  "faq": {
+    "kicker": "Perguntas frequentes",
+    "title": "Perguntas frequentes",
+    "subtitle": "Tudo o que precisa de saber sobre encomendas, personalização, controlo de qualidade e entrega DDP com a NovaBridge.",
+    "seeAll": "Ver todas as perguntas",
+    "more": {
+      "title": "Tem outra pergunta?",
+      "text": "A nossa equipa multilingue responde em inglês, francês e chinês — normalmente em 24 horas.",
+      "cta": "Contacte-nos"
+    },
+    "items": [
+      {
+        "q": "Como obtenho um orçamento?",
+        "a": "Preencha o nosso formulário de orçamento gratuito ou escreva-nos indicando o produto, a quantidade e as especificações (tamanhos, cores, personalização). Recebe um orçamento detalhado com preços e calendário de produção em 24 horas."
+      },
+      {
+        "q": "Qual é a vossa encomenda mínima (MOQ)?",
+        "a": "A nossa encomenda mínima começa a partir de 50–100 unidades, consoante o produto — mesmo para artigos personalizados. Indique-nos a sua quantidade e encontraremos a melhor opção."
+      },
+      {
+        "q": "Podem colocar o nosso logótipo nos produtos?",
+        "a": "Sim. A personalização está disponível em todas as nossas linhas: o seu logótipo, as suas cores, os seus tamanhos. Também oferecemos marca própria e fabrico OEM, além de uma maquete 3D gratuita antes da produção."
+      },
+      {
+        "q": "Quais são os vossos prazos?",
+        "a": "A produção demora em média 3 a 4 semanas. O prazo de entrega depende depois do tipo de envio: frete marítimo (normal, DDP) ou DHL / FedEx Express para encomendas urgentes."
+      },
+      {
+        "q": "O que significa a entrega DDP?",
+        "a": "DDP (Delivered Duty Paid, «entregue com direitos pagos») significa que os direitos aduaneiros e o frete estão incluídos no nosso preço. A sua mercadoria é entregue à sua porta, sem surpresas na alfândega."
+      },
+      {
+        "q": "Como funciona o pagamento?",
+        "a": "Depois de confirmada a encomenda, paga um sinal de 50 % para iniciar a produção na fábrica. O restante é pago na entrega."
+      },
+      {
+        "q": "Como garantem a qualidade?",
+        "a": "Trabalhamos com fábricas selecionadas nos principais polos de produção da China e verificamos cada lote. Recebe fotos de controlo de qualidade antes de cada envio, para aprovar a sua mercadoria antes de sair da fábrica."
+      },
+      {
+        "q": "Para que países fazem entregas?",
+        "a": "Entregamos a empresas nos Estados Unidos, Canadá, Europa e África. Para os nossos clientes africanos, o frete marítimo passa pelo porto de Durban; as encomendas urgentes podem ser enviadas por DHL ou FedEx Express."
+      },
+      {
+        "q": "Que produtos podem fornecer?",
+        "a": "Merchandising para centros de lazer (meias antiderrapantes, pulseiras, copos, balões…), equipamento para estúdios de Pilates (meias, tapetes, toalhas…), EPI e equipamentos de segurança, material médico, vestuário e fardamento, e benefícios empresariais e artigos promocionais. Procura algo que não está na lista? Pergunte-nos — aprovisionamo-nos diretamente em Shenzhen, Yiwu, Jiangsu e Zhuji."
+      },
+      {
+        "q": "Que idiomas fala a vossa equipa?",
+        "a": "A nossa equipa trabalha em inglês, francês e chinês, o que nos permite comunicar diretamente tanto com os nossos clientes como com as fábricas."
+      }
+    ]
+  }
+}

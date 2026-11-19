@@ -3,6 +3,7 @@ import { DOCUMENT, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeZh from '@angular/common/locales/zh';
 import localeEs from '@angular/common/locales/es';
+import localePt from '@angular/common/locales/pt-PT';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, firstValueFrom, tap } from 'rxjs';
 import { Announcement, ProductLine } from '../models';
@@ -12,8 +13,9 @@ import { CookieConsentService } from '../cookies/cookie-consent.service';
 registerLocaleData(localeFr, 'fr');
 registerLocaleData(localeZh, 'zh');
 registerLocaleData(localeEs, 'es');
+registerLocaleData(localePt, 'pt-PT');
 
-export type Lang = 'en' | 'fr' | 'es' | 'zh';
+export type Lang = 'en' | 'fr' | 'es' | 'pt' | 'zh';
 
 export interface LanguageOption {
   code: Lang;
@@ -33,6 +35,7 @@ export const LANGUAGES: LanguageOption[] = [
   { code: 'en', label: 'English (US)', short: 'EN', html: 'en-US', locale: 'en-US', flag: 'flags/us.svg' },
   { code: 'fr', label: 'Français', short: 'FR', html: 'fr', locale: 'fr', flag: 'flags/fr.svg' },
   { code: 'es', label: 'Español', short: 'ES', html: 'es', locale: 'es', flag: 'flags/es.svg' },
+  { code: 'pt', label: 'Português', short: 'PT', html: 'pt-PT', locale: 'pt-PT', flag: 'flags/pt.svg' },
   { code: 'zh', label: '简体中文', short: '中文', html: 'zh-CN', locale: 'zh', flag: 'flags/cn.svg' },
 ];
 

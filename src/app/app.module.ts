@@ -18,7 +18,7 @@ export function httpTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // Traductions : public/i18n/en.json (défaut), fr.json, es.json, zh.json
+    // Traductions : public/i18n/en.json (défaut), fr.json, es.json, pt.json, zh.json
     TranslateModule.forRoot({
       defaultLanguage: DEFAULT_LANG,
       loader: { provide: TranslateLoader, useFactory: httpTranslateLoader, deps: [HttpClient] },
