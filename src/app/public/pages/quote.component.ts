@@ -5,6 +5,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { COMPANY, CONTACT, STEPS, telHref } from '../../core/data/company';
 import { QuoteRequest } from '../../core/models';
 import { StoreService } from '../../core/services/store.service';
+import { MailService } from '../../core/services/mail.service';
 
 export const COUNTRIES = ['USA', 'Canada', 'Italy', 'France', 'Belgium', 'Western Europe (other)', 'DRC Congo', 'South Africa', 'Africa (other)', 'Other'];
 
@@ -62,7 +63,9 @@ export const COUNTRIES = ['USA', 'Canada', 'Italy', 'France', 'Belgium', 'Wester
             </fieldset>
 
             @if (error()) { <p class="mt-6 rounded-lg bg-red-50 p-4 text-sm font-medium text-danger" role="alert">{{ 'quote.form.error' | translate }}</p> }
-            <button type="submit" class="btn btn-gold mt-8 w-full justify-center text-base md:w-auto">{{ 'quote.form.submit' | translate }} <nb-icon name="arrow" class="h-5 w-5" /></button>
+            @if (sendError()) { <p class="mt-6 rounded-lg bg-red-50 p-4 text-sm font-medium text-danger" role="alert">{{ 'form.sendError' | translate: { email: company().email } }}</p> }
+            <button type="submit" class="btn btn-gold mt-8 w-full justify-center text-base disabled:cursor-wait disabled:opacity-70 md:w-auto" [disabled]="sending()">
+              {{ (sending() ? 'form.sending' : 'quote.form.submit') | translate }} <nb-icon name="arrow" class="h-5 w-5" /></button>
           </form>
         }
       </div>
@@ -107,6 +110,9 @@ export class QuoteComponent implements OnInit {
   readonly countryLabels = computed(() => this.lang.t<string[]>('quote.countries', COUNTRIES));
   readonly sent = signal<QuoteRequest | null>(null);
   readonly error = signal(false);
+  readonly sending = signal(false);
+  readonly sendError = signal(false);
+  private mail = inject(MailService);
 
   readonly form = this.fb.nonNullable.group({
     name: ['', Validators.required],
@@ -124,11 +130,24 @@ export class QuoteComponent implements OnInit {
 
   ngOnInit() { if (this.line()) this.form.patchValue({ productLine: this.line() }); }
 
-  submit() {
+  async submit() {
+    if (this.sending()) return;
     if (this.form.invalid) { this.form.markAllAsTouched(); this.error.set(true); return; }
     this.error.set(false);
-    this.sent.set(this.store.addQuote(this.form.getRawValue()));
-    window.scrollTo({ top: 300, behavior: 'smooth' });
+    this.sendError.set(false);
+    this.sending.set(true);
+    const data = this.form.getRawValue();
+    // Numéro de devis attribué avant l'envoi pour qu'il figure dans l'e-mail
+    const preview: QuoteRequest = { ...data, id: this.store.nextQuoteId(), createdAt: new Date().toISOString(), status: 'nouveau', notes: [] };
+    try {
+      await this.mail.sendQuote(preview); // envoi par e-mail à l'adresse de l'entreprise
+      this.sent.set(this.store.addQuote(data));
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    } catch {
+      this.sendError.set(true); // le formulaire reste rempli pour réessayer
+    } finally {
+      this.sending.set(false);
+    }
   }
 
   reset() { this.form.reset(); this.sent.set(null); }

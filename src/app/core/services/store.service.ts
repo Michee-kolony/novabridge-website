@@ -75,6 +75,9 @@ export class StoreService {
   // ---------- Devis ----------
   quote(id: string) { return this.state().quotes.find(q => q.id === id); }
 
+  /** Numéro que recevra le prochain devis. */
+  nextQuoteId() { return this.uid('Q', this.state().quotes); }
+
   addQuote(q: Omit<QuoteRequest, 'id' | 'createdAt' | 'status' | 'notes'>): QuoteRequest {
     const created: QuoteRequest = { ...q, id: this.uid('Q', this.state().quotes), createdAt: new Date().toISOString(), status: 'nouveau', notes: [] };
     this.patch(s => ({ quotes: [created, ...s.quotes] }));

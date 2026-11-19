@@ -4,6 +4,7 @@ import { LanguageService } from '../../core/services/language.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { COMPANY, CONTACT, MARKETS, SOCIALS, img, telHref } from '../../core/data/company';
 import { StoreService } from '../../core/services/store.service';
+import { MailService } from '../../core/services/mail.service';
 
 @Component({
   selector: 'nb-contact',
@@ -88,8 +89,10 @@ import { StoreService } from '../../core/services/store.service';
               <label class="field md:col-span-2"><span>{{ 'form.message' | translate }} *</span><textarea class="input min-h-[160px]" formControlName="message"></textarea></label>
             </div>
             @if (error()) { <p class="mt-6 rounded-lg bg-red-50 p-4 text-sm font-medium text-danger" role="alert">{{ 'contact.form.error' | translate }}</p> }
+            @if (sendError()) { <p class="mt-6 rounded-lg bg-red-50 p-4 text-sm font-medium text-danger" role="alert">{{ 'form.sendError' | translate: { email: company().email } }}</p> }
             <div class="mt-8 flex flex-wrap items-center gap-4">
-              <button type="submit" class="btn btn-primary">{{ 'contact.form.submit' | translate }} <nb-icon name="arrow" class="h-5 w-5" /></button>
+              <button type="submit" class="btn btn-primary disabled:cursor-wait disabled:opacity-70" [disabled]="sending()">
+                {{ (sending() ? 'form.sending' : 'contact.form.submit') | translate }} <nb-icon name="arrow" class="h-5 w-5" /></button>
               <a routerLink="/quote" class="link-arrow">{{ 'contact.form.quoteLink' | translate }}</a>
             </div>
           </form>
@@ -121,6 +124,9 @@ export class ContactComponent {
   readonly socials = SOCIALS;
   readonly sent = signal(false);
   readonly error = signal(false);
+  readonly sending = signal(false);
+  readonly sendError = signal(false);
+  private mail = inject(MailService);
   readonly form = this.fb.nonNullable.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -128,11 +134,22 @@ export class ContactComponent {
     message: ['', Validators.required],
   });
 
-  submit() {
+  async submit() {
+    if (this.sending()) return;
     if (this.form.invalid) { this.form.markAllAsTouched(); this.error.set(true); return; }
     this.error.set(false);
-    this.store.addMessage(this.form.getRawValue());
-    this.form.reset();
-    this.sent.set(true);
+    this.sendError.set(false);
+    this.sending.set(true);
+    const msg = this.form.getRawValue();
+    try {
+      await this.mail.sendContact(msg); // envoi par e-mail à l'adresse de l'entreprise
+      this.store.addMessage(msg);
+      this.form.reset();
+      this.sent.set(true);
+    } catch {
+      this.sendError.set(true); // le formulaire reste rempli pour réessayer
+    } finally {
+      this.sending.set(false);
+    }
   }
 }

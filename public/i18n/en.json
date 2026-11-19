@@ -36,6 +36,8 @@
     "backToTop": "Back to top"
   },
   "form": {
+    "sending": "Sending…",
+    "sendError": "Your message could not be sent. Please try again in a moment or write to us directly at {{email}}.",
     "fullName": "Full name",
     "message": "Message"
   },

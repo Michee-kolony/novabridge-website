@@ -36,6 +36,8 @@
     "backToTop": "返回顶部"
   },
   "form": {
+    "sending": "正在发送…",
+    "sendError": "您的消息未能发送。请稍后重试，或直接发送邮件至 {{email}}。",
     "fullName": "姓名",
     "message": "留言"
   },

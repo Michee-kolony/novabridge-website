@@ -36,6 +36,8 @@
     "backToTop": "Volver arriba"
   },
   "form": {
+    "sending": "Enviando…",
+    "sendError": "No se pudo enviar su mensaje. Inténtelo de nuevo en un momento o escríbanos directamente a {{email}}.",
     "fullName": "Nombre completo",
     "message": "Mensaje"
   },
