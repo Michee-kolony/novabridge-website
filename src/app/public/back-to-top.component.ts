@@ -7,8 +7,8 @@ const RADIUS = 22;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 /** Distance de défilement (px) à partir de laquelle le bouton apparaît. */
 const SHOW_AFTER = 300;
-/** Marge entre le bouton et le bas de l'écran (ou le haut du bandeau cookies). */
-const GAP = 24;
+/** Marge entre le bouton et le bas de l'écran (ou le haut du bandeau cookies) : au-dessus du bouton de l'assistant (56 px + 16 px). */
+const GAP = 24 + 72;
 
 /** Bouton « Retour en haut » (chevron) avec anneau doré indiquant la progression du défilement. */
 @Component({
@@ -18,7 +18,7 @@ const GAP = 24;
   <button type="button" (click)="toTop()" [attr.aria-label]="'common.backToTop' | translate" [attr.title]="'common.backToTop' | translate"
           [attr.tabindex]="visible() ? 0 : -1" [attr.aria-hidden]="!visible()"
           [style.bottom.px]="bottom()"
-          class="group fixed right-5 z-[65] flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-nb-lg transition-all duration-300 hover:bg-navy-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:right-6"
+          class="group fixed right-6 z-[65] flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-nb-lg transition-all duration-300 hover:bg-navy-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:right-7"
           [class]="visible() ? 'pointer-events-auto opacity-100 hover:-translate-y-1' : 'pointer-events-none translate-y-4 opacity-0'">
     <svg class="absolute inset-0 h-full w-full -rotate-90" viewBox="0 0 48 48" aria-hidden="true">
       <circle cx="24" cy="24" [attr.r]="radius" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="2" />

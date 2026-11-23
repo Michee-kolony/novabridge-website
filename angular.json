@@ -57,6 +57,11 @@
                 "glob": "land-110m.json",
                 "input": "node_modules/world-atlas",
                 "output": "geo"
+              },
+              {
+                "glob": ".htaccess",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": [

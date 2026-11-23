@@ -6,6 +6,7 @@ import { COMPANY, CONTACT, SOCIALS, telHref } from '../core/data/company';
 import { StoreService } from '../core/services/store.service';
 import { CookieConsentService } from '../core/cookies/cookie-consent.service';
 import { LanguageService } from '../core/services/language.service';
+import { SiteSearchService } from './search/site-search.component';
 
 @Component({
   selector: 'nb-public-layout',
@@ -76,6 +77,14 @@ import { LanguageService } from '../core/services/language.service';
       </nav>
 
       <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Recherche dans tout le site (Ctrl/⌘ + K ou « / ») -->
+        <button type="button" (click)="search.show()" [attr.aria-label]="'search.open' | translate" [attr.title]="('search.open' | translate) + ' (Ctrl + K)'"
+                class="flex items-center gap-2 rounded-full p-2 transition-colors hover:text-gold 2xl:border 2xl:px-3.5"
+                [class]="solid() ? 'text-navy 2xl:border-mist 2xl:hover:border-gold' : 'text-white 2xl:border-white/30 2xl:hover:border-gold'">
+          <nb-icon name="search" class="h-5 w-5" />
+          <span class="hidden text-sm 2xl:inline" [class]="solid() ? 'text-steel' : 'text-white/80'">{{ 'search.short' | translate }}</span>
+          <kbd class="hidden rounded px-1.5 text-[10px] font-semibold 2xl:inline" [class]="solid() ? 'bg-cloud text-steel' : 'bg-white/10 text-white/80'">Ctrl K</kbd>
+        </button>
         <nb-language-switcher class="hidden lg:block" [light]="!solid()" />
         <a routerLink="/quote" class="btn btn-gold hidden sm:inline-flex">{{ 'nav.quote' | translate }}</a>
         <button class="rounded p-2 lg:hidden" [class]="solid() ? 'text-navy' : 'text-white'"
@@ -88,6 +97,10 @@ import { LanguageService } from '../core/services/language.service';
     @if (menuOpen()) {
       <nav class="border-t border-mist bg-white lg:hidden" [attr.aria-label]="'nav.mobile' | translate">
         <div class="container-nb flex flex-col py-4">
+          <button type="button" (click)="menuOpen.set(false); search.show()"
+                  class="mb-2 flex items-center gap-3 rounded-xl border border-mist bg-cloud px-4 py-3 text-left text-sm text-steel">
+            <nb-icon name="search" class="h-5 w-5 text-navy" />{{ 'search.placeholder' | translate }}
+          </button>
           @for (l of links; track l.path) {
             <a [routerLink]="l.path" (click)="menuOpen.set(false)" class="border-b border-mist py-3 font-semibold text-navy">{{ l.label | translate }}</a>
           }
@@ -199,6 +212,8 @@ import { LanguageService } from '../core/services/language.service';
 
   <!-- ===== Retour en haut & cookies ===== -->
   <nb-back-to-top />
+  <nb-chat-widget />
+  <nb-site-search />
   <nb-cookie-banner />
   <nb-cookie-settings />
   `,
@@ -213,6 +228,7 @@ export class PublicLayoutComponent {
   readonly emails = computed(() => [this.company().email, ...CONTACT.emails]);
   readonly store = inject(StoreService);
   readonly consent = inject(CookieConsentService);
+  readonly search = inject(SiteSearchService);
   readonly products = computed(() => this.store.visibleProducts().map(p => this.lang.product(p)));
   readonly year = new Date().getFullYear();
   readonly links = [

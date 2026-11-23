@@ -21,6 +21,8 @@ import { CookieSettingsComponent } from './cookies/cookie-settings.component';
 import { CookieTableComponent } from './cookies/cookie-table.component';
 import { FaqAccordionComponent } from './faq/faq-accordion.component';
 import { FaqPageComponent } from './faq/faq-page.component';
+import { ChatWidgetComponent } from './assistant/chat-widget.component';
+import { SiteSearchComponent } from './search/site-search.component';
 
 /** Site client (chargé à la demande). */
 @NgModule({
@@ -47,6 +49,9 @@ import { FaqPageComponent } from './faq/faq-page.component';
     // FAQ
     FaqAccordionComponent,
     FaqPageComponent,
+    // Assistant virtuel + recherche
+    ChatWidgetComponent,
+    SiteSearchComponent,
   ],
   imports: [SharedModule, ReactiveFormsModule, PublicRoutingModule],
 })
