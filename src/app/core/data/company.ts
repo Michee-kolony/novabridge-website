@@ -46,9 +46,8 @@ export interface SocialLink { id: SocialId; label: string; url: string; }
  */
 export const SOCIALS: SocialLink[] = [
   { id: 'facebook', label: 'Facebook', url: '' },
-  { id: 'instagram', label: 'Instagram', url: '' },
-  { id: 'linkedin', label: 'LinkedIn', url: '' },
-  { id: 'tiktok', label: 'TikTok', url: '' },
+  { id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/nova.bridgeglobal?fqnt=MW1hZGduYXV6bDY5cw%3D%3D&utm_source=qr' },
+  { id: 'tiktok', label: 'TikTok', url: 'https://www.tiktok.com/@novabridge.global?_r=1&_t=ZP-9BeKqKsyk5n' },
 ];
 
 export interface Stat { key: string; value: number | null; display?: string; suffix?: string; label: string; }
